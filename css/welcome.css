@@ -2,7 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
     background-image: url('../images/welcome-back.jpg'); /* Ensure this path is correct */
     background-size: cover;
@@ -21,7 +21,7 @@ body::before {
     width: 100%; /* Full width */
     height: 100%;
     background: black; /* Black background */
-    clip-path: circle(50% at 100% 50%); /* Create a circular cutout on the right */
+    clip-path: circle(50% at 0% 50%); /* Create a circular cutout on the right */
     z-index: 1; /* Ensure it is behind the text */
 }
 
