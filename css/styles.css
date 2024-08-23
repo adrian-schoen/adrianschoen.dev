@@ -1,0 +1,27 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.jumbotron {
+    background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+.card .card-img-top{
+    max-width: 300px;
+}
+.card {
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    width: 100%; /* Make the image take the full width of the card */
+    height: auto; /* Allow the height to adjust automatically */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+footer {
+    background-color: #0056b3;
+}
