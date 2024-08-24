@@ -172,3 +172,23 @@ footer {
     animation: fadeIn 0.75s forwards;
     animation-delay: 0.5s;
 }
+
+
+.watermark {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate and center */
+    font-size: 100px; /* Adjust size */
+    color: white; /* Base color */
+    text-shadow: 
+        2px 2px 0 black, /* Black shadow */
+        -2px -2px 0 black, /* Black shadow */
+        2px -2px 0 black, /* Black shadow */
+        -2px 2px 0 black; /* Black shadow */
+    opacity: 0.5; /* Adjust transparency */
+    pointer-events: none; /* Prevent interaction with the watermark */
+    z-index: 9999; /* Ensure it appears above other content */
+    user-select: none; /* Prevent text selection */
+    white-space: nowrap; /* Prevent wrapping */
+}
