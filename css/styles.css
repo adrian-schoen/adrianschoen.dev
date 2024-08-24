@@ -180,6 +180,15 @@ transition: transform 1s;
     color: rgb(230, 230, 230);
 }
 
+/* Scale Effect on Navbar Links */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Scale up the link */
+    color: rgb(161, 199, 255); /* Change color on hover */
+}
 
 header, footer {
     background-color: rgb(15, 15, 15);
