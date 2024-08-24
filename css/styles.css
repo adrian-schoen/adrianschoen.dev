@@ -154,7 +154,9 @@ transition: transform 1s;
     }
 }
 
-
+.card-row {
+    padding-top: 20px;
+}
 .card .card-img-top{
     max-width: 300px;
 }
@@ -163,7 +165,13 @@ transition: transform 1s;
     width: 300px;
     cursor: pointer;
     margin-bottom: 20px;
-    border: 3px solid rgb(40, 40, 40); /* Set a darker border color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+    overflow: hidden; /* Hide any overflow caused by scaling */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Scale up the card slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
 }
 
 .card-img-top {
