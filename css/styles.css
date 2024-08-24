@@ -30,30 +30,28 @@ main {
     position: relative;
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 5%; /* Adjust this value to control the height of the gradient */
-    background: linear-gradient(to top, rgb(30, 30, 30), transparent 100%);
-    z-index: 1; /* Ensure the gradient is below the text */
-}
+
 
 .welcome-container {
     text-align: center;
     opacity: 0;
-    animation: fadeIn 1.5s forwards;
+    border: 5px solid rgb(161, 199, 255);
+    animation: fadeIn 1.5s forwards, animateborder 2s infinite;
     position: relative; 
     z-index: 2; 
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     border-radius: 15px; /* Rounded corners */
     padding: 20px; /* Padding inside the box */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for depth */
+    
+    /* animation-delay: 5s; */
     max-width: 80%; /* Optional: Limit the width of the box */
     margin: 0 auto; /* Center the box */
 }
+
+@keyframes animateborder {
+    50% {border-color: lightblue;}
+  }
 
 .welcome-title {
     font-size: 4rem;
@@ -70,18 +68,59 @@ main {
 .arrow {
     opacity: 0;
     font-size: 2rem;
-    animation: fadeIn 1.5s forwards, bounce 1s infinite;
+    animation: fadeIn 1.5s forwards, slideIn 2s forwards;
     animation-delay: 1.5s;
     cursor: pointer;
     display: inline-block; /* Keep it inline-block for proper sizing */
-    padding: 10px; /* Add padding to create an invisible clickable area */
+    padding-top: 23px;
+    padding-bottom: 20px;
+    padding-left: 14px;
+    padding-right: 10px;
     transition: color 0.3s; /* Smooth transition for color change */
+    writing-mode: vertical-lr;
 }
 
 .arrow:hover {
     color: rgba(68, 180, 255, 0.6); /* Change the arrow color on hover */
 }
 
+.center-animation {
+    position: relative; /* Ensure positioning context for pseudo-elements */
+}
+
+.center-animation:hover {
+color: white; /* Replace with the desired color */
+}
+
+.center-animation::before,
+.center-animation::after {
+content: ""; /* Required for pseudo-elements */
+position: absolute; /* Positioning for scaling */
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+transform-origin: center; /* Ensure scaling is done from the center (expands outwards) */
+}
+
+.center-animation::before {
+border-top: 2px solid white; /* Replace with the desired color */
+border-bottom: 2px solid white; /* Replace with the desired color */
+transform: scale3d(0, 1, 1); /* Shrink only width */
+}
+
+.center-animation::after {
+border-left: 2px solid white; /* Replace with the desired color */
+border-right: 2px solid white; /* Replace with the desired color */
+transform: scale3d(1, 0, 1); /* Shrink only height */
+}
+
+.center-animation:hover::before,
+.center-animation:hover::after {
+transform: scale3d(1, 1, 1); /* Show full-size */
+transition: transform 1s;
+}
+  
 
 @keyframes fadeIn {
     from {
@@ -115,7 +154,9 @@ main {
     }
 }
 
-
+.card-row {
+    padding-top: 20px;
+}
 .card .card-img-top{
     max-width: 300px;
 }
@@ -124,7 +165,13 @@ main {
     width: 300px;
     cursor: pointer;
     margin-bottom: 20px;
-    border: 3px solid rgb(40, 40, 40); /* Set a darker border color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+    overflow: hidden; /* Hide any overflow caused by scaling */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Scale up the card slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
 }
 
 .card-img-top {
@@ -141,6 +188,15 @@ main {
     color: rgb(230, 230, 230);
 }
 
+/* Scale Effect on Navbar Links */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Scale up the link */
+    color: rgb(161, 199, 255); /* Change color on hover */
+}
 
 header, footer {
     background-color: rgb(15, 15, 15);
