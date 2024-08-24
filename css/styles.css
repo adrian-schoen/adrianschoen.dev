@@ -25,6 +25,18 @@ body {
     position: relative; /* Keep this for positioning text */
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5%; /* Adjust this value to control the height of the gradient */
+    background: linear-gradient(to top, rgb(30, 30, 30), transparent 100%);
+    z-index: 1; /* Ensure the gradient is below the text */
+}
+
+
 
 .welcome-container {
     text-align: center; /* Align text to the left */
