@@ -1,19 +1,125 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    color: rgb(230, 230, 230);
+    background-color: rgb(30, 30, 30);
 }
 
-.jumbotron {
-    background: linear-gradient(to right, #007bff, #0056b3);
+.hero {
+    background-image: url(../images/welcome-back.jpg);
+    background-size: cover; /* Cover the entire hero section */
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
 }
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5%; /* Adjust this value to control the height of the gradient */
+    background: linear-gradient(to top, rgb(30, 30, 30), transparent 100%);
+    z-index: 1; /* Ensure the gradient is below the text */
+}
+
+.welcome-container {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    position: relative; 
+    z-index: 2; 
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for depth */
+    max-width: 80%; /* Optional: Limit the width of the box */
+    margin: 0 auto; /* Center the box */
+}
+
+.welcome-title {
+    font-size: 4rem;
+    margin: 0;
+    animation: slideIn 1s forwards;
+}
+
+.welcome-subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: slideIn 1.2s forwards;
+}
+
+.arrow {
+    opacity: 0;
+    font-size: 2rem;
+    animation: fadeIn 1.5s forwards, bounce 1s infinite;
+    animation-delay: 1.5s;
+    cursor: pointer;
+    display: inline-block; /* Keep it inline-block for proper sizing */
+    padding: 10px; /* Add padding to create an invisible clickable area */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.arrow:hover {
+    color: rgba(68, 180, 255, 0.6); /* Change the arrow color on hover */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 
 .card .card-img-top{
     max-width: 300px;
 }
+
 .card {
     width: 300px;
     cursor: pointer;
     margin-bottom: 20px;
+    border: 3px solid rgb(40, 40, 40); /* Set a darker border color */
 }
 
 .card-img-top {
@@ -22,6 +128,37 @@ body {
     object-fit: cover; /* Maintain aspect ratio and cover the area */
 }
 
-footer {
-    background-color: #0056b3;
+.modal-content {
+    background-color: rgb(50, 50, 50);
+}
+.card-body {
+    background-color: rgb(40, 40, 40);
+    color: rgb(230, 230, 230);
+}
+
+.sticky-header,
+.sticky-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    opacity: 0; /* Initially invisible */
+}
+
+.sticky-header.visible,
+.sticky-footer.visible {
+    animation: fadeIn 0.75s forwards;
+    animation-delay: 0.5s;
+}
+
+.sticky-header {
+    top: 0; /* Position at the top */
+}
+
+.sticky-footer {
+    bottom: 0; /* Position at the bottom */
+}
+
+header, footer {
+    background-color: rgb(15, 15, 15);
 }
