@@ -7,9 +7,20 @@ $(document).ready(function() {
     $('#scrollDown').click(function() {
         // Allow scrolling
         $('html, body').css('overflow', 'auto');
-        // Animate scroll to the main content
+        
+        // Get the height of the header
+        var headerHeight = $('#header').outerHeight();
+
+        // Correctly select the arrow and main elements
+        var $scrollTo = $('main');
+        
+        // Animate the scrolling to the main section
         $('html, body').animate({
-            scrollTop: $('main').offset().top
-        }, 1000);
+            scrollTop: $scrollTo.offset().top - headerHeight
+        }, 800); // You can adjust the duration of the animation here
+
+        // Add sticky classes to header and footer
+        $('#header').addClass('sticky-header visible');
+        $('footer').addClass('sticky-footer visible');
     });
 });
