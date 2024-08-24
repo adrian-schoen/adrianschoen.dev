@@ -16,7 +16,7 @@ $(document).ready(function() {
         
         // Animate the scrolling to the main section
         $('html, body').animate({
-            scrollTop: $scrollTo.offset().top - headerHeight
+            scrollTop: $scrollTo.offset().top - 20
         }, 800); // You can adjust the duration of the animation here
 
         $('#header').addClass('fading-header visible');
