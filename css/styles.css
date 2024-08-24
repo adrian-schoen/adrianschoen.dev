@@ -11,6 +11,11 @@ body {
     background-color: rgb(30, 30, 30);
 }
 
+main {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 .hero {
     background-image: url(../images/welcome-back.jpg);
     background-size: cover; /* Cover the entire hero section */
@@ -136,8 +141,25 @@ body {
     color: rgb(230, 230, 230);
 }
 
-.sticky-header,
-.sticky-footer {
+
+header, footer {
+    background-color: rgb(15, 15, 15);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+.fading-header,
+.fading-footer {
     position: fixed;
     left: 0;
     right: 0;
@@ -145,20 +167,28 @@ body {
     opacity: 0; /* Initially invisible */
 }
 
-.sticky-header.visible,
-.sticky-footer.visible {
+.fading-header.visible,
+.fading-footer.visible {
     animation: fadeIn 0.75s forwards;
     animation-delay: 0.5s;
 }
 
-.sticky-header {
-    top: 0; /* Position at the top */
-}
 
-.sticky-footer {
-    bottom: 0; /* Position at the bottom */
-}
-
-header, footer {
-    background-color: rgb(15, 15, 15);
+.watermark {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate and center */
+    font-size: 100px; /* Adjust size */
+    color: white; /* Base color */
+    text-shadow: 
+        2px 2px 0 black, /* Black shadow */
+        -2px -2px 0 black, /* Black shadow */
+        2px -2px 0 black, /* Black shadow */
+        -2px 2px 0 black; /* Black shadow */
+    opacity: 0.5; /* Adjust transparency */
+    pointer-events: none; /* Prevent interaction with the watermark */
+    z-index: 9999; /* Ensure it appears above other content */
+    user-select: none; /* Prevent text selection */
+    white-space: nowrap; /* Prevent wrapping */
 }
