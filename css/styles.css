@@ -12,17 +12,17 @@ body {
 }
 
 .hero {
-    background-image: url(../images/welcome-back.jpg); /* Set your background image */
+    background-image: url(../images/welcome-back.jpg);
     background-size: cover; /* Cover the entire hero section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; 
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
-    position: relative; /* Keep this for positioning text */
+    position: relative;
 }
 
 .hero::after {
@@ -36,15 +36,18 @@ body {
     z-index: 1; /* Ensure the gradient is below the text */
 }
 
-
-
 .welcome-container {
-    text-align: center; /* Align text to the left */
+    text-align: center;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
-    position: relative; /* Added to position the text above the pseudo-element */
-    z-index: 2; /* Ensure text is above the black half-circle */
-    margin-left: 5%; /* Add some left margin for spacing */
+    position: relative; 
+    z-index: 2; 
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for depth */
+    max-width: 80%; /* Optional: Limit the width of the box */
+    margin: 0 auto; /* Center the box */
 }
 
 .welcome-title {
@@ -65,7 +68,15 @@ body {
     animation: fadeIn 1.5s forwards, bounce 1s infinite;
     animation-delay: 1.5s;
     cursor: pointer;
+    display: inline-block; /* Keep it inline-block for proper sizing */
+    padding: 10px; /* Add padding to create an invisible clickable area */
+    transition: color 0.3s; /* Smooth transition for color change */
 }
+
+.arrow:hover {
+    color: rgba(68, 180, 255, 0.6); /* Change the arrow color on hover */
+}
+
 
 @keyframes fadeIn {
     from {

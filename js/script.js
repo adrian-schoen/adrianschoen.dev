@@ -5,8 +5,8 @@ $(document).ready(function() {
     });
 
     $('#scrollDown').click(function() {
-        // Allow scrolling
-        $('html, body').css('overflow', 'auto');
+        // // Allow scrolling
+        // $('html, body').css('overflow', 'auto');
         
         // Get the height of the header
         var headerHeight = $('#header').outerHeight();
