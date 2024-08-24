@@ -104,12 +104,14 @@ transform-origin: center; /* Ensure scaling is done from the center (expands out
 }
 
 .center-animation::before {
+    border-radius: 10px;
 border-top: 2px solid white; /* Replace with the desired color */
 border-bottom: 2px solid white; /* Replace with the desired color */
 transform: scale3d(0, 1, 1); /* Shrink only width */
 }
 
 .center-animation::after {
+    border-radius: 10px;
 border-left: 2px solid white; /* Replace with the desired color */
 border-right: 2px solid white; /* Replace with the desired color */
 transform: scale3d(1, 0, 1); /* Shrink only height */
