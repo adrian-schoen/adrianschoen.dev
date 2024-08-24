@@ -19,8 +19,7 @@ $(document).ready(function() {
             scrollTop: $scrollTo.offset().top - headerHeight
         }, 800); // You can adjust the duration of the animation here
 
-        // Add sticky classes to header and footer
-        $('#header').addClass('sticky-header visible');
-        $('footer').addClass('sticky-footer visible');
+        $('#header').addClass('fading-header visible');
+        $('footer').addClass('fading-footer visible');
     });
 });
