@@ -1,13 +1,13 @@
 $(document).ready(function() {
-    // Prevent manual scrolling
-    $(window).on('wheel touchmove', function(e) {
-        e.preventDefault();
-    });
+    // Check if the current page is index.html
+    if (window.location.pathname.endsWith('index.html')) {
+        // Prevent manual scrolling
+        $(window).on('wheel touchmove', function(e) {
+            e.preventDefault();
+        });
+    }
 
     $('#scrollDown').click(function() {
-        // // Allow scrolling
-        // $('html, body').css('overflow', 'auto');
-        
         // Get the height of the header
         var headerHeight = $('#header').outerHeight();
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
         
         // Animate the scrolling to the main section
         $('html, body').animate({
-            scrollTop: $scrollTo.offset().top - 20
+            scrollTop: $scrollTo.offset().top - headerHeight // Adjusted to account for header height
         }, 800); // You can adjust the duration of the animation here
 
         $('#header').addClass('fading-header visible');

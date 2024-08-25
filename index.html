@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="index-html-page">
     <div class="watermark">WORK IN PROGRESS</div>
 
     <header id="header" class="fading-header">
@@ -20,13 +20,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="html/about.html">About Me</a>
+                            <a class="nav-link active" href="html/about.html">About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="html/projects.html">My Projects</a>
+                            <a class="nav-link active" href="html/projects.html">My Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="html/contact.html">Contact Me</a>
+                            <a class="nav-link active" href="html/contact.html">Contact Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="html/cv.html">CV</a>
                         </li>
                     </ul>
                 </div>
@@ -44,15 +47,28 @@
     <main>
         <section id="summary" class="container py-5">
             <h2 class="text-center">Welcome to My Portfolio</h2>
-            <p class="text-center">I am a passionate software developer with experience in various technologies. Explore my work and learn more about me.</p>
+            <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.
+            </p>
             <div class="text-center">
-                <a href="html/about.html" class="btn btn-primary">Learn More About Me</a>
                 <a href="html/projects.html" class="btn btn-primary">View My Projects</a>
-                <a href="html/contact.html" class="btn btn-primary">Contact Me</a>
             </div>
         </section>
+    
+        <section id="links" class="container py-5">
+            <h2 class="text-center">Connect with Me</h2>
+            <p class="text-center">Feel free to check out my GitHub and the repository for this portfolio:</p>
+            <div class="text-center">
+                <a href="https://github.com/adrian-schoen" class="btn btn-secondary" target="_blank">My GitHub Profile</a>
+                <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-secondary" target="_blank">View This Portfolio Repo</a>
+            </div>
+            <h2 class="text-center" style="margin-top: 5%;">Contact Me</h2>
+            <p class="text-center">If you'd like to get in touch, feel free to reach out on <a href="mailto:your-email@example.com">myemail@example.com</a>.</p>
+        </section>
+
         <div class="index-filler" style="height: 100vh;"></div>
     </main>
+    
 
     <footer class="fading-footer text-center py-3">
         <p>&copy; 2024 Adrian Schoen. All Rights Reserved.</p>

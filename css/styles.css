@@ -1,7 +1,10 @@
+.index-html-page {
+    overflow: hidden; /* Prevent scrolling */
+
+}
 body, html {
     height: 100%;
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 body {
@@ -104,12 +107,14 @@ transform-origin: center; /* Ensure scaling is done from the center (expands out
 }
 
 .center-animation::before {
+    border-radius: 10px;
 border-top: 2px solid white; /* Replace with the desired color */
 border-bottom: 2px solid white; /* Replace with the desired color */
 transform: scale3d(0, 1, 1); /* Shrink only width */
 }
 
 .center-animation::after {
+    border-radius: 10px;
 border-left: 2px solid white; /* Replace with the desired color */
 border-right: 2px solid white; /* Replace with the desired color */
 transform: scale3d(1, 0, 1); /* Shrink only height */
@@ -180,6 +185,11 @@ transition: transform 1s;
     object-fit: cover; /* Maintain aspect ratio and cover the area */
 }
 
+.modal-img {
+    width: 500px;
+    max-width: 500px;
+}
+
 .modal-content {
     background-color: rgb(50, 50, 50);
 }
@@ -247,4 +257,11 @@ footer {
     z-index: 9999; /* Ensure it appears above other content */
     user-select: none; /* Prevent text selection */
     white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Additional styles for the iframe */
+.cv-iframe {
+    width: 70%;
+    height: 80vh; /* Adjust height as needed */
+    border: none; /* Remove border */
 }
