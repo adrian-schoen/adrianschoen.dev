@@ -219,15 +219,3 @@ document.addEventListener('DOMContentLoaded', loadLanguage);
 document.querySelector('#language-selector').addEventListener('change', (event) => {
     switchLanguage(event.target.value);
 });
-
-
-function loadLanguage() {
-    const lang = sessionStorage.getItem('language') || 'de'; // Default to German
-    switchLanguage(lang);
-}
-
-document.addEventListener('DOMContentLoaded', loadLanguage);
-
-document.querySelector('#language-selector').addEventListener('change', (event) => {
-    switchLanguage(event.target.value);
-});
