@@ -130,7 +130,8 @@ const translations = {
 function switchLanguage(lang) {
     sessionStorage.setItem('language', lang);
     
-    const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
+    const currentPage = window.location.href.split('/').pop();
+
 
     // Navigation
     document.querySelector('#nav-about-me').textContent = translations[lang].navAboutMe;
@@ -139,7 +140,7 @@ function switchLanguage(lang) {
     document.querySelector('#nav-cv').textContent = translations[lang].navCv;
 
     // Index Page
-    if (currentPage === 'index.html') {
+    if (currentPage === '' || currentPage ==='index.html') {
         document.querySelector('#index-greeting').textContent = translations[lang].indexGreeting;
         document.querySelector('#index-greeting-text').textContent = translations[lang].indexGreetingText;
         document.querySelector('#index-view-projects-button').textContent = translations[lang].indexViewProjectsButton;
@@ -152,21 +153,21 @@ function switchLanguage(lang) {
     }
 
     // About Page
-    if (currentPage === 'about.html') {
+    if (currentPage === 'about' || currentPage === 'about.html') {
         document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
         document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
         document.querySelector('#about-back-button').textContent = translations[lang].aboutBackButton;
     }
 
     // Contact Page
-    if (currentPage === 'contact.html') {
+    if (currentPage === 'contact' || currentPage === 'contact.html') {
         document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
         document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
         document.querySelector('#contact-back-button').textContent = translations[lang].contactBackButton;
     }
 
     // CV Page
-    if (currentPage === 'cv.html') {
+    if (currentPage === 'cv' || currentPage === 'cv.html') {
         document.querySelector('#cv-cv').textContent = translations[lang].cvCv;
         document.querySelector('#cv-cv-text').textContent = translations[lang].cvCvText;
         document.querySelector('#cv-workexperience').textContent = translations[lang].cvWorkexperience;
