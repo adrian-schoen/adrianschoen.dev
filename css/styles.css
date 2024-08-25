@@ -1,7 +1,10 @@
+.index-html-page {
+    overflow: hidden; /* Prevent scrolling */
+
+}
 body, html {
     height: 100%;
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 body {
@@ -254,4 +257,11 @@ footer {
     z-index: 9999; /* Ensure it appears above other content */
     user-select: none; /* Prevent text selection */
     white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Additional styles for the iframe */
+.cv-iframe {
+    width: 70%;
+    height: 80vh; /* Adjust height as needed */
+    border: none; /* Remove border */
 }
