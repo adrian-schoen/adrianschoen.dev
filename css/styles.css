@@ -1,17 +1,15 @@
-.index-html-page {
-    overflow: hidden; /* Prevent scrolling */
-
-}
+/* General Styles */
 body, html {
     height: 100%;
     margin: 0;
-}
-
-body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: rgb(230, 230, 230);
     background-color: rgb(30, 30, 30);
+}
+
+.index-html-page {
+    overflow: hidden; /* Disable scrolling */
 }
 
 main {
@@ -21,8 +19,8 @@ main {
 
 .hero {
     background-image: url(../images/welcome-back.jpg);
-    background-size: cover; /* Cover the entire hero section */
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -33,107 +31,100 @@ main {
     position: relative;
 }
 
-
-
 .welcome-container {
     text-align: center;
     opacity: 0;
     border: 5px solid rgb(161, 199, 255);
     animation: fadeIn 1.5s forwards, animateborder 2s infinite;
-    position: relative; 
-    z-index: 2; 
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px; /* Padding inside the box */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for depth */
-    
-    /* animation-delay: 5s; */
-    max-width: 80%; /* Optional: Limit the width of the box */
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 80%; /* Limit box width */
     margin: 0 auto; /* Center the box */
 }
 
 @keyframes animateborder {
-    50% {border-color: lightblue;}
-  }
+    50% { border-color: lightblue; }
+}
+
+/* Text Animations */
+.welcome-title, .welcome-subtitle {
+    animation: slideIn forwards;
+}
 
 .welcome-title {
     font-size: 4rem;
     margin: 0;
-    animation: slideIn 1s forwards;
+    animation-duration: 1s;
 }
 
 .welcome-subtitle {
     font-size: 1.5rem;
     margin: 20px 0;
-    animation: slideIn 1.2s forwards;
+    animation-duration: 1.2s;
 }
 
+/* Arrow Animation */
 .arrow {
     opacity: 0;
     font-size: 2rem;
     animation: fadeIn 1.5s forwards, slideIn 2s forwards;
     animation-delay: 1.5s;
     cursor: pointer;
-    display: inline-block; /* Keep it inline-block for proper sizing */
-    padding-top: 23px;
-    padding-bottom: 20px;
-    padding-left: 14px;
-    padding-right: 10px;
-    transition: color 0.3s; /* Smooth transition for color change */
+    display: inline-block;
+    padding: 23px 10px 20px 14px;
+    transition: color 0.3s;
     writing-mode: vertical-lr;
 }
 
 .arrow:hover {
-    color: rgba(68, 180, 255, 0.6); /* Change the arrow color on hover */
+    color: rgba(68, 180, 255, 0.6); /* Change color on hover */
 }
 
 .center-animation {
-    position: relative; /* Ensure positioning context for pseudo-elements */
+    position: relative;
 }
 
 .center-animation:hover {
-color: white; /* Replace with the desired color */
+    color: white; /* Hover color */
 }
 
 .center-animation::before,
 .center-animation::after {
-content: ""; /* Required for pseudo-elements */
-position: absolute; /* Positioning for scaling */
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-transform-origin: center; /* Ensure scaling is done from the center (expands outwards) */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+    border-radius: 10px;
 }
 
 .center-animation::before {
-    border-radius: 10px;
-border-top: 2px solid white; /* Replace with the desired color */
-border-bottom: 2px solid white; /* Replace with the desired color */
-transform: scale3d(0, 1, 1); /* Shrink only width */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: scale3d(0, 1, 1);
 }
 
 .center-animation::after {
-    border-radius: 10px;
-border-left: 2px solid white; /* Replace with the desired color */
-border-right: 2px solid white; /* Replace with the desired color */
-transform: scale3d(1, 0, 1); /* Shrink only height */
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    transform: scale3d(1, 0, 1);
 }
 
 .center-animation:hover::before,
 .center-animation:hover::after {
-transform: scale3d(1, 1, 1); /* Show full-size */
-transition: transform 1s;
+    transform: scale3d(1, 1, 1);
+    transition: transform 1s;
 }
-  
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideIn {
@@ -148,66 +139,59 @@ transition: transform 1s;
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
 }
 
 .card-row {
     padding-top: 20px;
-}
-.card .card-img-top{
-    max-width: 300px;
 }
 
 .card {
     width: 300px;
     cursor: pointer;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
-    overflow: hidden; /* Hide any overflow caused by scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Hide overflow */
 }
 
 .card:hover {
-    transform: scale(1.1); /* Scale up the card slightly */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .card-img-top {
-    width: 100%; /* Make the image take the full width of the card */
-    height: auto; /* Allow the height to adjust automatically */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    max-width: 300px;
+    width: 100%; /* Full width */
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
-.modal-img {
-    width: 500px;
-    max-width: 500px;
-}
-
-.modal-content {
-    background-color: rgb(50, 50, 50);
-}
 .card-body {
     background-color: rgb(40, 40, 40);
     color: rgb(230, 230, 230);
 }
 
-/* Scale Effect on Navbar Links */
+.modal-img {
+    max-width: 500px;
+    width: 500px;
+}
+
+.modal-content {
+    background-color: rgb(50, 50, 50);
+}
+
 .navbar-nav .nav-link {
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    transform: scale(1.1); /* Scale up the link */
-    color: rgb(161, 199, 255); /* Change color on hover */
+    transform: scale(1.1);
+    color: rgb(161, 199, 255);
 }
 
+/* Header & Footer */
 header, footer {
     background-color: rgb(15, 15, 15);
     position: fixed;
@@ -216,21 +200,16 @@ header, footer {
     z-index: 1000;
 }
 
-header {
-    top: 0;
-}
-
-footer {
-    bottom: 0;
-}
+header { top: 0; }
+footer { bottom: 0; }
 
 .fading-header,
 .fading-footer {
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-    opacity: 0; /* Initially invisible */
+    z-index: 1000;
+    opacity: 0;
 }
 
 .fading-header.visible,
@@ -239,31 +218,29 @@ footer {
     animation-delay: 0.5s;
 }
 
-
 .watermark {
-    position: fixed; /* Keep it fixed on the screen */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate and center */
-    font-size: 100px; /* Adjust size */
-    color: white; /* Base color */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 100px;
+    color: white;
     text-shadow: 
-        2px 2px 0 black, /* Black shadow */
-        -2px -2px 0 black, /* Black shadow */
-        2px -2px 0 black, /* Black shadow */
-        -2px 2px 0 black; /* Black shadow */
-    opacity: 0.5; /* Adjust transparency */
-    pointer-events: none; /* Prevent interaction with the watermark */
-    z-index: 9999; /* Ensure it appears above other content */
-    user-select: none; /* Prevent text selection */
+        2px 2px 0 black,
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px 2px 0 black;
+    opacity: 0.5;
+    pointer-events: none; /* No interaction */
+    z-index: 9999;
+    user-select: none;
     white-space: nowrap; /* Prevent wrapping */
 }
 
-/* Additional styles for the iframe */
 .cv-iframe {
     width: 70%;
-    height: 80vh; /* Adjust height as needed */
-    border: none; /* Remove border */
+    height: 80vh;
+    border: none; /* No border */
 }
 
 .btn-primary {
