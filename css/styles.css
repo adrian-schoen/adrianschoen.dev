@@ -1,15 +1,17 @@
+/* Global Variables */
+:root {
+    --white: rgb(230, 230, 230);
+    --background-black: rgb(20, 20, 20);
+}
+
 /* General Styles */
 body, html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: rgb(230, 230, 230);
-    background-color: rgb(30, 30, 30);
-}
-
-.index-html-page {
-    overflow: hidden; /* Disable scrolling */
+    color: var(--white);
+    background-color: var(--background-black)
 }
 
 main {
@@ -18,10 +20,6 @@ main {
 }
 
 .hero {
-    background-image: url(../images/welcome-back.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,20 +32,30 @@ main {
 .welcome-container {
     text-align: center;
     opacity: 0;
-    border: 5px solid rgb(161, 199, 255);
-    animation: fadeIn 1.5s forwards, animateborder 2s infinite;
+    border: 5px solid rgba(160, 200, 255, 0.2);
+    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 5s infinite, welcomeAnimateBoxShadow 5s infinite;
     position: relative;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(160, 200, 255, 0.3);
     max-width: 80%; /* Limit box width */
     margin: 0 auto; /* Center the box */
 }
 
-@keyframes animateborder {
-    50% { border-color: lightblue; }
+@keyframes welcomeFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes welcomeAnimateBorder {
+    0%, 100% { border-color: rgba(160, 200, 255, 0.2); }
+    50% { border-color: rgba(160, 200, 255, 0.4); }
+}
+
+@keyframes welcomeAnimateBoxShadow {
+    0%, 100% { box-shadow: 0 4px 20px rgba(160, 200, 255, 0.3); }
+    50% { box-shadow: 0 4px 40px rgba(160, 200, 255, 0.4); }
 }
 
 /* Text Animations */
@@ -67,30 +75,36 @@ main {
     animation-duration: 1.2s;
 }
 
-/* Arrow Animation */
 .arrow {
     opacity: 0;
     font-size: 2rem;
-    animation: fadeIn 1.5s forwards, slideIn 2s forwards;
+    animation: slideIn 1.5s forwards, fadeIn 1.5s forwards;
     animation-delay: 1.5s;
     cursor: pointer;
     display: inline-block;
     padding: 23px 10px 20px 14px;
     transition: color 0.3s;
     writing-mode: vertical-lr;
+    text-align: center;
 }
 
-.arrow:hover {
-    color: rgba(68, 180, 255, 0.6); /* Change color on hover */
+.center-animation:hover{
+    color: white;
+    transform: scale(1.05);
 }
 
 .center-animation {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Adjust the size to fit the arrow */
+    height: 80px; /* Adjust the size to fit the arrow */
+    margin: 0 auto;
     position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
-.center-animation:hover {
-    color: white; /* Hover color */
-}
 
 .center-animation::before,
 .center-animation::after {
@@ -105,22 +119,46 @@ main {
 }
 
 .center-animation::before {
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
     transform: scale3d(0, 1, 1);
 }
 
 .center-animation::after {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--white);
     transform: scale3d(1, 0, 1);
 }
 
-.center-animation:hover::before,
-.center-animation:hover::after {
-    transform: scale3d(1, 1, 1);
-    transition: transform 1s;
+.center-animation::before {
+    animation: scaleBefore 3s forwards; /* Animate before */
+    animation-delay: 3s; /* Delay the animation by 3 seconds */
 }
+
+.center-animation::after {
+    animation: scaleAfter 3s forwards; /* Animate after */
+    animation-delay: 3s; /* Delay the animation by 3 seconds */
+}
+
+/* Keyframe animations for before and after */
+@keyframes scaleBefore {
+    0% {
+        transform: scale3d(0, 1, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes scaleAfter {
+    0% {
+        transform: scale3d(1, 0, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -136,12 +174,6 @@ main {
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
 }
 
 .card-row {
@@ -215,10 +247,21 @@ footer { bottom: 0; }
 .fading-header.visible,
 .fading-footer.visible {
     animation: fadeIn 0.75s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1s;
+}
+
+.cv-iframe {
+    width: 70%;
+    height: 80vh;
+    border: none; /* No border */
+}
+
+.btn-primary {
+    margin: 20px;
 }
 
 .watermark {
+    opacity: 0;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -230,19 +273,8 @@ footer { bottom: 0; }
         -2px -2px 0 black,
         2px -2px 0 black,
         -2px 2px 0 black;
-    opacity: 0.5;
     pointer-events: none; /* No interaction */
     z-index: 9999;
     user-select: none;
     white-space: nowrap; /* Prevent wrapping */
-}
-
-.cv-iframe {
-    width: 70%;
-    height: 80vh;
-    border: none; /* No border */
-}
-
-.btn-primary {
-    margin: 20px;
 }
