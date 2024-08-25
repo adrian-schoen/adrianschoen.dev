@@ -19,6 +19,24 @@ const translations = {
         aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         aboutBackButton: "Back to Home",
 
+        projectsTitle: "My Projects",
+        projectsTitle1: "adrianschoen.dev",
+        projectsTitle1Text: "This very website you are on.",
+        projectsTitle2: "Project 2",
+        projectsTitle2Text: "Description of project 2.",
+        projectsTitle3: "Project 3",
+        projectsTitle3Text: "Description of project 3.",
+        projectsTitle1ModalTitle1: "Project 1",
+        projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle1ModalTitle1Button: "View on Github",
+        projectsTitle2ModalTitle2: "Project 2",
+        projectsTitle2ModalTitle2Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle2ModalTitle2Button: "View on Github",
+        projectsTitle3ModalTitle3: "Project 3",
+        projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle3ModalTitle3Button: "View on Github",
+        projectsBackButton: "Back to Home",
+
         contactContactMe: "Contact Me",
         contactContactMeText: "If you'd like to get in touch, feel free to reach out on ",
         contactBackButton: "Back to Home",
@@ -81,6 +99,24 @@ const translations = {
         aboutAboutMe: "Über Mich",
         aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         aboutBackButton: "Zurück zur Startseite",
+        
+        projectsTitle: "Meine Projekte",
+        projectsTitle1: "adrianschoen.dev",
+        projectsTitle1Text: "Auf dieser Website befinden Sie sich gerade.",
+        projectsTitle2: "Projekt 2",
+        projectsTitle2Text: "Beschreibung von Projekt 2.",
+        projectsTitle3: "Projekt 3",
+        projectsTitle3Text: "Beschreibung von Projekt 3.",
+        projectsTitle1ModalTitle1: "adrianschoen.dev",
+        projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle1ModalTitle1Button: "Zur GitHub Repo",
+        projectsTitle2ModalTitle2: "Projekt 2",
+        projectsTitle2ModalTitle2Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle2ModalTitle2Button: "Zur GitHub Repo",
+        projectsTitle3ModalTitle3: "Projekt 3",
+        projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle3ModalTitle3Button: "Zur GitHub Repo",
+        projectsBackButton: "Zurück zur Startseite",
 
         contactContactMe: "Kontakt",
         contactContactMeText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
@@ -158,6 +194,28 @@ function switchLanguage(lang) {
         document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
         document.querySelector('#about-back-button').textContent = translations[lang].aboutBackButton;
     }
+
+    // Projects Page
+    if (currentPage === 'projects' || currentPage === 'projects.html') {
+        document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
+        document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
+        document.querySelector('#projects-title-1-text').textContent = translations[lang].projectsTitle1Text;
+        document.querySelector('#projects-title-2').textContent = translations[lang].projectsTitle2;
+        document.querySelector('#projects-title-2-text').textContent = translations[lang].projectsTitle2Text;
+        document.querySelector('#projects-title-3').textContent = translations[lang].projectsTitle3;
+        document.querySelector('#projects-title-3-text').textContent = translations[lang].projectsTitle3Text;
+        document.querySelector('#projects-title-1-modal-title-1').textContent = translations[lang].projectsTitle1ModalTitle1;
+        document.querySelector('#projects-title-1-modal-title-1-text').textContent = translations[lang].projectsTitle1ModalTitle1Text;
+        document.querySelector('#projects-title-1-modal-title-1-button').textContent = translations[lang].projectsTitle1ModalTitle1Button;
+        document.querySelector('#projects-title-2-modal-title-2').textContent = translations[lang].projectsTitle2ModalTitle2;
+        document.querySelector('#projects-title-2-modal-title-2-text').textContent = translations[lang].projectsTitle2ModalTitle2Text;
+        document.querySelector('#projects-title-2-modal-title-2-button').textContent = translations[lang].projectsTitle2ModalTitle2Button;
+        document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
+        document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
+        document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
+        document.querySelector('#projects-back-button').textContent = translations[lang].projectsBackButton;
+    }
+
 
     // Contact Page
     if (currentPage === 'contact' || currentPage === 'contact.html') {
