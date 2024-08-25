@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Adrian Schoen Portfolio</title>
+    <title>Adrian Schön</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -13,25 +13,36 @@
     <header id="header" class="fading-header">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Adrian Schoen</a>
+                <a class="navbar-brand" href="javascript:void(0);">Adrian Schön</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="html/about.html">About Me</a>
+                            <a class="nav-link active" id="nav-about-me" href="html/about.html"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="html/projects.html">My Projects</a>
+                            <a class="nav-link active" id="nav-my-projects" href="html/projects.html"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="html/contact.html">Contact Me</a>
+                            <a class="nav-link active" id="nav-contact-me" href="html/contact.html"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="html/cv.html">CV</a>
+                            <a class="nav-link active" id="nav-cv" href="html/cv.html"></a>
                         </li>
                     </ul>
+                    <div class="ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="javascript:void(0);" onclick="switchLanguage('en')">English</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);" onclick="switchLanguage('de')">Deutsch</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -45,36 +56,34 @@
         </div>
     </div>
     <main>
-        <section id="summary" class="container py-5">
-            <h2 class="text-center">Welcome to My Portfolio</h2>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.
-            </p>
+        <section class="container py-5">
+            <h2 class="text-center" id="index-greeting"></h2>
+            <p class="text-center" id="index-greeting-text"></p>
             <div class="text-center">
-                <a href="html/projects.html" class="btn btn-primary">View My Projects</a>
+                <a href="html/projects.html" class="btn btn-primary" id="index-view-projects-button"></a>
             </div>
         </section>
     
         <section id="links" class="container py-5">
-            <h2 class="text-center">Connect with Me</h2>
-            <p class="text-center">Feel free to check out my GitHub and the repository for this portfolio:</p>
+            <h2 class="text-center" id="index-connect"></h2>
+            <p class="text-center" id="index-connect-subtitle"></p>
             <div class="text-center">
-                <a href="https://github.com/adrian-schoen" class="btn btn-secondary" target="_blank">My GitHub Profile</a>
-                <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-secondary" target="_blank">View This Portfolio Repo</a>
+                <a href="https://github.com/adrian-schoen" class="btn btn-secondary" id="index-github-profile-button" target="_blank"></a>
+                <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-secondary" id="index-github-repo-button" target="_blank"></a>
             </div>
-            <h2 class="text-center" style="margin-top: 5%;">Contact Me</h2>
-            <p class="text-center">If you'd like to get in touch, feel free to reach out on <a href="mailto:your-email@example.com">myemail@example.com</a>.</p>
+            <h2 class="text-center" style="margin-top: 5%;" id="index-contact"></h2>
+            <p class="text-center" id="contact-text"> <a href="mailto:your-email@example.com">myemail@example.com</a>.</p>
         </section>
 
         <div class="index-filler" style="height: 100vh;"></div>
     </main>
     
-
     <footer class="fading-footer text-center py-3">
         <p>&copy; 2024 Adrian Schoen. All Rights Reserved.</p>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="js/language-switcher.js"></script>
         <script src="js/script.js"></script>
     </footer>
 </body>
