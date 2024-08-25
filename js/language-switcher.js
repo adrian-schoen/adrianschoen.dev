@@ -1,10 +1,12 @@
 const translations = {
     en: {
+        // Navbar
         navAboutMe: "About Me",
         navMyProjects: "My Projects",
         navContactMe: "Contact Me",
         navCv: "CV",
 
+        // index.html
         indexGreeting: "Welcome on my Website",
         indexGreetingText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         indexViewProjectsButton: "View my Projects",
@@ -15,10 +17,12 @@ const translations = {
         indexContact: "Contact",
         indexContactText: "If you'd like to get in touch, feel free to reach out on ",
 
+        // about.html
         aboutAboutMe: "About Me",
         aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         aboutBackButton: "Back to Home",
 
+        // projects.html
         projectsTitle: "My Projects",
         projectsTitle1: "adrianschoen.dev",
         projectsTitle1Text: "This very website you are on.",
@@ -37,10 +41,12 @@ const translations = {
         projectsTitle3ModalTitle3Button: "View on Github",
         projectsBackButton: "Back to Home",
 
+        // contact.html
         contactContactMe: "Contact Me",
         contactContactMeText: "If you'd like to get in touch, feel free to reach out on ",
         contactBackButton: "Back to Home",
 
+        // cv.html
         cvCv: "Curriculum Vitae",
         cvCvText: "(I don't have a professional picture yet)",
         cvWorkexperience: "Work Experience",
@@ -81,11 +87,13 @@ const translations = {
         cvBackButton: "Back to Home"
     },
     de: {
+        // navbar
         navAboutMe: "Über Mich",
         navMyProjects: "Meine Projekte",
         navContactMe: "Kontakt",
         navCv: "Lebenslauf",
 
+        // index.html
         indexGreeting: "Wilkommen auf meiner Website",
         indexGreetingText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         indexViewProjectsButton: "Meine Projekte",
@@ -96,10 +104,12 @@ const translations = {
         indexContact: "Kontakt",
         indexContactText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
 
+        // about.html
         aboutAboutMe: "Über Mich",
         aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         aboutBackButton: "Zurück zur Startseite",
         
+        // projects.html
         projectsTitle: "Meine Projekte",
         projectsTitle1: "adrianschoen.dev",
         projectsTitle1Text: "Auf dieser Website befinden Sie sich gerade.",
@@ -118,10 +128,12 @@ const translations = {
         projectsTitle3ModalTitle3Button: "Zur GitHub Repo",
         projectsBackButton: "Zurück zur Startseite",
 
+        // contact.html
         contactContactMe: "Kontakt",
         contactContactMeText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
         contactBackButton: "Zurück zur Startseite",
 
+        // cv.html
         cvCv: "Lebenslauf",
         cvCvText: "(Ich habe noch kein professionelles Bild)",
         cvWorkexperience: "Berufserfahrung",
@@ -165,17 +177,15 @@ const translations = {
 
 function switchLanguage(lang) {
     sessionStorage.setItem('language', lang);
-    
     const currentPage = window.location.href.split('/').pop();
 
-
-    // Navigation
+    // navbar
     document.querySelector('#nav-about-me').textContent = translations[lang].navAboutMe;
     document.querySelector('#nav-my-projects').textContent = translations[lang].navMyProjects;
     document.querySelector('#nav-contact-me').textContent = translations[lang].navContactMe;
     document.querySelector('#nav-cv').textContent = translations[lang].navCv;
 
-    // Index Page
+    // index.html
     if (currentPage === '' || currentPage ==='index.html') {
         document.querySelector('#index-greeting').textContent = translations[lang].indexGreeting;
         document.querySelector('#index-greeting-text').textContent = translations[lang].indexGreetingText;
@@ -188,14 +198,14 @@ function switchLanguage(lang) {
         document.querySelector('#index-contact-text').textContent = translations[lang].indexContactText;
     }
 
-    // About Page
+    // about.html
     if (currentPage === 'about' || currentPage === 'about.html') {
         document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
         document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
         document.querySelector('#about-back-button').textContent = translations[lang].aboutBackButton;
     }
 
-    // Projects Page
+    // projects.html
     if (currentPage === 'projects' || currentPage === 'projects.html') {
         document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
         document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
@@ -216,15 +226,14 @@ function switchLanguage(lang) {
         document.querySelector('#projects-back-button').textContent = translations[lang].projectsBackButton;
     }
 
-
-    // Contact Page
+    // contact.html
     if (currentPage === 'contact' || currentPage === 'contact.html') {
         document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
         document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
         document.querySelector('#contact-back-button').textContent = translations[lang].contactBackButton;
     }
 
-    // CV Page
+    // cv.html
     if (currentPage === 'cv' || currentPage === 'cv.html') {
         document.querySelector('#cv-cv').textContent = translations[lang].cvCv;
         document.querySelector('#cv-cv-text').textContent = translations[lang].cvCvText;
@@ -265,7 +274,6 @@ function switchLanguage(lang) {
         document.querySelector('#cv-skills-languageskills-list').textContent = translations[lang].cvSkillsLanguageskillsList;
         document.querySelector('#cv-back-button').textContent = translations[lang].cvBackButton;
     }
-
 }
 
 function loadLanguage() {
@@ -274,7 +282,6 @@ function loadLanguage() {
 }
 
 document.addEventListener('DOMContentLoaded', loadLanguage);
-
 document.querySelector('#language-selector').addEventListener('change', (event) => {
     switchLanguage(event.target.value);
 });
