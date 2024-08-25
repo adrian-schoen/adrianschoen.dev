@@ -49,15 +49,15 @@
     </header>
 
     <main class="container py-5">
-        <h2 class="text-center" id="projects-title">My Projects</h2>
+        <h2 class="text-center" id="projects-title"></h2>
         <div class="row card-row">
             <!-- Project 1 -->
             <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#project1Modal">
                     <img src="../images/adrianschoen.dev.png" class="card-img-top" alt="adrianschoen.dev">
                     <div class="card-body">
-                        <h5 class="card-title">adrianschoen.dev</h5>
-                        <p class="card-text">This very website you are on.</p>
+                        <h5 id="projects-title-1"></h5>
+                        <p id="projects-title-1-text"></p>
                     </div>
                 </div>
             </div>
@@ -66,8 +66,8 @@
                 <div class="card" data-bs-toggle="modal" data-bs-target="#project2Modal">
                     <img src="https://placehold.co/300" class="card-img-top" alt="Project 2">
                     <div class="card-body">
-                        <h5 class="card-title">Project 2</h5>
-                        <p class="card-text">Description of project 2.</p>
+                        <h5 id="projects-title-2"></h5>
+                        <p id="projects-title-2-text"></p>
                     </div>
                 </div>
             </div>
@@ -76,14 +76,14 @@
                 <div class="card" data-bs-toggle="modal" data-bs-target="#project3Modal">
                     <img src="https://placehold.co/300" class="card-img-top" alt="Project 3">
                     <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
-                        <p class="card-text">Description of project 3.</p>
+                        <h5 id="projects-title-3"></h5>
+                        <p id="projects-title-3-text"></p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center">
-            <a href="../index.html" class="btn btn-primary" id="back-button">Back to Home</a>
+            <a href="../index.html" class="btn btn-primary" id="projects-back-button"></a>
         </div>
     </main>
 
@@ -93,15 +93,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="project1ModalLabel">Project 1</h5>
+                    <h5 class="modal-title" id="projects-title-1-modal-title-1"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <img src="../images/adrianschoen.dev.png" class="modal-img img-fluid mb-3" alt="adrianschoen.dev">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.
-                    </p>
-                    <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-primary">View on GitHub</a>
+                    <p id="projects-title-1-modal-title-1-text"></p>
+                    <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-primary" id="projects-title-1-modal-title-1-button"></a>
                 </div>
             </div>
         </div>
@@ -112,15 +110,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="project2ModalLabel">Project 2</h5>
+                    <h5 class="modal-title" id="projects-title-2-modal-title-2"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 2 Large">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non. Aenean cursus vestibulum mattis. Aenean quam lacus, malesuada sed mollis in, feugiat a turpis. Etiam condimentum dictum leo eu convallis. Quisque quis malesuada ligula.
-                    </p>
-                    <a href="#" class="btn btn-primary">View on GitHub</a>
+                    <p id="projects-title-2-modal-title-2-text"></p>
+                    <a href="#" class="btn btn-primary" id="projects-title-2-modal-title-2-button"></a>
                 </div>
             </div>
         </div>
@@ -131,15 +127,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="project3ModalLabel">Project 3</h5>
+                    <h5 class="modal-title" id="projects-title-3-modal-title-3"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 3 Large">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non. Aenean cursus vestibulum mattis. Aenean quam lacus, malesuada sed mollis in, feugiat a turpis. Etiam condimentum dictum leo eu convallis. Quisque quis malesuada ligula. Nulla ac lorem ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla imperdiet efficitur interdum.
-                    </p>
-                    <a href="#" class="btn btn-primary">View on GitHub</a>
+                    <p id="projects-title-3-modal-title-3-text"></p>
+                    <a href="#" class="btn btn-primary" id="projects-title-3-modal-title-3-button"></a>
                 </div>
             </div>
         </div>
