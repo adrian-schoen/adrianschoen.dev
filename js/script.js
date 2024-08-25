@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#scrollDown').click(function() {
-        var headerHeight = $('#header').outerHeight();
-        var $scrollTo = $('main');
+        const headerHeight = $('#header').outerHeight();
+        const $scrollTo = $('main');
 
         $('html, body').animate({
             scrollTop: $scrollTo.offset().top - headerHeight
