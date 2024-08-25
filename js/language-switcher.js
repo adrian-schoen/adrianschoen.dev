@@ -130,7 +130,9 @@ const translations = {
 function switchLanguage(lang) {
     sessionStorage.setItem('language', lang);
     
-    const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
+    const currentPage = window.location.href.split('/').pop();
+    console.log(currentPage);
+
 
     // Navigation
     document.querySelector('#nav-about-me').textContent = translations[lang].navAboutMe;
