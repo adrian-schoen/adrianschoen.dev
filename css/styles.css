@@ -182,6 +182,11 @@ transition: transform 1s;
     object-fit: cover; /* Maintain aspect ratio and cover the area */
 }
 
+.modal-img {
+    width: 500px;
+    max-width: 500px;
+}
+
 .modal-content {
     background-color: rgb(50, 50, 50);
 }
