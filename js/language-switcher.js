@@ -130,7 +130,7 @@ const translations = {
 function switchLanguage(lang) {
     sessionStorage.setItem('language', lang);
     
-    const currentPage = window.location.href.split('/').pop();
+    const currentPage = window.location.href;
     console.log(currentPage);
 
 
