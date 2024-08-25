@@ -265,3 +265,7 @@ footer {
     height: 80vh; /* Adjust height as needed */
     border: none; /* Remove border */
 }
+
+.btn-primary {
+    margin: 20px;
+}
