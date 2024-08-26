@@ -280,7 +280,7 @@ footer {
 .btn {
     transition: transform 0.3s ease;
 }
-p
+
 .btn:hover {
     transform: scale(1.05);
 }
