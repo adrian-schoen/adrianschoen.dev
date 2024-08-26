@@ -278,19 +278,20 @@ footer {
 
 
 .btn {
-    border: 2px white solid !important;
+    color: var(--white) !important;
+    border: 2px var(--white) solid !important;
     background-color: transparent !important;
     transition: transform 0.3s ease !important;
 }
 
 .btn:hover {
-    border: 2px white solid !important;
+    border: 2px var(--white) solid !important;
     background-color: transparent !important;
     transform: scale(1.05) !important;
 }
 
 .btn:focus, .btn:active {
-    background-color: transparent !important; /* Ensure background remains transparent */
+    background-color: transparent !important;
     box-shadow: none !important;
     outline: 0 !important;
 }
