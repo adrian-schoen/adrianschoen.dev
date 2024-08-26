@@ -1,28 +1,16 @@
 const translations = {
     en: {
         // Navbar
-        navAboutMe: "About Me",
-        navMyProjects: "My Projects",
-        navContactMe: "Contact Me",
+        navAboutMe: "About Me",        navContactMe: "Contact Me",
         navCv: "CV",
 
         // index.html
         indexGreeting: "Welcome on my Website",
         indexGreetingText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        indexViewProjectsButton: "View my Projects",
-        indexConnect: "Connect with me",
         indexConnectSubtitle: "Feel free to check out my GitHub and the repository for this website:",
         indexGithubProfileButton: "My GitHub Profile",
         indexGithubRepoButton: "Website Repository",
-        indexContact: "Contact",
-        indexContactText: "If you'd like to get in touch, feel free to reach out on ",
 
-        // about.html
-        aboutAboutMe: "About Me",
-        aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        aboutBackButton: "Back to Home",
-
-        // projects.html
         projectsTitle: "My Projects",
         projectsTitle1: "adrianschoen.dev",
         projectsTitle1Text: "This very website you are on.",
@@ -39,7 +27,11 @@ const translations = {
         projectsTitle3ModalTitle3: "Project 3",
         projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle3ModalTitle3Button: "View on Github",
-        projectsBackButton: "Back to Home",
+
+        // about.html
+        aboutAboutMe: "About Me",
+        aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        aboutBackButton: "Back to Home",
 
         // contact.html
         contactContactMe: "Contact Me",
@@ -89,27 +81,16 @@ const translations = {
     de: {
         // navbar
         navAboutMe: "Über Mich",
-        navMyProjects: "Meine Projekte",
         navContactMe: "Kontakt",
         navCv: "Lebenslauf",
 
         // index.html
         indexGreeting: "Wilkommen auf meiner Website",
         indexGreetingText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        indexViewProjectsButton: "Meine Projekte",
-        indexConnect: "Verbinden sie sich mit mir",
         indexConnectSubtitle: "Schauen Sie sich mein GitHub Profil und das Repository für diese Website an:",
         indexGithubProfileButton: "Mein GitHub Profil",
         indexGithubRepoButton: "Website Repository",
-        indexContact: "Kontakt",
-        indexContactText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
 
-        // about.html
-        aboutAboutMe: "Über Mich",
-        aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        aboutBackButton: "Zurück zur Startseite",
-        
-        // projects.html
         projectsTitle: "Meine Projekte",
         projectsTitle1: "adrianschoen.dev",
         projectsTitle1Text: "Auf dieser Website befinden Sie sich gerade.",
@@ -126,7 +107,11 @@ const translations = {
         projectsTitle3ModalTitle3: "Projekt 3",
         projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle3ModalTitle3Button: "Zur GitHub Repo",
-        projectsBackButton: "Zurück zur Startseite",
+
+        // about.html
+        aboutAboutMe: "Über Mich",
+        aboutAboutMeText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        aboutBackButton: "Zurück zur Startseite",
 
         // contact.html
         contactContactMe: "Kontakt",
@@ -181,7 +166,6 @@ function switchLanguage(lang) {
 
     // navbar
     document.querySelector('#nav-about-me').textContent = translations[lang].navAboutMe;
-    document.querySelector('#nav-my-projects').textContent = translations[lang].navMyProjects;
     document.querySelector('#nav-contact-me').textContent = translations[lang].navContactMe;
     document.querySelector('#nav-cv').textContent = translations[lang].navCv;
 
@@ -189,24 +173,9 @@ function switchLanguage(lang) {
     if (currentPage === '' || currentPage ==='index.html') {
         document.querySelector('#index-greeting').textContent = translations[lang].indexGreeting;
         document.querySelector('#index-greeting-text').textContent = translations[lang].indexGreetingText;
-        document.querySelector('#index-view-projects-button').textContent = translations[lang].indexViewProjectsButton;
-        document.querySelector('#index-connect').textContent = translations[lang].indexConnect;
         document.querySelector('#index-connect-subtitle').textContent = translations[lang].indexConnectSubtitle;
         document.querySelector('#index-github-profile-button').textContent = translations[lang].indexGithubProfileButton;
         document.querySelector('#index-github-repo-button').textContent = translations[lang].indexGithubRepoButton;
-        document.querySelector('#index-contact').textContent = translations[lang].indexContact;
-        document.querySelector('#index-contact-text').textContent = translations[lang].indexContactText;
-    }
-
-    // about.html
-    if (currentPage === 'about' || currentPage === 'about.html') {
-        document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
-        document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
-        document.querySelector('#about-back-button').textContent = translations[lang].aboutBackButton;
-    }
-
-    // projects.html
-    if (currentPage === 'projects' || currentPage === 'projects.html') {
         document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
         document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
         document.querySelector('#projects-title-1-text').textContent = translations[lang].projectsTitle1Text;
@@ -223,7 +192,13 @@ function switchLanguage(lang) {
         document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
         document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
         document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
-        document.querySelector('#projects-back-button').textContent = translations[lang].projectsBackButton;
+    }
+
+    // about.html
+    if (currentPage === 'about' || currentPage === 'about.html') {
+        document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
+        document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
+        document.querySelector('#about-back-button').textContent = translations[lang].aboutBackButton;
     }
 
     // contact.html
@@ -279,9 +254,16 @@ function switchLanguage(lang) {
 function loadLanguage() {
     const lang = sessionStorage.getItem('language') || 'de'; // Default to German
     switchLanguage(lang);
+    console.log('yeeeet');
 }
 
 document.addEventListener('DOMContentLoaded', loadLanguage);
 document.querySelector('#language-selector').addEventListener('change', (event) => {
     switchLanguage(event.target.value);
+});
+
+window.addEventListener('hashchange', () => {
+    // You can call a function here if you need to handle something when the hash changes
+    // For example, you might want to load a specific section based on the new hash
+    loadLanguage(); // If you want to re-load the language when the hash changes
 });

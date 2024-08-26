@@ -23,9 +23,6 @@
                             <a class="nav-link active" id="nav-about-me" href="html/about.html"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-my-projects" href="html/projects.html"></a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active" id="nav-contact-me" href="html/contact.html"></a>
                         </li>
                         <li class="nav-item">
@@ -61,25 +58,101 @@
         <section class="container py-5">
             <h2 class="text-center" id="index-greeting"></h2>
             <p class="text-center" id="index-greeting-text"></p>
-            <div class="text-center">
-                <a href="html/projects.html" class="btn btn-primary" id="index-view-projects-button"></a>
-            </div>
-        </section>
-    
-        <section id="links" class="container py-5">
-            <h2 class="text-center" id="index-connect"></h2>
             <p class="text-center" id="index-connect-subtitle"></p>
             <div class="text-center">
                 <a href="https://github.com/adrian-schoen" class="btn btn-secondary" id="index-github-profile-button" target="_blank"></a>
                 <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-secondary" id="index-github-repo-button" target="_blank"></a>
             </div>
-            <h2 class="text-center" style="margin-top: 5%;" id="index-contact"></h2>
-            <p class="text-center"><span id="index-contact-text"></span><a href="mailto:your-email@example.com">myemail@example.com</a>.</p>
         </section>
-
-        <div class="index-filler" style="height: 100vh;"></div>
+        <section class="container py-5">
+            <h2 class="text-center" id="projects-title"></h2>
+            <div class="row card-row">
+                <!-- Project 1 -->
+                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                        <img src="images/adrianschoen.dev.png" class="card-img-top" alt="adrianschoen.dev">
+                        <div class="card-body">
+                            <h5 id="projects-title-1"></h5>
+                            <p id="projects-title-1-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                        <img src="https://placehold.co/300" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 id="projects-title-2"></h5>
+                            <p id="projects-title-2-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#project3Modal">
+                        <img src="https://placehold.co/300" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 id="projects-title-3"></h5>
+                            <p id="projects-title-3-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
+<!-- Modals for Projects -->
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projects-title-1-modal-title-1"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/adrianschoen.dev.png" class="modal-img img-fluid mb-3" alt="adrianschoen.dev">
+                    <p id="projects-title-1-modal-title-1-text"></p>
+                    <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-primary" id="projects-title-1-modal-title-1-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projects-title-2-modal-title-2"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 2 Large">
+                    <p id="projects-title-2-modal-title-2-text"></p>
+                    <a href="#" class="btn btn-primary" id="projects-title-2-modal-title-2-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projects-title-3-modal-title-3"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 3 Large">
+                    <p id="projects-title-3-modal-title-3-text"></p>
+                    <a href="#" class="btn btn-primary" id="projects-title-3-modal-title-3-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="fading-footer text-center py-3">
         <p>&copy; 2024 Adrian Schoen. All Rights Reserved.</p>
     </footer>
