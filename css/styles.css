@@ -5,7 +5,7 @@
 
     --background-black: rgb(30, 30, 30);
     --header-footer-black: rgb(15, 15, 15);
-    --card-modal-black: rgb(50, 50, 50);
+    --card-modal-black: rgb(20, 20, 20);
 }
 
 html {
@@ -199,6 +199,7 @@ main {
     width: 300px;
     cursor: pointer;
     margin-bottom: 20px;
+    border: 2px solid var(--white);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden; /* Hide overflow */
 }
@@ -227,6 +228,7 @@ main {
 
 .modal-content {
     background-color: var(--card-modal-black);
+    border: 2px solid var(--white);
 }
 
 .about-container {
@@ -293,6 +295,10 @@ footer {
     transition: transform 0.3s ease, border-color 0.3s ease !important;
 }
 
+.btn-close {
+    color: var(--white) !important;
+}
+
 .btn:hover {
     border: 2px var(--white) solid !important;
     background-color: transparent !important;
@@ -309,4 +315,9 @@ footer {
 .btn:active:focus:not(:disabled):not(.disabled) {
     box-shadow: none !important;
     outline: 0 !important;
+}
+
+.btn-close-custom {             
+    filter: invert(1) sepia(1)         
+    saturate(5) hue-rotate(175deg);         
 }
