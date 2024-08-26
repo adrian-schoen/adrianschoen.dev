@@ -14,12 +14,11 @@ html {
 
 /* General Styles */
 body, html {
-    height: 100%;
     margin: 0px;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--white);
-    background-color: var(--background-black)
+    background-color: var(--background-black);
 }
 
 main {
@@ -240,13 +239,13 @@ main {
 
 /* Header & Footer */
 header, footer {
-    position: fixed;
     left: 0;
     right: 0;
     z-index: 1000;
 }
 
 header { 
+    position: fixed;
     top: 0; 
     background-image: linear-gradient(var(--header-footer-black), var(--background-black) 90%);
 }
@@ -257,7 +256,6 @@ footer {
 
 .fading-header,
 .fading-footer {
-    position: fixed;
     left: 0;
     right: 0;
     z-index: 1000;
