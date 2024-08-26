@@ -40,7 +40,7 @@ main {
     text-align: center;
     opacity: 0;
     border: 5px solid var(--white-low-alpha);
-    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 3s forwards 3s, welcomeAnimateBoxShadow 3s forwards 3s;
+    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 3s forwards, welcomeAnimateBoxShadow 3s forwards;
     position: relative;
     z-index: 2;
     border-radius: 15px;
