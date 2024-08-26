@@ -14,7 +14,7 @@ html {
 /* General Styles */
 body, html {
     height: 100%;
-    margin: 0;
+    margin: 0px;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--white);
@@ -45,9 +45,9 @@ main {
     z-index: 2;
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 4px 20px var(--white-low-alpha);
+    box-shadow: 0px 0px 20px var(--white-low-alpha);
     max-width: 80%; /* Limit box width */
-    margin: 0 auto; /* Center the box */
+    margin: 0px auto; /* Center the box */
 }
 
 @keyframes welcomeFadeIn {
@@ -60,7 +60,7 @@ main {
 }
 
 @keyframes welcomeAnimateBoxShadow {
-    100% { box-shadow: 0 4px 40px var(--white); }
+    100% { box-shadow: 0px 0px 40px var(--white); }
 }
 
 /* Text Animations
@@ -105,7 +105,7 @@ main {
     justify-content: center;
     width: 80px; /* Adjust the size to fit the arrow */
     height: 80px; /* Adjust the size to fit the arrow */
-    margin: 0 auto;
+    margin: 0px auto;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -280,7 +280,7 @@ footer {
 .btn {
     transition: transform 0.3s ease;
 }
-
+p
 .btn:hover {
     transform: scale(1.05);
 }
