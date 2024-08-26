@@ -10,7 +10,7 @@ $(document).ready(function() {
             hasScrolled = true; // Set the flag to true
 
             $('html, body').animate({
-                scrollTop: $scrollTo.offset().top - headerHeight
+                scrollTop: $scrollTo.offset().top - 10
             }, 1000); 
 
             $('#header').addClass('fading-header visible');

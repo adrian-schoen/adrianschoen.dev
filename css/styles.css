@@ -229,6 +229,17 @@ main {
     background-color: var(--card-modal-black);
 }
 
+.about-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centers the box horizontally */
+    padding: 20px; /* Adds some padding inside the box */
+    border-radius: 8px; /* Optional: rounds the corners of the box */
+    text-align: left; 
+    border: 1px solid var(--white);
+    box-shadow: 0px 0px 20px var(--white);
+
+}
+
 .navbar-nav .nav-link {
     transition: transform 0.3s ease, color 0.3s ease;
 }
