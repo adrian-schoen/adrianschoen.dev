@@ -1,6 +1,6 @@
 /* Global Variables */
 :root {
-    --white-low-alpha: rgba(230, 230, 230, 0.1);
+    --white-low-alpha: rgba(230, 230, 230, 0.3);
     --white: rgb(230, 230, 230);
 
     --background-black: rgb(30, 30, 30);
@@ -279,9 +279,9 @@ footer {
 
 .btn {
     color: var(--white) !important;
-    border: 2px var(--white) solid !important;
+    border: 2px var(--white-low-alpha) solid !important;
     background-color: transparent !important;
-    transition: transform 0.3s ease !important;
+    transition: transform 0.3s ease, border-color 0.3s ease !important;
 }
 
 .btn:hover {
