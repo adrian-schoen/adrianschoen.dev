@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="watermark">WORK IN PROGRESS</div>
-
     <header id="header" class="sticky-header">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="javascript:void(0);">Adrian Schön</a>
+                <a class="navbar-brand" href="../index.html">Adrian Schön</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -23,18 +21,12 @@
                             <a class="nav-link active" id="nav-about-me" href="about.html"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-my-projects" href="projects.html"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" id="nav-contact-me" href="contact.html"></a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active" id="nav-cv" href="cv.html"></a>
                         </li>
                     </ul>
                     <div class="ms-auto">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="language-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="language-selector" data-bs-toggle="dropdown" aria-expanded="false">
                                 Language
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="language-selector">
@@ -49,10 +41,16 @@
     </header>
 
     <main class="container py-5 about-main">
-        <h2 class="text-center" id="about-about-me"></h2>
-        <p class="text-center" id="about-about-me-text"></p>
+        <div class="about-container mt-3 mb-3">
+            <h2 class="text-center" id="about-about-me"></h2>
+            <p id="about-about-me-text"></p>
+            <p id="about-about-me-text2"></p>
+            <p id="about-about-me-text3"></p>
+        </div>
+        <h2 class="text-center" id="contact-contact-me"></h2>
+        <p class="text-center"><span id="contact-contact-me-text"></span><u>my@mail.com</u></p>
         <div class="text-center">
-            <a href="../index.html" class="btn btn-primary" id="about-back-button"></a>
+            <a href="../index.html" class="btn btn-primary" id="contact-back-button"></a>
         </div>
     </main>
 
