@@ -277,6 +277,14 @@ footer {
     border: none; /* No border */
 }
 
+.btn {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
 .btn-primary {
     margin: 20px;
 }
