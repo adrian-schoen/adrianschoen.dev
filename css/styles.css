@@ -1,7 +1,9 @@
 /* Global Variables */
 :root {
+    --white-low-alpha: rgba(230, 230, 230, 0.1);
     --white: rgb(230, 230, 230);
-    --background-black: rgb(20, 20, 20);
+
+    --background-black: rgb(30, 30, 30);
 }
 
 html {
@@ -36,13 +38,13 @@ main {
 .welcome-container {
     text-align: center;
     opacity: 0;
-    border: 5px solid rgba(160, 200, 255, 0.2);
-    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 5s infinite, welcomeAnimateBoxShadow 5s infinite;
+    border: 5px solid var(--white-low-alpha);
+    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 3s forwards 3s, welcomeAnimateBoxShadow 3s forwards 3s;
     position: relative;
     z-index: 2;
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(160, 200, 255, 0.3);
+    box-shadow: 0 4px 20px var(--white-low-alpha);
     max-width: 80%; /* Limit box width */
     margin: 0 auto; /* Center the box */
 }
@@ -53,13 +55,11 @@ main {
 }
 
 @keyframes welcomeAnimateBorder {
-    0%, 100% { border-color: rgba(160, 200, 255, 0.2); }
-    50% { border-color: rgba(160, 200, 255, 0.4); }
+    100% { border-color: var(--white); }
 }
 
 @keyframes welcomeAnimateBoxShadow {
-    0%, 100% { box-shadow: 0 4px 20px rgba(160, 200, 255, 0.3); }
-    50% { box-shadow: 0 4px 40px rgba(160, 200, 255, 0.4); }
+    100% { box-shadow: 0 4px 40px var(--white); }
 }
 
 /* Text Animations */
@@ -93,8 +93,8 @@ main {
 }
 
 .center-animation:hover{
-    color: white;
-    transform: scale(1.05);
+    color: var(--white);
+    transform: scale(1.1);
 }
 
 .center-animation {
@@ -106,7 +106,7 @@ main {
     height: 80px; /* Adjust the size to fit the arrow */
     margin: 0 auto;
     position: relative;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 
@@ -120,17 +120,18 @@ main {
     width: 100%;
     transform-origin: center;
     border-radius: 10px;
+    transition: border-color 0.3s ease; /* Add transition for border color */
 }
 
 .center-animation::before {
-    border-top: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
+    border-top: 2px solid var(--white-low-alpha);
+    border-bottom: 2px solid var(--white-low-alpha);
     transform: scale3d(0, 1, 1);
 }
 
 .center-animation::after {
-    border-left: 2px solid var(--white);
-    border-right: 2px solid var(--white);
+    border-left: 2px solid var(--white-low-alpha);
+    border-right: 2px solid var(--white-low-alpha);
     transform: scale3d(1, 0, 1);
 }
 
@@ -143,6 +144,15 @@ main {
     animation: scaleAfter 3s forwards; /* Animate after */
     animation-delay: 3s; /* Delay the animation by 3 seconds */
 }
+
+.center-animation:hover::before {
+    border-color: var(--white);
+}
+
+.center-animation:hover::after {
+    border-color: var(--white);
+}
+
 
 /* Keyframe animations for before and after */
 @keyframes scaleBefore {
