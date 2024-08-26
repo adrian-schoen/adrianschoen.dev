@@ -63,19 +63,19 @@ main {
     100% { box-shadow: 0 4px 40px var(--white); }
 }
 
-/* Text Animations */
+/* Text Animations
 .welcome-title, .welcome-subtitle {
     animation: slideIn forwards;
-}
+} */
 
 .welcome-title {
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0;
     animation-duration: 1s;
 }
 
 .welcome-subtitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 20px 0;
     animation-duration: 1.2s;
 }
@@ -182,7 +182,7 @@ main {
 
 @keyframes slideIn {
     from {
-        transform: translateY(-50px);
+        transform: translateY(-100px);
         opacity: 0;
     }
     to {
