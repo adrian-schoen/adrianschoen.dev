@@ -59,18 +59,12 @@ const translations = {
         cvWorkexperience: "Work Experience",
         cvWorkexperiencePosition: "Dual Student Computer Science",
         cvWorkexperiencePositionDate: "October 2023 - September 2026",
-        cvWorkexperiencePositionC1: "IONOS SE, Oct. 2025 - Sep. 2026",
-        cvWorkexperiencePositionC11: "Did cool stuff",
-        cvWorkexperiencePositionC12: "And so on",
-        cvWorkexperiencePositionC2: "1&1 Telecommunications SE, Oct. 2024 - Sep. 2025",
-        cvWorkexperiencePositionC21: "Marcel D'avis",
-        cvWorkexperiencePositionC22: "1&1 for 16 years",
-        cvWorkexperiencePositionC3: "1&1 Mail & Media GmbH, Oct. 2023 - Sep. 2024",
-        cvWorkexperiencePositionC31: "Developed a solid understanding of Java service and repository patterns as well as the frameworks Spring and Spring Boot frameworks to build robust backend applications with RESTful services and to improve the application architecture.",
-        cvWorkexperiencePositionC32: "Implemented unit tests with JUnit and Mockito in Spring Boot applications in order to ensure the reliability andreliability and functionality of the code and increase code quality.",
-        cvWorkexperiencePositionC33: "Reduced technical debt through the use of SonarQube, which improves the maintainability of the code.",
-        cvWorkexperiencePositionC34: "Researched and implemented a CI/CD pipeline as part of a project to optimise the development process and increase deployment efficiency.",
-        cvWorkexperiencePositionC35: "Gained hands-on experience in an agile work environment, including attending scrum meetings, sprint planning and retrospectives, which strengthened my ability to collaborate in a team and adapt to changing requirements. changing requirements.",
+        cvWorkexperiencePositionC1: "1&1 Mail & Media GmbH, Oct. 2023 - Sep. 2024",
+        cvWorkexperiencePositionC11: "Developed a solid understanding of Java service and repository patterns as well as the frameworks Spring and Spring Boot frameworks to build robust backend applications with RESTful services and to improve the application architecture.",
+        cvWorkexperiencePositionC12: "Implemented unit tests with JUnit and Mockito in Spring Boot applications in order to ensure the reliability andreliability and functionality of the code and increase code quality.",
+        cvWorkexperiencePositionC13: "Reduced technical debt through the use of SonarQube, which improves the maintainability of the code.",
+        cvWorkexperiencePositionC14: "Researched and implemented a CI/CD pipeline as part of a project to optimise the development process and increase deployment efficiency.",
+        cvWorkexperiencePositionC15: "Gained hands-on experience in an agile work environment, including attending scrum meetings, sprint planning and retrospectives, which strengthened my ability to collaborate in a team and adapt to changing requirements. changing requirements.",
         cvEducation: "Education",
         cvEducationCourse: "B. Sc. in Computer Science",
         cvEducationCourseDate: "Oct. 2023 - Sep. 2026",
@@ -155,17 +149,12 @@ const translations = {
         cvWorkexperiencePosition: "Dualer Student Informatik",
         cvWorkexperiencePositionDate: "Oktober 2023 - September 2026",
         cvWorkexperiencePositionC1: "IONOS SE, Okt. 2025 - Sep. 2026",
-        cvWorkexperiencePositionC11: "Habe cooles gemacht",
-        cvWorkexperiencePositionC12: "Und so zeugs",
-        cvWorkexperiencePositionC2: "1&1 Telecommunications SE, Okt. 2024 - Sep. 2025",
-        cvWorkexperiencePositionC21: "Marcel D'avis",
-        cvWorkexperiencePositionC22: "Seit 16 Jahren 1&1",
-        cvWorkexperiencePositionC3: "1&1 Mail & Media GmbH, Okt. 2023 - Sep. 2024",
-        cvWorkexperiencePositionC31: "Entwickelte ein fundiertes Verständnis der Java Service- und Repository-Pattern sowie der Frameworks Spring und Spring Boot zur Erstellung robuster Backend-Anwendungen mit RESTful Services und zur Verbesserung der Anwendungsarchitektur.",
-        cvWorkexperiencePositionC32: "Implementierte Unit-Tests mit JUnit und Mockito in Spring Boot-Anwendungen, um die Zuverlässigkeit und Funktionalität des Codes zu gewährleisten und die Codequalität zu steigern.",
-        cvWorkexperiencePositionC33: "Reduzierte technische Schulden durch den Einsatz von SonarQube, was die Wartbarkeit des Codes verbesserte.",
-        cvWorkexperiencePositionC34: "Recherchierte und implementierte eine CI/CD-Pipeline im Rahmen einer Projektarbeit, um den Entwicklungsprozess zu optimieren und die Effizienz des Deployments zu steigern.",
-        cvWorkexperiencePositionC35: "Erwarb praktische Erfahrung in einem agilen Arbeitsumfeld, einschließlich der Teilnahme an Scrum-Meetings Sprint-Planungen und Retrospektiven, was meine Fähigkeit zur Zusammenarbeit im Team und zur Anpassung an sich ändernde Anforderungen stärkte.",
+        cvWorkexperiencePositionC1: "1&1 Mail & Media GmbH, Okt. 2023 - Sep. 2024",
+        cvWorkexperiencePositionC11: "Entwickelte ein fundiertes Verständnis der Java Service- und Repository-Pattern sowie der Frameworks Spring und Spring Boot zur Erstellung robuster Backend-Anwendungen mit RESTful Services und zur Verbesserung der Anwendungsarchitektur.",
+        cvWorkexperiencePositionC12: "Implementierte Unit-Tests mit JUnit und Mockito in Spring Boot-Anwendungen, um die Zuverlässigkeit und Funktionalität des Codes zu gewährleisten und die Codequalität zu steigern.",
+        cvWorkexperiencePositionC13: "Reduzierte technische Schulden durch den Einsatz von SonarQube, was die Wartbarkeit des Codes verbesserte.",
+        cvWorkexperiencePositionC14: "Recherchierte und implementierte eine CI/CD-Pipeline im Rahmen einer Projektarbeit, um den Entwicklungsprozess zu optimieren und die Effizienz des Deployments zu steigern.",
+        cvWorkexperiencePositionC15: "Erwarb praktische Erfahrung in einem agilen Arbeitsumfeld, einschließlich der Teilnahme an Scrum-Meetings Sprint-Planungen und Retrospektiven, was meine Fähigkeit zur Zusammenarbeit im Team und zur Anpassung an sich ändernde Anforderungen stärkte.",
         cvEducation: "Ausbildung",
         cvEducationCourse: "B. Sc. Informatik",
         cvEducationCourseDate: "Okt. 2023 - Sep. 2026",
@@ -262,15 +251,9 @@ function switchLanguage(lang) {
         document.querySelector('#cv-workexperience-position-c1').textContent = translations[lang].cvWorkexperiencePositionC1;
         document.querySelector('#cv-workexperience-position-c1-1').textContent = translations[lang].cvWorkexperiencePositionC11;
         document.querySelector('#cv-workexperience-position-c1-2').textContent = translations[lang].cvWorkexperiencePositionC12;
-        document.querySelector('#cv-workexperience-position-c2').textContent = translations[lang].cvWorkexperiencePositionC2;
-        document.querySelector('#cv-workexperience-position-c2-1').textContent = translations[lang].cvWorkexperiencePositionC21;
-        document.querySelector('#cv-workexperience-position-c2-2').textContent = translations[lang].cvWorkexperiencePositionC22;
-        document.querySelector('#cv-workexperience-position-c3').textContent = translations[lang].cvWorkexperiencePositionC3;
-        document.querySelector('#cv-workexperience-position-c3-1').textContent = translations[lang].cvWorkexperiencePositionC31;
-        document.querySelector('#cv-workexperience-position-c3-2').textContent = translations[lang].cvWorkexperiencePositionC32;
-        document.querySelector('#cv-workexperience-position-c3-3').textContent = translations[lang].cvWorkexperiencePositionC33;
-        document.querySelector('#cv-workexperience-position-c3-4').textContent = translations[lang].cvWorkexperiencePositionC34;
-        document.querySelector('#cv-workexperience-position-c3-5').textContent = translations[lang].cvWorkexperiencePositionC35;
+        document.querySelector('#cv-workexperience-position-c1-3').textContent = translations[lang].cvWorkexperiencePositionC13;
+        document.querySelector('#cv-workexperience-position-c1-4').textContent = translations[lang].cvWorkexperiencePositionC14;
+        document.querySelector('#cv-workexperience-position-c1-5').textContent = translations[lang].cvWorkexperiencePositionC15;
         document.querySelector('#cv-education').textContent = translations[lang].cvEducation;
         document.querySelector('#cv-education-course').textContent = translations[lang].cvEducationCourse;
         document.querySelector('#cv-education-course-date').textContent = translations[lang].cvEducationCourseDate;
