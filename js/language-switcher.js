@@ -18,6 +18,12 @@ const translations = {
         projectsTitle2Text: "Description of project 2.",
         projectsTitle3: "Project 3",
         projectsTitle3Text: "Description of project 3.",
+        projectsTitle4: "Project 4",
+        projectsTitle4Text: "Description of project 4.",
+        projectsTitle5: "Project 5",
+        projectsTitle6Text: "Description of project 5.",
+        projectsTitle6: "Project 6",
+        projectsTitle6Text: "Description of project 6.",
         projectsTitle1ModalTitle1: "Project 1",
         projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle1ModalTitle1Button: "View on Github",
@@ -27,6 +33,15 @@ const translations = {
         projectsTitle3ModalTitle3: "Project 3",
         projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle3ModalTitle3Button: "View on Github",
+        projectsTitle4ModalTitle4: "Project 4",
+        projectsTitle4ModalTitle4Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle4ModalTitle4Button: "View on Github",
+        projectsTitle5ModalTitle5: "Project 5",
+        projectsTitle5ModalTitle5Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle5ModalTitle5Button: "View on Github",
+        projectsTitle6ModalTitle6: "Project 6",
+        projectsTitle6ModalTitle6Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle6ModalTitle6Button: "View on Github",
 
         // about.html
         aboutAboutMe: "About Me",
@@ -98,6 +113,13 @@ const translations = {
         projectsTitle2Text: "Beschreibung von Projekt 2.",
         projectsTitle3: "Projekt 3",
         projectsTitle3Text: "Beschreibung von Projekt 3.",
+        projectsTitle4: "Projekt 4",
+        projectsTitle4Text: "Beschreibung von Projekt 4.",
+        projectsTitle5: "Projekt 5",
+        projectsTitle5Text: "Beschreibung von Projekt 5.",
+        projectsTitle6: "Projekt 6",
+        projectsTitle6Text: "Beschreibung von Projekt 6.",
+
         projectsTitle1ModalTitle1: "adrianschoen.dev",
         projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle1ModalTitle1Button: "Zur GitHub Repo",
@@ -107,6 +129,15 @@ const translations = {
         projectsTitle3ModalTitle3: "Projekt 3",
         projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle3ModalTitle3Button: "Zur GitHub Repo",
+        projectsTitle4ModalTitle4: "Projekt 4",
+        projectsTitle4ModalTitle4Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle4ModalTitle4Button: "Zur GitHub Repo",
+        projectsTitle5ModalTitle5: "Projekt 5",
+        projectsTitle5ModalTitle5Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle5ModalTitle5Button: "Zur GitHub Repo",
+        projectsTitle6ModalTitle6: "Projekt 6",
+        projectsTitle6ModalTitle6Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle6ModalTitle6Button: "Zur GitHub Repo",
 
         // about.html
         aboutAboutMe: "Über Mich",
@@ -177,12 +208,20 @@ function switchLanguage(lang) {
         document.querySelector('#index-github-profile-button').textContent = translations[lang].indexGithubProfileButton;
         document.querySelector('#index-github-repo-button').textContent = translations[lang].indexGithubRepoButton;
         document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
+
         document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
         document.querySelector('#projects-title-1-text').textContent = translations[lang].projectsTitle1Text;
         document.querySelector('#projects-title-2').textContent = translations[lang].projectsTitle2;
         document.querySelector('#projects-title-2-text').textContent = translations[lang].projectsTitle2Text;
         document.querySelector('#projects-title-3').textContent = translations[lang].projectsTitle3;
         document.querySelector('#projects-title-3-text').textContent = translations[lang].projectsTitle3Text;
+        document.querySelector('#projects-title-4').textContent = translations[lang].projectsTitle4;
+        document.querySelector('#projects-title-4-text').textContent = translations[lang].projectsTitle4Text;
+        document.querySelector('#projects-title-5').textContent = translations[lang].projectsTitle5;
+        document.querySelector('#projects-title-5-text').textContent = translations[lang].projectsTitle5Text;
+        document.querySelector('#projects-title-6').textContent = translations[lang].projectsTitle6;
+        document.querySelector('#projects-title-6-text').textContent = translations[lang].projectsTitle6Text;
+
         document.querySelector('#projects-title-1-modal-title-1').textContent = translations[lang].projectsTitle1ModalTitle1;
         document.querySelector('#projects-title-1-modal-title-1-text').textContent = translations[lang].projectsTitle1ModalTitle1Text;
         document.querySelector('#projects-title-1-modal-title-1-button').textContent = translations[lang].projectsTitle1ModalTitle1Button;
@@ -192,6 +231,15 @@ function switchLanguage(lang) {
         document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
         document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
         document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
+        document.querySelector('#projects-title-4-modal-title-4').textContent = translations[lang].projectsTitle4ModalTitle4;
+        document.querySelector('#projects-title-4-modal-title-4-text').textContent = translations[lang].projectsTitle4ModalTitle4Text;
+        document.querySelector('#projects-title-4-modal-title-4-button').textContent = translations[lang].projectsTitle4ModalTitle4Button;
+        document.querySelector('#projects-title-5-modal-title-5').textContent = translations[lang].projectsTitle5ModalTitle5;
+        document.querySelector('#projects-title-5-modal-title-5-text').textContent = translations[lang].projectsTitle5ModalTitle5Text;
+        document.querySelector('#projects-title-5-modal-title-5-button').textContent = translations[lang].projectsTitle5ModalTitle5Button;
+        document.querySelector('#projects-title-6-modal-title-6').textContent = translations[lang].projectsTitle6ModalTitle6;
+        document.querySelector('#projects-title-6-modal-title-6-text').textContent = translations[lang].projectsTitle6ModalTitle6Text;
+        document.querySelector('#projects-title-6-modal-title-6-button').textContent = translations[lang].projectsTitle6ModalTitle6Button;
     }
 
     // about.html
