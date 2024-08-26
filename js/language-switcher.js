@@ -5,10 +5,10 @@ const translations = {
         navCv: "CV",
 
         // index.html
-        indexGreeting: "Welcome on my Website",
-        indexGreetingText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        indexConnectSubtitle: "Feel free to check out my GitHub and the repository for this website:",
-        indexGithubProfileButton: "My GitHub Profile",
+        indexGreeting: "Welcome to my Website!",
+        indexGreetingText: "Thank you for visiting! Here, you'll find a collection of my projects and insights into my work. I’m passionate about creating and sharing knowledge in the tech community.",
+        indexConnectSubtitle: "Feel free to explore my GitHub profile and check out the repository for this website:",
+        indexGithubProfileButton: "GitHub Profile",
         indexGithubRepoButton: "Website Repository",
 
         projectsTitle: "My Projects",
@@ -24,7 +24,7 @@ const translations = {
         projectsTitle6Text: "Description of project 5.",
         projectsTitle6: "Project 6",
         projectsTitle6Text: "Description of project 6.",
-        projectsTitle1ModalTitle1: "Project 1",
+        projectsTitle1ModalTitle1: "adrianschoen.dev",
         projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         projectsTitle1ModalTitle1Button: "View on Github",
         projectsTitle2ModalTitle2: "Project 2",
@@ -100,10 +100,10 @@ const translations = {
         navCv: "Lebenslauf",
 
         // index.html
-        indexGreeting: "Wilkommen auf meiner Website",
-        indexGreetingText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        indexConnectSubtitle: "Schauen Sie sich mein GitHub Profil und das Repository für diese Website an:",
-        indexGithubProfileButton: "Mein GitHub Profil",
+        indexGreeting: "Wilkommen auf meiner Website!",
+        indexGreetingText: "Vielen Dank für Ihren Besuch! Hier finden Sie eine Sammlung meiner Projekte und Einblicke in meine Arbeit. Meine Leidenschaft gilt der Schaffung und dem Austausch von Wissen in der Tech-Community.",
+        indexConnectSubtitle: "Schauen Sie sich mein GitHub-Profil und das Repository für diese Website an:",
+        indexGithubProfileButton: "GitHub Profil",
         indexGithubRepoButton: "Website Repository",
 
         projectsTitle: "Meine Projekte",
