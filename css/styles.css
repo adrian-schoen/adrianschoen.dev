@@ -4,6 +4,10 @@
     --background-black: rgb(20, 20, 20);
 }
 
+html {
+    scroll-behavior: auto !important;
+}
+
 /* General Styles */
 body, html {
     height: 100%;
