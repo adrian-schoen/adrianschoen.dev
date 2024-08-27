@@ -25,7 +25,7 @@ const translations = {
         // projectsTitle6: "Project 6",
         // projectsTitle6Text: "Description of project 6.",
         projectsTitle1ModalTitle1: "adrianschoen.dev",
-        projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle1ModalTitle1Text: "This is my personal website, designed to showcase my projects and professional experience. Here, you'll find a comprehensive portfolio that highlights my skills and accomplishments across various fields. Currently, the site is under construction as I work to enhance its features and content.",
         projectsTitle1ModalTitle1Button: "View on Github",
         // projectsTitle2ModalTitle2: "Project 2",
         // projectsTitle2ModalTitle2Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
@@ -114,7 +114,7 @@ const translations = {
         // projectsTitle6Text: "Beschreibung von Projekt 6.",
 
         projectsTitle1ModalTitle1: "adrianschoen.dev",
-        projectsTitle1ModalTitle1Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
+        projectsTitle1ModalTitle1Text: "Dies ist meine persönliche Website, auf der ich meine Projekte und beruflichen Erfahrungen vorstelle. Hier finden Sie ein umfassendes Portfolio, das meine Fähigkeiten und Leistungen in verschiedenen Bereichen zeigt. Derzeit befindet sich die Website noch im Aufbau, während ich an der Verbesserung ihrer Funktionen und Inhalte arbeite.",
         projectsTitle1ModalTitle1Button: "Zur GitHub Repo",
         // projectsTitle2ModalTitle2: "Projekt 2",
         // projectsTitle2ModalTitle2Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
