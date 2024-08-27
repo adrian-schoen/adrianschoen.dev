@@ -217,6 +217,7 @@ main {
     width: 100%; /* Full width */
     height: auto;
     object-fit: cover; /* Maintain aspect ratio */
+    border-bottom: 2px solid var(--white);
 }
 
 .card-body {
