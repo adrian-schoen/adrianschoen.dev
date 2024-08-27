@@ -326,13 +326,12 @@ footer {
     saturate(5) hue-rotate(175deg);         
 }
 
-/* Hide scrollbar for Webkit browsers */
-::-webkit-scrollbar {
-    width: 0px; 
+html, body {
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
-
-
-/* Custom scrollbar for Firefox */
-body {
-    scrollbar-width: none; /* Hides Firefox scrollbar */
+  
+body::-webkit-scrollbar {
+width: 0;
+height: 0;
 }
