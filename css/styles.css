@@ -235,15 +235,36 @@ main {
     border: 2px solid var(--white);
 }
 
-.about-container {
-    max-width: 600px;
-    margin: 0 auto; /* Centers the box horizontally */
-    padding: 20px; /* Adds some padding inside the box */
-    border-radius: 8px; /* Optional: rounds the corners of the box */
+.greeting-container {
+    max-width: 650px;
+    margin: 0px auto;
+    padding: 20px;
     text-align: left; 
-    border: 1px solid var(--white);
-    box-shadow: 0px 0px 20px var(--white);
+    border-top: 2px solid var(--white);
+}
 
+.projects-container {
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: left; 
+    border-top: 2px solid var(--white);
+}
+
+.about-container {
+    max-width: 650px;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: left; 
+    border-top: 2px solid var(--white);
+}
+
+.cv-container {
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: left; 
+    border-top: 2px solid var(--white);
 }
 
 .navbar-nav .nav-link {
