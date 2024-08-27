@@ -1,7 +1,19 @@
+// Function to scroll to a specific container with an offset of 100 pixels above the target container
+function scrollToContainer(containerId) {
+    const container = document.getElementById(containerId);
+    if (container) {
+        window.scrollTo({
+            top: container.offsetTop - 100,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
 $(document).ready(function() {
     // Check if the current page is index.html
     const currentPage = window.location.href.split('/').pop();
-    if (currentPage === '' || currentPage ==='index.html') { // on cloudflare deployment its adrianschoen.dev/, on local its .../index.html
+    if (currentPage === '' || currentPage === 'index.html') { // on cloudflare deployment its adrianschoen.dev/, on local its .../index.html
         const headerHeight = $('#header').outerHeight();
         const $scrollTo = $('main');
         let hasScrolled = false;
@@ -10,7 +22,7 @@ $(document).ready(function() {
             hasScrolled = true; // Set the flag to true
 
             $('html, body').animate({
-                scrollTop: $scrollTo.offset().top - 10
+                scrollTop: $scrollTo.offset().top - 100
             }, 1000); 
 
             $('#header').addClass('fading-header visible');
@@ -29,4 +41,17 @@ $(document).ready(function() {
             scrollToMain();
         });
     }
+
+    // Bind navbar links to scrollToContainer function
+    $('#nav-my-projects').click(function() {
+        scrollToContainer('projects-title');
+    });
+
+    $('#nav-about-me').click(function() {
+        scrollToContainer('about-about-me');
+    });
+
+    $('#nav-cv').click(function() {
+        scrollToContainer('cv-cv');
+    });
 });

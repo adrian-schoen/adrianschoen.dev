@@ -1,6 +1,7 @@
 const translations = {
     en: {
         // Navbar
+        navMyProjects: "My Projects",
         navAboutMe: "About Me",
         navCv: "CV",
 
@@ -51,11 +52,9 @@ const translations = {
 
         // contactContactMe: "Contact Me",
         // contactContactMeText: "If you'd like to get in touch, feel free to reach out on ",
-        contactBackButton: "Back to Home",
 
         // cv.html
         cvCv: "Curriculum Vitae",
-        cvCvText: "(I don't have a professional picture yet)",
         cvWorkexperience: "Work Experience",
         cvWorkexperiencePosition: "Dual Student Computer Science",
         cvWorkexperiencePositionDate: "October 2023 - September 2026",
@@ -84,11 +83,11 @@ const translations = {
         cvSkillsIdes: "IDEs",
         cvSkillsIdesList: "IntelliJ, PyCharm, VS Code",
         cvSkillsLanguageskills: "Language Skills",
-        cvSkillsLanguageskillsList: "German (native speaker), English (business fluent)",
-        cvBackButton: "Back to Home"
+        cvSkillsLanguageskillsList: "German (native speaker), English (business fluent)"
     },
     de: {
         // navbar
+        navMyProjects: "Meine Projekte",
         navAboutMe: "Über Mich",
         navCv: "Lebenslauf",
 
@@ -140,11 +139,9 @@ const translations = {
 
         // contactContactMe: "Kontakt",
         // contactContactMeText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
-        contactBackButton: "Zurück zur Startseite",
 
         // cv.html
         cvCv: "Lebenslauf",
-        cvCvText: "(Ich habe noch kein professionelles Bild)",
         cvWorkexperience: "Berufserfahrung",
         cvWorkexperiencePosition: "Dualer Student Informatik",
         cvWorkexperiencePositionDate: "Oktober 2023 - September 2026",
@@ -173,8 +170,7 @@ const translations = {
         cvSkillsIdes: "IDEs",
         cvSkillsIdesList: "IntelliJ, PyCharm, VS Code",
         cvSkillsLanguageskills: "Sprachkenntnisse",
-        cvSkillsLanguageskillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)",
-        cvBackButton: "Zurück zur Startseite"
+        cvSkillsLanguageskillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)"
     }
 };
 
@@ -183,99 +179,88 @@ function switchLanguage(lang) {
     const currentPage = window.location.href.split('/').pop();
 
     // navbar
+    document.querySelector('#nav-my-projects').textContent = translations[lang].navMyProjects;
     document.querySelector('#nav-about-me').textContent = translations[lang].navAboutMe;
     document.querySelector('#nav-cv').textContent = translations[lang].navCv;
 
-    // index.html
-    if (currentPage === '' || currentPage ==='index.html') {
-        document.querySelector('#index-greeting').textContent = translations[lang].indexGreeting;
-        document.querySelector('#index-greeting-text').textContent = translations[lang].indexGreetingText;
-        document.querySelector('#index-connect-subtitle').textContent = translations[lang].indexConnectSubtitle;
-        document.querySelector('#index-github-profile-button').textContent = translations[lang].indexGithubProfileButton;
-        document.querySelector('#index-github-repo-button').textContent = translations[lang].indexGithubRepoButton;
-        document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
+    document.querySelector('#index-greeting').textContent = translations[lang].indexGreeting;
+    document.querySelector('#index-greeting-text').textContent = translations[lang].indexGreetingText;
+    document.querySelector('#index-connect-subtitle').textContent = translations[lang].indexConnectSubtitle;
+    document.querySelector('#index-github-profile-button').textContent = translations[lang].indexGithubProfileButton;
+    document.querySelector('#index-github-repo-button').textContent = translations[lang].indexGithubRepoButton;
+    document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
 
-        document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
-        document.querySelector('#projects-title-1-text').textContent = translations[lang].projectsTitle1Text;
-        // document.querySelector('#projects-title-2').textContent = translations[lang].projectsTitle2;
-        // document.querySelector('#projects-title-2-text').textContent = translations[lang].projectsTitle2Text;
-        // document.querySelector('#projects-title-3').textContent = translations[lang].projectsTitle3;
-        // document.querySelector('#projects-title-3-text').textContent = translations[lang].projectsTitle3Text;
-        // document.querySelector('#projects-title-4').textContent = translations[lang].projectsTitle4;
-        // document.querySelector('#projects-title-4-text').textContent = translations[lang].projectsTitle4Text;
-        // document.querySelector('#projects-title-5').textContent = translations[lang].projectsTitle5;
-        // document.querySelector('#projects-title-5-text').textContent = translations[lang].projectsTitle5Text;
-        // document.querySelector('#projects-title-6').textContent = translations[lang].projectsTitle6;
-        // document.querySelector('#projects-title-6-text').textContent = translations[lang].projectsTitle6Text;
+    document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
+    document.querySelector('#projects-title-1-text').textContent = translations[lang].projectsTitle1Text;
+    // document.querySelector('#projects-title-2').textContent = translations[lang].projectsTitle2;
+    // document.querySelector('#projects-title-2-text').textContent = translations[lang].projectsTitle2Text;
+    // document.querySelector('#projects-title-3').textContent = translations[lang].projectsTitle3;
+    // document.querySelector('#projects-title-3-text').textContent = translations[lang].projectsTitle3Text;
+    // document.querySelector('#projects-title-4').textContent = translations[lang].projectsTitle4;
+    // document.querySelector('#projects-title-4-text').textContent = translations[lang].projectsTitle4Text;
+    // document.querySelector('#projects-title-5').textContent = translations[lang].projectsTitle5;
+    // document.querySelector('#projects-title-5-text').textContent = translations[lang].projectsTitle5Text;
+    // document.querySelector('#projects-title-6').textContent = translations[lang].projectsTitle6;
+    // document.querySelector('#projects-title-6-text').textContent = translations[lang].projectsTitle6Text;
 
-        document.querySelector('#projects-title-1-modal-title-1').textContent = translations[lang].projectsTitle1ModalTitle1;
-        document.querySelector('#projects-title-1-modal-title-1-text').textContent = translations[lang].projectsTitle1ModalTitle1Text;
-        document.querySelector('#projects-title-1-modal-title-1-button').textContent = translations[lang].projectsTitle1ModalTitle1Button;
-        // document.querySelector('#projects-title-2-modal-title-2').textContent = translations[lang].projectsTitle2ModalTitle2;
-        // document.querySelector('#projects-title-2-modal-title-2-text').textContent = translations[lang].projectsTitle2ModalTitle2Text;
-        // document.querySelector('#projects-title-2-modal-title-2-button').textContent = translations[lang].projectsTitle2ModalTitle2Button;
-        // document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
-        // document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
-        // document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
-        // document.querySelector('#projects-title-4-modal-title-4').textContent = translations[lang].projectsTitle4ModalTitle4;
-        // document.querySelector('#projects-title-4-modal-title-4-text').textContent = translations[lang].projectsTitle4ModalTitle4Text;
-        // document.querySelector('#projects-title-4-modal-title-4-button').textContent = translations[lang].projectsTitle4ModalTitle4Button;
-        // document.querySelector('#projects-title-5-modal-title-5').textContent = translations[lang].projectsTitle5ModalTitle5;
-        // document.querySelector('#projects-title-5-modal-title-5-text').textContent = translations[lang].projectsTitle5ModalTitle5Text;
-        // document.querySelector('#projects-title-5-modal-title-5-button').textContent = translations[lang].projectsTitle5ModalTitle5Button;
-        // document.querySelector('#projects-title-6-modal-title-6').textContent = translations[lang].projectsTitle6ModalTitle6;
-        // document.querySelector('#projects-title-6-modal-title-6-text').textContent = translations[lang].projectsTitle6ModalTitle6Text;
-        // document.querySelector('#projects-title-6-modal-title-6-button').textContent = translations[lang].projectsTitle6ModalTitle6Button;
-    }
+    document.querySelector('#projects-title-1-modal-title-1').textContent = translations[lang].projectsTitle1ModalTitle1;
+    document.querySelector('#projects-title-1-modal-title-1-text').textContent = translations[lang].projectsTitle1ModalTitle1Text;
+    document.querySelector('#projects-title-1-modal-title-1-button').textContent = translations[lang].projectsTitle1ModalTitle1Button;
+    // document.querySelector('#projects-title-2-modal-title-2').textContent = translations[lang].projectsTitle2ModalTitle2;
+    // document.querySelector('#projects-title-2-modal-title-2-text').textContent = translations[lang].projectsTitle2ModalTitle2Text;
+    // document.querySelector('#projects-title-2-modal-title-2-button').textContent = translations[lang].projectsTitle2ModalTitle2Button;
+    // document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
+    // document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
+    // document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
+    // document.querySelector('#projects-title-4-modal-title-4').textContent = translations[lang].projectsTitle4ModalTitle4;
+    // document.querySelector('#projects-title-4-modal-title-4-text').textContent = translations[lang].projectsTitle4ModalTitle4Text;
+    // document.querySelector('#projects-title-4-modal-title-4-button').textContent = translations[lang].projectsTitle4ModalTitle4Button;
+    // document.querySelector('#projects-title-5-modal-title-5').textContent = translations[lang].projectsTitle5ModalTitle5;
+    // document.querySelector('#projects-title-5-modal-title-5-text').textContent = translations[lang].projectsTitle5ModalTitle5Text;
+    // document.querySelector('#projects-title-5-modal-title-5-button').textContent = translations[lang].projectsTitle5ModalTitle5Button;
+    // document.querySelector('#projects-title-6-modal-title-6').textContent = translations[lang].projectsTitle6ModalTitle6;
+    // document.querySelector('#projects-title-6-modal-title-6-text').textContent = translations[lang].projectsTitle6ModalTitle6Text;
+    // document.querySelector('#projects-title-6-modal-title-6-button').textContent = translations[lang].projectsTitle6ModalTitle6Button;"
 
-    // about.html
-    if (currentPage === 'about' || currentPage === 'about.html') {
-        document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
-        document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
-        document.querySelector('#about-about-me-text2').textContent = translations[lang].aboutAboutMeText2;
-        document.querySelector('#about-about-me-text3').textContent = translations[lang].aboutAboutMeText3;
+    document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
+    document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
+    document.querySelector('#about-about-me-text2').textContent = translations[lang].aboutAboutMeText2;
+    document.querySelector('#about-about-me-text3').textContent = translations[lang].aboutAboutMeText3;
 
-        // document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
-        // document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
-        document.querySelector('#contact-back-button').textContent = translations[lang].contactBackButton;
-    }
+    // document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
+    // document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
 
-    // cv.html
-    if (currentPage === 'cv' || currentPage === 'cv.html') {
-        document.querySelector('#cv-cv').textContent = translations[lang].cvCv;
-        document.querySelector('#cv-cv-text').textContent = translations[lang].cvCvText;
-        document.querySelector('#cv-workexperience').textContent = translations[lang].cvWorkexperience;
-        document.querySelector('#cv-workexperience-position').textContent = translations[lang].cvWorkexperiencePosition;
-        document.querySelector('#cv-workexperience-position-date').textContent = translations[lang].cvWorkexperiencePositionDate;
-        document.querySelector('#cv-workexperience-position-c1').textContent = translations[lang].cvWorkexperiencePositionC1;
-        document.querySelector('#cv-workexperience-position-c1-1').textContent = translations[lang].cvWorkexperiencePositionC11;
-        document.querySelector('#cv-workexperience-position-c1-2').textContent = translations[lang].cvWorkexperiencePositionC12;
-        document.querySelector('#cv-workexperience-position-c1-3').textContent = translations[lang].cvWorkexperiencePositionC13;
-        document.querySelector('#cv-workexperience-position-c1-4').textContent = translations[lang].cvWorkexperiencePositionC14;
-        document.querySelector('#cv-workexperience-position-c1-5').textContent = translations[lang].cvWorkexperiencePositionC15;
-        document.querySelector('#cv-education').textContent = translations[lang].cvEducation;
-        document.querySelector('#cv-education-course').textContent = translations[lang].cvEducationCourse;
-        document.querySelector('#cv-education-course-date').textContent = translations[lang].cvEducationCourseDate;
-        document.querySelector('#cv-education-university').textContent = translations[lang].cvEducationUniversity;
-        document.querySelector('#cv-projects').textContent = translations[lang].cvProjects;
-        document.querySelector('#cv-projects-1-name').textContent = translations[lang].cvProjects1Name;
-        document.querySelector('#cv-projects-1-desc').textContent = translations[lang].cvProjects1Desc;
-        document.querySelector('#cv-skills').textContent = translations[lang].cvSkills;
-        document.querySelector('#cv-skills-programminglanguages').textContent = translations[lang].cvSkillsProgramminglanguages;
-        document.querySelector('#cv-skills-programminglanguages-list').textContent = translations[lang].cvSkillsProgramminglanguagesList;
-        document.querySelector('#cv-skills-frameworks').textContent = translations[lang].cvSkillsFrameworks;
-        document.querySelector('#cv-skills-frameworks-list').textContent = translations[lang].cvSkillsFrameworksList;
-        document.querySelector('#cv-skills-codequality').textContent = translations[lang].cvSkillsCodequality;
-        document.querySelector('#cv-skills-codequality-list').textContent = translations[lang].cvSkillsCodequalityList;
-        document.querySelector('#cv-skills-othertools').textContent = translations[lang].cvSkillsOthertools;
-        document.querySelector('#cv-skills-othertools-list').textContent = translations[lang].cvSkillsOthertoolsList;
-        document.querySelector('#cv-skills-ides').textContent = translations[lang].cvSkillsIdes;
-        document.querySelector('#cv-skills-ides-list').textContent = translations[lang].cvSkillsIdesList;
-        document.querySelector('#cv-skills-languageskills').textContent = translations[lang].cvSkillsLanguageskills;
-        document.querySelector('#cv-skills-languageskills-list').textContent = translations[lang].cvSkillsLanguageskillsList;
-        document.querySelector('#cv-back-button').textContent = translations[lang].cvBackButton;
-    }
-}
+    document.querySelector('#cv-cv').textContent = translations[lang].cvCv;
+    document.querySelector('#cv-workexperience').textContent = translations[lang].cvWorkexperience;
+    document.querySelector('#cv-workexperience-position').textContent = translations[lang].cvWorkexperiencePosition;
+    document.querySelector('#cv-workexperience-position-date').textContent = translations[lang].cvWorkexperiencePositionDate;
+    document.querySelector('#cv-workexperience-position-c1').textContent = translations[lang].cvWorkexperiencePositionC1;
+    document.querySelector('#cv-workexperience-position-c1-1').textContent = translations[lang].cvWorkexperiencePositionC11;
+    document.querySelector('#cv-workexperience-position-c1-2').textContent = translations[lang].cvWorkexperiencePositionC12;
+    document.querySelector('#cv-workexperience-position-c1-3').textContent = translations[lang].cvWorkexperiencePositionC13;
+    document.querySelector('#cv-workexperience-position-c1-4').textContent = translations[lang].cvWorkexperiencePositionC14;
+    document.querySelector('#cv-workexperience-position-c1-5').textContent = translations[lang].cvWorkexperiencePositionC15;
+    document.querySelector('#cv-education').textContent = translations[lang].cvEducation;
+    document.querySelector('#cv-education-course').textContent = translations[lang].cvEducationCourse;
+    document.querySelector('#cv-education-course-date').textContent = translations[lang].cvEducationCourseDate;
+    document.querySelector('#cv-education-university').textContent = translations[lang].cvEducationUniversity;
+    document.querySelector('#cv-projects').textContent = translations[lang].cvProjects;
+    document.querySelector('#cv-projects-1-name').textContent = translations[lang].cvProjects1Name;
+    document.querySelector('#cv-projects-1-desc').textContent = translations[lang].cvProjects1Desc;
+    document.querySelector('#cv-skills').textContent = translations[lang].cvSkills;
+    document.querySelector('#cv-skills-programminglanguages').textContent = translations[lang].cvSkillsProgramminglanguages;
+    document.querySelector('#cv-skills-programminglanguages-list').textContent = translations[lang].cvSkillsProgramminglanguagesList;
+    document.querySelector('#cv-skills-frameworks').textContent = translations[lang].cvSkillsFrameworks;
+    document.querySelector('#cv-skills-frameworks-list').textContent = translations[lang].cvSkillsFrameworksList;
+    document.querySelector('#cv-skills-codequality').textContent = translations[lang].cvSkillsCodequality;
+    document.querySelector('#cv-skills-codequality-list').textContent = translations[lang].cvSkillsCodequalityList;
+    document.querySelector('#cv-skills-othertools').textContent = translations[lang].cvSkillsOthertools;
+    document.querySelector('#cv-skills-othertools-list').textContent = translations[lang].cvSkillsOthertoolsList;
+    document.querySelector('#cv-skills-ides').textContent = translations[lang].cvSkillsIdes;
+    document.querySelector('#cv-skills-ides-list').textContent = translations[lang].cvSkillsIdesList;
+    document.querySelector('#cv-skills-languageskills').textContent = translations[lang].cvSkillsLanguageskills;
+    document.querySelector('#cv-skills-languageskills-list').textContent = translations[lang].cvSkillsLanguageskillsList;
+};
 
 function loadLanguage() {
     const lang = sessionStorage.getItem('language') || 'de'; // Default to German
