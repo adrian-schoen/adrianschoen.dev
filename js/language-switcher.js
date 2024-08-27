@@ -148,7 +148,6 @@ const translations = {
         cvWorkexperience: "Berufserfahrung",
         cvWorkexperiencePosition: "Dualer Student Informatik",
         cvWorkexperiencePositionDate: "Oktober 2023 - September 2026",
-        cvWorkexperiencePositionC1: "IONOS SE, Okt. 2025 - Sep. 2026",
         cvWorkexperiencePositionC1: "1&1 Mail & Media GmbH, Okt. 2023 - Sep. 2024",
         cvWorkexperiencePositionC11: "Entwickelte ein fundiertes Verständnis der Java Service- und Repository-Pattern sowie der Frameworks Spring und Spring Boot zur Erstellung robuster Backend-Anwendungen mit RESTful Services und zur Verbesserung der Anwendungsarchitektur.",
         cvWorkexperiencePositionC12: "Implementierte Unit-Tests mit JUnit und Mockito in Spring Boot-Anwendungen, um die Zuverlässigkeit und Funktionalität des Codes zu gewährleisten und die Codequalität zu steigern.",
