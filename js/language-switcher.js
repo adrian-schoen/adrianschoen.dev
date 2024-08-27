@@ -49,8 +49,8 @@ const translations = {
         aboutAboutMeText2: "By combining theory and practice, I gain valuable experience and deepen my knowledge both in the academic field and in real projects. My professional focus is on backend development. I work intensively with technologies such as Java and SpringBoot to develop robust and scalable applications. I place particular emphasis on clean code, performance optimisation and the implementation of best practices.",
         aboutAboutMeText3: "In addition to my backend work, I also work with frontend technologies. I enjoy designing websites and web applications, utilising HTML, CSS and JavaScript to develop user-friendly and appealing interfaces. This website you are currently viewing is an example of my frontend work.",
 
-        contactContactMe: "Contact Me",
-        contactContactMeText: "If you'd like to get in touch, feel free to reach out on ",
+        // contactContactMe: "Contact Me",
+        // contactContactMeText: "If you'd like to get in touch, feel free to reach out on ",
         contactBackButton: "Back to Home",
 
         // cv.html
@@ -138,8 +138,8 @@ const translations = {
         aboutAboutMeText2: "Durch die Kombination von Theorie und Praxis sammle ich wertvolle Erfahrungen und vertiefe mein Wissen sowohl im akademischen Bereich als auch in realen Projekten.\nDer Schwerpunkt meiner beruflichen Tätigkeit liegt in der Backend-Entwicklung. Ich arbeite intensiv mit Technologien wie Java und SpringBoot, um robuste und skalierbare Anwendungen zu entwickeln. Dabei lege ich besonderen Wert auf sauberen Code, Performance-Optimierung und die Implementierung von Best Practices.",
         aboutAboutMeText3: "Neben meiner Backend-Arbeit beschäftige ich mich auch mit Frontend-Technologien. Ich habe Freude daran, Websites und Webanwendungen zu gestalten, und nutze dabei HTML, CSS und JavaScript, um benutzerfreundliche und ansprechende Oberflächen zu entwickeln. Diese Website, auf der Sie sich gerade befinden, ist ein Beispiel für meine Arbeit im Frontend-Bereich.",
 
-        contactContactMe: "Kontakt",
-        contactContactMeText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
+        // contactContactMe: "Kontakt",
+        // contactContactMeText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
         contactBackButton: "Zurück zur Startseite",
 
         // cv.html
@@ -236,8 +236,8 @@ function switchLanguage(lang) {
         document.querySelector('#about-about-me-text2').textContent = translations[lang].aboutAboutMeText2;
         document.querySelector('#about-about-me-text3').textContent = translations[lang].aboutAboutMeText3;
 
-        document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
-        document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
+        // document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
+        // document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
         document.querySelector('#contact-back-button').textContent = translations[lang].contactBackButton;
     }
 
