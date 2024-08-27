@@ -80,6 +80,8 @@ main {
     animation-duration: 1.2s;
 }
 
+
+
 .arrow {
     opacity: 0;
     font-size: 2rem;
@@ -87,27 +89,28 @@ main {
     animation-delay: 1.5s;
     cursor: pointer;
     display: inline-block;
-    padding: 23px 10px 20px 14px;
+    padding: 0; /* Set padding to 0 */
+    margin: 0 -4px; /* Adjust margin to shift left */
     transition: color 0.3s;
-    writing-mode: vertical-lr;
-    text-align: center;
-}
-
-.center-animation:hover{
-    color: var(--white);
-    transform: scale(1.1);
 }
 
 .center-animation {
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Keep this as center */
     width: 80px; /* Adjust the size to fit the arrow */
     height: 80px; /* Adjust the size to fit the arrow */
-    margin: 0px auto;
+    margin: 0 auto;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center; /* Center text */
+}
+
+
+.center-animation:hover{
+    color: var(--white);
+    transform: scale(1.1);
 }
 
 
@@ -320,4 +323,15 @@ footer {
 .btn-close-custom {             
     filter: invert(1) sepia(1)         
     saturate(5) hue-rotate(175deg);         
+}
+
+/* Hide scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    width: 0px; 
+}
+
+
+/* Custom scrollbar for Firefox */
+body {
+    scrollbar-width: none; /* Hides Firefox scrollbar */
 }
