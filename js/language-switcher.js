@@ -16,7 +16,7 @@ const translations = {
         projectsTitle1: "adrianschoen.dev",
         projectsTitle1Text: "This very website you are on.",
         projectsTitle2: "CatCompression",
-        projectsTitle2Text: "A (bad, but cat-themed) .zip / .rar alternative.",
+        projectsTitle2Text: "CatCompression compresses files using Huffman coding and hides the data in PNG images.",
         // projectsTitle3: "Project 3",
         // projectsTitle3Text: "Description of project 3.",
         // projectsTitle4: "Project 4",
@@ -27,10 +27,10 @@ const translations = {
         // projectsTitle6Text: "Description of project 6.",
         projectsTitle1ModalTitle1: "adrianschoen.dev",
         projectsTitle1ModalTitle1Text: "This is my personal website, designed to showcase my projects and professional experience. Here, you'll find a comprehensive portfolio that highlights my skills and accomplishments across various fields. Currently, the site is under construction as I work to enhance its features and content.",
-        projectsTitle1ModalTitle1Button: "View on Github",
+        projectsTitle1ModalTitle1Button: "View on GitHub",
         projectsTitle2ModalTitle2: "CatCompression",
-        projectsTitle2ModalTitle2Text: "A .zip / .rar alternative. File extension: .catc.",
-        projectsTitle2ModalTitle2Button: "Work in Progress",
+        projectsTitle2ModalTitle2Text: "CatCompression is a custom file compression tool that utilizes Huffman coding to compress files and embed the compressed data into a PNG image of a cat. The tool also supports extracting and decompressing the data from the PNG image. The project is designed to efficiently compress data and conveniently hide it within an cat image file.",
+        projectsTitle2ModalTitle2Button: "View on GitHub",
         // projectsTitle3ModalTitle3: "Project 3",
         // projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         // projectsTitle3ModalTitle3Button: "View on Github",
@@ -105,7 +105,7 @@ const translations = {
         projectsTitle1: "adrianschoen.dev",
         projectsTitle1Text: "Auf dieser Website befinden Sie sich gerade.",
         projectsTitle2: "CatCompression",
-        projectsTitle2Text: "Eine (schlechte, aber katzige) .zip / .rar alternative.",
+        projectsTitle2Text: "CatCompression komprimiert Dateien mithilfe der Huffman-Kodierung und versteckt die Daten in PNG-Bildern.",
         // projectsTitle3: "Projekt 3",
         // projectsTitle3Text: "Beschreibung von Projekt 3.",
         // projectsTitle4: "Projekt 4",
@@ -119,8 +119,8 @@ const translations = {
         projectsTitle1ModalTitle1Text: "Dies ist meine persönliche Website, auf der ich meine Projekte und beruflichen Erfahrungen vorstelle. Hier finden Sie ein umfassendes Portfolio, das meine Fähigkeiten und Leistungen in verschiedenen Bereichen zeigt. Derzeit befindet sich die Website noch im Aufbau, während ich an der Verbesserung ihrer Funktionen und Inhalte arbeite.",
         projectsTitle1ModalTitle1Button: "Zur GitHub Repo",
         projectsTitle2ModalTitle2: "CatCompression",
-        projectsTitle2ModalTitle2Text: "Eine .zip / .rar alternative. Dateiendung: .catc.",
-        projectsTitle2ModalTitle2Button: "Work in Progress",
+        projectsTitle2ModalTitle2Text: "CatCompression ist ein spezielles Dateikomprimierungstool, das die Huffman-Kodierung nutzt, um Dateien effizient zu komprimieren und die komprimierten Daten nahtlos in ein PNG-Bild einer Katze einzubetten. Dieses innovative Tool erleichtert nicht nur den Komprimierungsprozess, sondern ermöglicht auch eine einfache Extraktion und Dekomprimierung der Daten aus dem PNG-Bild. CatCompression wurde für Effizienz und Komfort entwickelt und bietet eine einzigartige Möglichkeit, Daten diskret in einer charmanten Katzenbilddatei zu speichern.",
+        projectsTitle2ModalTitle2Button: "Zur GitHub Repo",
         // projectsTitle3ModalTitle3: "Projekt 3",
         // projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
         // projectsTitle3ModalTitle3Button: "Zur GitHub Repo",
@@ -214,7 +214,7 @@ function switchLanguage(lang) {
     document.querySelector('#projects-title-1-modal-title-1-button').textContent = translations[lang].projectsTitle1ModalTitle1Button;
     document.querySelector('#projects-title-2-modal-title-2').textContent = translations[lang].projectsTitle2ModalTitle2;
     document.querySelector('#projects-title-2-modal-title-2-text').textContent = translations[lang].projectsTitle2ModalTitle2Text;
-    // document.querySelector('#projects-title-2-modal-title-2-button').textContent = translations[lang].projectsTitle2ModalTitle2Button;
+    document.querySelector('#projects-title-2-modal-title-2-button').textContent = translations[lang].projectsTitle2ModalTitle2Button;
     // document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
     // document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
     // document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
