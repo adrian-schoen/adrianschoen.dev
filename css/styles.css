@@ -9,12 +9,13 @@
 }
 
 html {
-    scroll-behavior: auto !important;
+    scroll-behavior: smooth !important;
+    font-size: calc(26px + 0.1vw); /* Base font size (everything larger than 4k)*/
 }
 
 /* General Styles */
 body, html {
-    margin: 0px;
+    margin: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--white);
@@ -22,8 +23,8 @@ body, html {
 }
 
 main {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 1.25rem; /* 20px */
+    margin-bottom: 2.5rem; /* 40px */
 }
 
 .hero {
@@ -39,15 +40,15 @@ main {
 .welcome-container {
     text-align: center;
     opacity: 0;
-    border: 5px solid var(--white-low-alpha);
+    border: 0.3125rem solid var(--white-low-alpha); /* 5px */
     animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 3s forwards, welcomeAnimateBoxShadow 3s forwards;
     position: relative;
     z-index: 2;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0px 0px 20px var(--white-low-alpha);
+    border-radius: 0.9375rem; /* 15px */
+    padding: 2.5rem; /* 40px */
+    box-shadow: 0 0 1.25rem var(--white-low-alpha); /* 20px */
     max-width: 80%; /* Limit box width */
-    margin: 0px auto; /* Center the box */
+    margin: 0 auto; /* Center the box */
 }
 
 @keyframes welcomeFadeIn {
@@ -60,7 +61,7 @@ main {
 }
 
 @keyframes welcomeAnimateBoxShadow {
-    100% { box-shadow: 0px 0px 40px var(--white); }
+    100% { box-shadow: 0 0 2.5rem var(--white); /* 40px */ }
 }
 
 /* Text Animations
@@ -76,10 +77,58 @@ main {
 
 .welcome-subtitle {
     font-size: 2rem;
-    margin: 20px 0;
+    margin: 1.25rem 0; /* 20px */
     animation-duration: 1.2s;
 }
 
+/* Screens up to 4K (3840px) */
+@media (max-width: 3840px) {
+    html {
+        font-size: calc(22px + 0.1vw);
+    }
+}
+
+/* Screens up to 2560px (e.g., large desktops, QHD monitors) */
+@media (max-width: 2560px) {
+    html {
+        font-size: calc(18px + 0.1vw);
+    }
+}
+
+/* Screens up to 1440px (e.g., desktops, large laptops) */
+@media (max-width: 1920px) {
+    html {
+        font-size: calc(14px + 0.1vw);
+    }
+}
+
+/* Screens up to 1024px (e.g., tablets, small laptops) */
+@media (max-width: 1024px) {
+    html {
+        font-size: calc(12px + 0.1vw);
+    }
+}
+
+/* Screens up to 768px (e.g., large smartphones, tablets in portrait mode) */
+@media (max-width: 768px) {
+    html {
+        font-size: calc(10px + 0.1vw);
+    }
+}
+
+/* Screens up to 576px (e.g., small smartphones) */
+@media (max-width: 576px) {
+    html {
+        font-size: calc(8px + 0.1vw);
+    }
+}
+
+/* Screens up to 480px (e.g., very small smartphones) */
+@media (max-width: 480px) {
+    html {
+        font-size: calc(6px + 0.1vw);
+    }
+}
 
 
 .arrow {
@@ -90,7 +139,7 @@ main {
     cursor: pointer;
     display: inline-block;
     padding: 0; /* Set padding to 0 */
-    margin: 0 -4px; /* Adjust margin to shift left */
+    margin: 0 -0.25rem; /* Adjust margin to shift left (4px) */
     transition: color 0.3s;
 }
 
@@ -99,20 +148,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center; /* Keep this as center */
-    width: 80px; /* Adjust the size to fit the arrow */
-    height: 80px; /* Adjust the size to fit the arrow */
+    width: 5rem; /* 80px */
+    height: 5rem; /* 80px */
     margin: 0 auto;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-align: center; /* Center text */
 }
 
-
-.center-animation:hover{
+.center-animation:hover {
     color: var(--white);
     transform: scale(1.1);
 }
-
 
 .center-animation::before,
 .center-animation::after {
@@ -123,19 +170,19 @@ main {
     height: 100%;
     width: 100%;
     transform-origin: center;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px */
     transition: border-color 0.3s ease; /* Add transition for border color */
 }
 
 .center-animation::before {
-    border-top: 2px solid var(--white-low-alpha);
-    border-bottom: 2px solid var(--white-low-alpha);
+    border-top: 0.125rem solid var(--white-low-alpha); /* 2px */
+    border-bottom: 0.125rem solid var(--white-low-alpha); /* 2px */
     transform: scale3d(0, 1, 1);
 }
 
 .center-animation::after {
-    border-left: 2px solid var(--white-low-alpha);
-    border-right: 2px solid var(--white-low-alpha);
+    border-left: 0.125rem solid var(--white-low-alpha); /* 2px */
+    border-right: 0.125rem solid var(--white-low-alpha); /* 2px */
     transform: scale3d(1, 0, 1);
 }
 
@@ -157,7 +204,6 @@ main {
     border-color: var(--white);
 }
 
-
 /* Keyframe animations for before and after */
 @keyframes scaleBefore {
     0% {
@@ -177,7 +223,6 @@ main {
     }
 }
 
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -185,7 +230,7 @@ main {
 
 @keyframes slideIn {
     from {
-        transform: translateY(-100px);
+        transform: translateY(-6.25rem); /* 100px */
         opacity: 0;
     }
     to {
@@ -195,29 +240,29 @@ main {
 }
 
 .card-row {
-    padding-top: 20px;
+    padding-top: 1.25rem; /* 20px */
 }
 
 .card {
-    width: 300px;
+    width: 18.75rem; /* 300px */
     cursor: pointer;
-    margin-bottom: 20px;
-    border: 2px solid var(--white);
+    margin-bottom: 1.25rem; /* 20px */
+    border: 0.125rem solid var(--white); /* 2px */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden; /* Hide overflow */
 }
 
 .card:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 30px var(--white);
+    box-shadow: 0 0 1.875rem var(--white); /* 30px */
 }
 
 .card-img-top {
-    max-width: 300px;
+    max-width: 18.75rem; /* 300px */
     width: 100%; /* Full width */
     height: auto;
     object-fit: cover; /* Maintain aspect ratio */
-    border-bottom: 2px solid var(--white);
+    border-bottom: 0.125rem solid var(--white); /* 2px */
 }
 
 .card-body {
@@ -226,45 +271,45 @@ main {
 }
 
 .modal-img {
-    max-width: 500px;
-    width: 500px;
+    max-width: 31.25rem; /* 500px */
+    width: 31.25rem; /* 500px */
 }
 
 .modal-content {
     background-color: var(--card-modal-black);
-    border: 2px solid var(--white);
+    border: 0.125rem solid var(--white); /* 2px */
 }
 
 .greeting-container {
-    max-width: 650px;
-    margin: 0px auto;
-    padding: 20px;
+    max-width: 40.625rem; /* 650px */
+    margin: 0 auto;
+    padding: 1.25rem; /* 20px */
     text-align: left; 
-    border-top: 2px solid var(--white);
+    border-top: 0.125rem solid var(--white); /* 2px */
 }
 
 .projects-container {
-    max-width: 1300px;
-    margin: 0px auto;
-    padding: 20px;
+    max-width: 81.25rem; /* 1300px */
+    margin: 0 auto;
+    padding: 1.25rem; /* 20px */
     text-align: left; 
-    border-top: 2px solid var(--white);
+    border-top: 0.125rem solid var(--white); /* 2px */
 }
 
 .about-container {
-    max-width: 650px;
-    margin: 0px auto;
-    padding: 20px;
+    max-width: 40.625rem; /* 650px */
+    margin: 0 auto;
+    padding: 1.25rem; /* 20px */
     text-align: left; 
-    border-top: 2px solid var(--white);
+    border-top: 0.125rem solid var(--white); /* 2px */
 }
 
 .cv-container {
-    max-width: 1300px;
-    margin: 0px auto;
-    padding: 20px;
+    max-width: 81.25rem; /* 1300px */
+    margin: 0 auto;
+    padding: 1.25rem; /* 20px */
     text-align: left; 
-    border-top: 2px solid var(--white);
+    border-top: 0.125rem solid var(--white); /* 2px */
 }
 
 .navbar-nav .nav-link {
@@ -312,10 +357,9 @@ footer {
     border: none; /* No border */
 }
 
-
 .btn {
     color: var(--white) !important;
-    border: 2px var(--white-low-alpha) solid !important;
+    border: 0.125rem var(--white-low-alpha) solid !important; /* 2px */
     background-color: transparent !important;
     transition: transform 0.3s ease, border-color 0.3s ease !important;
 }
@@ -325,7 +369,7 @@ footer {
 }
 
 .btn:hover {
-    border: 2px var(--white) solid !important;
+    border: 0.125rem var(--white) solid !important; /* 2px */
     background-color: transparent !important;
     transform: scale(1.05) !important;
 }
@@ -353,6 +397,6 @@ html, body {
 }
   
 body::-webkit-scrollbar {
-width: 0;
-height: 0;
+    width: 0;
+    height: 0;
 }
