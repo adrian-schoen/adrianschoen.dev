@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth !important;
-    font-size: calc(24px + 0.1vw); /* Base font size */
+    font-size: calc(26px + 0.1vw); /* Base font size (everything larger than 4k)*/
 }
 
 /* General Styles */
