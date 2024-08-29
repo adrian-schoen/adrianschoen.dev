@@ -53,8 +53,8 @@ const translations = {
         linkedin: "LinkedIn",
         linkedinText: "Visit my LinkedIn profile to learn more about my professional experiences and qualifications.",
         linkedinProfileButton: "LinkedIn Profile",
-        // contactContactMe: "Contact Me",
-        // contactContactMeText: "If you'd like to get in touch, feel free to reach out on ",
+        contactMe: "Contact Me",
+        contactMeText: "You can reach me at my e-mail address: ",
 
         // cv.html
         cvCv: "Curriculum Vitae",
@@ -143,8 +143,8 @@ const translations = {
         linkedin: "LinkedIn",
         linkedinText: "Besuchen Sie mein LinkedIn-Profil, um mehr über meine beruflichen Erfahrungen und Qualifikationen zu erfahren.",
         linkedinProfileButton: "LinkedIn Profil",
-        // contactContactMe: "Kontakt",
-        // contactContactMeText: "Wenn Sie mit uns in Kontakt treten möchten, wenden Sie sich bitte an ",
+        contactMe: "Kontakt",
+        contactMeText: "Sie können mich unter meiner E-Mail-Adresse erreichen: ",
 
         // cv.html
         cvCv: "Lebenslauf",
@@ -237,8 +237,8 @@ function switchLanguage(lang) {
     document.querySelector('#linkedin-text').textContent = translations[lang].linkedinText;
     document.querySelector('#linkedin-profile-button').textContent = translations[lang].linkedinProfileButton;
 
-    // document.querySelector('#contact-contact-me').textContent = translations[lang].contactContactMe;
-    // document.querySelector('#contact-contact-me-text').textContent = translations[lang].contactContactMeText;
+    document.querySelector('#contact-me').textContent = translations[lang].contactMe;
+    document.querySelector('#contact-me-text').textContent = translations[lang].contactMeText;
 
     document.querySelector('#cv-cv').textContent = translations[lang].cvCv;
     document.querySelector('#cv-workexperience').textContent = translations[lang].cvWorkexperience;
