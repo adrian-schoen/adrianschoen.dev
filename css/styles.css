@@ -80,6 +80,26 @@ main {
     animation-duration: 1.2s;
 }
 
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 4rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
 
 
 .arrow {
