@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth !important;
-    font-size: 22px; /* Base font size */
+    font-size: calc(24px + 0.1vw); /* Base font size */
 }
 
 /* General Styles */
@@ -84,49 +84,49 @@ main {
 /* Screens up to 4K (3840px) */
 @media (max-width: 3840px) {
     html {
-        font-size: 22px;
+        font-size: calc(22px + 0.1vw);
     }
 }
 
 /* Screens up to 2560px (e.g., large desktops, QHD monitors) */
 @media (max-width: 2560px) {
     html {
-        font-size: 20px;
+        font-size: calc(18px + 0.1vw);
     }
 }
 
 /* Screens up to 1440px (e.g., desktops, large laptops) */
 @media (max-width: 1440px) {
     html {
-        font-size: 18px;
+        font-size: calc(14px + 0.1vw);
     }
 }
 
 /* Screens up to 1024px (e.g., tablets, small laptops) */
 @media (max-width: 1024px) {
     html {
-        font-size: 16px;
+        font-size: calc(12px + 0.1vw);
     }
 }
 
 /* Screens up to 768px (e.g., large smartphones, tablets in portrait mode) */
 @media (max-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: calc(10px + 0.1vw);
     }
 }
 
 /* Screens up to 576px (e.g., small smartphones) */
 @media (max-width: 576px) {
     html {
-        font-size: 12px;
+        font-size: calc(8px + 0.1vw);
     }
 }
 
 /* Screens up to 480px (e.g., very small smartphones) */
 @media (max-width: 480px) {
     html {
-        font-size: 10px;
+        font-size: calc(6px + 0.1vw);
     }
 }
 
