@@ -96,7 +96,7 @@ main {
 }
 
 /* Screens up to 1440px (e.g., desktops, large laptops) */
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
     html {
         font-size: calc(14px + 0.1vw);
     }
