@@ -151,7 +151,7 @@
             <h3 class="text-center mt-4" id="contact-me">Kontakt</h3>
             <p id="contact-me-text">Sie können mich unter meiner E-Mail-Adresse erreichen: </p>
             <div class="text-center">
-                <button class="btn btn-primary" onclick="copyToClipboard('contact@adrianschoen.dev');">contact@adrianschoen.dev</button>
+                <button class="btn btn-primary" onclick="copyToClipboard('contact@adrianschoen.dev');" data-toggle="tooltip" title="Copy">contact@adrianschoen.dev</button>
             </div>
         </div>
 
@@ -325,18 +325,27 @@
     <script src="/js/language-switcher.js"></script>
     <script src="/js/script.js"></script>
     <script>
-        function copyToClipboard(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            
-            textarea.select();
-            textarea.setSelectionRange(0, 99999); // For mobile devices
+    function copyToClipboard(text) {
+        // Create a temporary textarea element
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
         
-            document.execCommand('copy');
-
-            document.body.removeChild(textarea);
-        }
-        </script>
+        // Select the text
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+    
+        // Copy the text to the clipboard
+        document.execCommand('copy');
+        
+        // Remove the temporary textarea element
+        document.body.removeChild(textarea);
+    }
+    
+    // Initialize Bootstrap tooltips
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+    </script>
 </body>
 </html>
