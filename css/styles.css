@@ -81,27 +81,33 @@ main {
     animation-duration: 1.2s;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 2560px) {
     html {
-        font-size: 12px; /* Further adjust base font size for even smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: 14px; /* Adjust base font size for smaller screens */
+        font-size: 20px;
     }
 }
 
 @media (min-width: 1440px) {
     html {
-        font-size: 18px; /* Adjust base font size for 2K screens */
+        font-size: 18px;
     }
 }
 
-@media (min-width: 2560px) {
+@media (max-width: 768px) {
     html {
-        font-size: 20px; /* Adjust base font size for 4K screens */
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 10px;
     }
 }
 
