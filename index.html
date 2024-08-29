@@ -136,9 +136,7 @@
                 </div> -->
             </div>
         </div>
-
         <div style="height:100px"></div>
-
         <!-- ABOUT ME  ------------------------------------------------------- -->
         <h1 class="text-center" id="about-about-me">Über Mich</h1>
         <div class="about-container mt-3 mb-5" id="about-container">
@@ -150,9 +148,12 @@
             <div class="text-center">
                 <a href="https://www.linkedin.com/in/adrianschoen-dev" class="btn btn-primary" id="linkedin-profile-button" target="_blank">LinkedIn Profil</a>
             </div>
+            <h3 class="text-center mt-4" id="contact-me">Kontakt</h3>
+            <p id="contact-me-text">Sie können mich unter meiner E-Mail-Adresse erreichen: </p>
+            <div class="text-center">
+                <button class="btn btn-primary" onclick="copyToClipboard('contact@adrianschoen.dev');">contact@adrianschoen.dev</button>
+            </div>
         </div>
-
-
 
         <div style="height:100px"></div>
 
@@ -323,5 +324,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/js/language-switcher.js"></script>
     <script src="/js/script.js"></script>
+    <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile devices
+        
+            document.execCommand('copy');
+
+            document.body.removeChild(textarea);
+        }
+        </script>
 </body>
 </html>
