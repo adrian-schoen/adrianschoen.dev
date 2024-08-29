@@ -9,8 +9,8 @@
 }
 
 html {
-    scroll-behavior: auto !important;
-    font-size: 16px; /* Base font size */
+    scroll-behavior: smooth !important;
+    font-size: 22px; /* Base font size */
 }
 
 /* General Styles */
@@ -81,35 +81,55 @@ main {
     animation-duration: 1.2s;
 }
 
-@media (min-width: 2560px) {
+/* Screens up to 4K (3840px) */
+@media (max-width: 3840px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+/* Screens up to 2560px (e.g., large desktops, QHD monitors) */
+@media (max-width: 2560px) {
     html {
         font-size: 20px;
     }
 }
 
-@media (min-width: 1440px) {
+/* Screens up to 1440px (e.g., desktops, large laptops) */
+@media (max-width: 1440px) {
     html {
         font-size: 18px;
     }
 }
 
+/* Screens up to 1024px (e.g., tablets, small laptops) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Screens up to 768px (e.g., large smartphones, tablets in portrait mode) */
 @media (max-width: 768px) {
     html {
         font-size: 14px;
     }
 }
 
+/* Screens up to 576px (e.g., small smartphones) */
 @media (max-width: 576px) {
     html {
         font-size: 12px;
     }
 }
 
+/* Screens up to 480px (e.g., very small smartphones) */
 @media (max-width: 480px) {
     html {
         font-size: 10px;
     }
 }
+
 
 .arrow {
     opacity: 0;
