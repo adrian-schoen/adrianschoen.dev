@@ -391,11 +391,6 @@ footer {
     saturate(5) hue-rotate(175deg);         
 }
 
-html, body {
-    overflow-y: scroll;
-    scrollbar-width: none;
-}
-  
 body::-webkit-scrollbar {
     width: 0;
     height: 0;
