@@ -2,7 +2,6 @@
 :root {
     --white-low-alpha: rgba(230, 230, 230, 0.3);
     --white: rgb(230, 230, 230);
-
     --background-black: rgb(30, 30, 30);
     --header-footer-black: rgb(15, 15, 15);
     --card-modal-black: rgb(20, 20, 20);
@@ -10,7 +9,7 @@
 
 html {
     scroll-behavior: smooth !important;
-    font-size: calc(26px + 0.1vw); /* Base font size (everything larger than 4k)*/
+    font-size: calc(26px + 0.1vw); /* Base font size for large screens */
 }
 
 /* General Styles */
@@ -47,8 +46,8 @@ main {
     border-radius: 0.9375rem; /* 15px */
     padding: 2.5rem; /* 40px */
     box-shadow: 0 0 1.25rem var(--white-low-alpha); /* 20px */
-    max-width: 80%; /* Limit box width */
-    margin: 0 auto; /* Center the box */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 @keyframes welcomeFadeIn {
@@ -64,11 +63,6 @@ main {
     100% { box-shadow: 0 0 2.5rem var(--white); /* 40px */ }
 }
 
-/* Text Animations
-.welcome-title, .welcome-subtitle {
-    animation: slideIn forwards;
-} */
-
 .welcome-title {
     font-size: 6rem;
     margin: 0;
@@ -81,55 +75,48 @@ main {
     animation-duration: 1.2s;
 }
 
-/* Screens up to 4K (3840px) */
+/* Responsive Font Sizes */
 @media (max-width: 3840px) {
     html {
         font-size: calc(22px + 0.1vw);
     }
 }
 
-/* Screens up to 2560px (e.g., large desktops, QHD monitors) */
 @media (max-width: 2560px) {
     html {
         font-size: calc(18px + 0.1vw);
     }
 }
 
-/* Screens up to 1440px (e.g., desktops, large laptops) */
 @media (max-width: 1920px) {
     html {
         font-size: calc(14px + 0.1vw);
     }
 }
 
-/* Screens up to 1024px (e.g., tablets, small laptops) */
 @media (max-width: 1024px) {
     html {
         font-size: calc(12px + 0.1vw);
     }
 }
 
-/* Screens up to 768px (e.g., large smartphones, tablets in portrait mode) */
 @media (max-width: 768px) {
     html {
         font-size: calc(10px + 0.1vw);
     }
 }
 
-/* Screens up to 576px (e.g., small smartphones) */
 @media (max-width: 576px) {
     html {
         font-size: calc(8px + 0.1vw);
     }
 }
 
-/* Screens up to 480px (e.g., very small smartphones) */
 @media (max-width: 480px) {
     html {
         font-size: calc(6px + 0.1vw);
     }
 }
-
 
 .arrow {
     opacity: 0;
@@ -137,7 +124,7 @@ main {
     animation: slideIn 1.5s forwards, fadeIn 1.5s forwards;
     cursor: pointer;
     display: inline-block;
-    padding: 0; /* Set padding to 0 */
+    padding: 0;
     margin: 0 -0.25rem; /* Adjust margin to shift left (4px) */
     transition: color 0.3s;
 }
@@ -146,13 +133,13 @@ main {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center; /* Keep this as center */
+    justify-content: center;
     width: 5rem; /* 80px */
     height: 5rem; /* 80px */
     margin: 0 auto;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 .center-animation:hover {
@@ -170,7 +157,7 @@ main {
     width: 100%;
     transform-origin: center;
     border-radius: 0.625rem; /* 10px */
-    transition: border-color 0.3s ease; /* Add transition for border color */
+    transition: border-color 0.3s ease;
 }
 
 .center-animation::before {
@@ -186,24 +173,20 @@ main {
 }
 
 .center-animation::before {
-    animation: scaleBefore 3s forwards; /* Animate before */
-    animation-delay: 1.5s; /* Delay the animation by 3 seconds */
+    animation: scaleBefore 3s forwards;
+    animation-delay: 1.5s;
 }
 
 .center-animation::after {
-    animation: scaleAfter 3s forwards; /* Animate after */
-    animation-delay: 1.5s; /* Delay the animation by 3 seconds */
+    animation: scaleAfter 3s forwards;
+    animation-delay: 1.5s;
 }
 
-.center-animation:hover::before {
-    border-color: var(--white);
-}
-
+.center-animation:hover::before,
 .center-animation:hover::after {
     border-color: var(--white);
 }
 
-/* Keyframe animations for before and after */
 @keyframes scaleBefore {
     0% {
         transform: scale3d(0, 1, 1);
@@ -248,7 +231,7 @@ main {
     margin-bottom: 1.25rem; /* 20px */
     border: 0.125rem solid var(--white); /* 2px */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Hide overflow */
+    overflow: hidden;
 }
 
 .card:hover {
@@ -258,9 +241,9 @@ main {
 
 .card-img-top {
     max-width: 18.75rem; /* 300px */
-    width: 100%; /* Full width */
+    width: 100%;
     height: auto;
-    object-fit: cover; /* Maintain aspect ratio */
+    object-fit: cover;
     border-bottom: 0.125rem solid var(--white); /* 2px */
 }
 
@@ -279,35 +262,21 @@ main {
     border: 0.125rem solid var(--white); /* 2px */
 }
 
-.greeting-container {
-    max-width: 40.625rem; /* 650px */
-    margin: 0 auto;
-    padding: 1.25rem; /* 20px */
-    text-align: left; 
-    border-top: 0.125rem solid var(--white); /* 2px */
-}
-
-.projects-container {
-    max-width: 81.25rem; /* 1300px */
-    margin: 0 auto;
-    padding: 1.25rem; /* 20px */
-    text-align: left; 
-    border-top: 0.125rem solid var(--white); /* 2px */
-}
-
+.greeting-container,
 .about-container {
     max-width: 40.625rem; /* 650px */
     margin: 0 auto;
     padding: 1.25rem; /* 20px */
-    text-align: left; 
+    text-align: left;
     border-top: 0.125rem solid var(--white); /* 2px */
 }
 
+.projects-container,
 .cv-container {
     max-width: 81.25rem; /* 1300px */
     margin: 0 auto;
     padding: 1.25rem; /* 20px */
-    text-align: left; 
+    text-align: left;
     border-top: 0.125rem solid var(--white); /* 2px */
 }
 
@@ -331,6 +300,7 @@ header {
     top: 0; 
     background-image: linear-gradient(var(--header-footer-black), var(--background-black) 90%);
 }
+
 footer { 
     bottom: 0; 
     background-image: linear-gradient(var(--background-black), var(--header-footer-black) 90%);
@@ -352,7 +322,7 @@ footer {
 .cv-iframe {
     width: 70%;
     height: 80vh;
-    border: none; /* No border */
+    border: none;
 }
 
 .btn {
@@ -385,8 +355,7 @@ footer {
 }
 
 .btn-close-custom {             
-    filter: invert(1) sepia(1)         
-    saturate(5) hue-rotate(175deg);         
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);         
 }
 
 body::-webkit-scrollbar {

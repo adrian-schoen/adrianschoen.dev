@@ -10,55 +10,54 @@ function scrollToContainer(containerId) {
 }
 
 $(document).ready(function() {
-    // Check if the current page is index.html
-    const currentPage = window.location.href.split('/').pop();
-    if (currentPage === '' || currentPage === 'index.html') { // on cloudflare deployment its adrianschoen.dev/, on local its .../index.html
-        const headerHeight = $('#header').outerHeight();
-        const $scrollTo = $('main');
-        let hasScrolled = false;
+    const currentPage = window.location.pathname.split('/').pop();
+    const $header = $('#header');
+    const $footer = $('footer');
+    const $scrollTo = $('main');
+    let hasScrolled = false;
 
-        function scrollToMain() {
-            hasScrolled = true; // Set the flag to true
-
-            $('html, body').animate({
-                scrollTop: $scrollTo.offset().top - 100
-            }, 1000); 
-
-            $('#header').addClass('fading-header visible');
-            $('footer').addClass('fading-footer visible');
-
-            // Remove the scroll wheel event listener after the animation is triggered
-            $(window).off('wheel');
-        }
-
-        function showHeaderFooter() {
-            if (!hasScrolled) {
-                $('#header').addClass('fading-header visible');
-                $('footer').addClass('fading-footer visible');
-                hasScrolled = true;
-            }
-        }
-
-        $('#scrollDown').click(function() {
-            scrollToMain();
-        });
-
-        // Show header and footer immediately on first scroll
-        $(window).on('wheel', function(event) {
-            showHeaderFooter();
-        });
+    // Function to scroll to the main content
+    function scrollToMain() {
+        hasScrolled = true;
+        $('html, body').animate({
+            scrollTop: $scrollTo.offset().top - 100
+        }, 1000); 
+        $header.addClass('fading-header visible');
+        $footer.addClass('fading-footer visible');
+        $(window).off('wheel');
     }
 
-    // Bind navbar links to scrollToContainer function
-    $('#nav-my-projects').click(function() {
-        scrollToContainer('projects-title');
-    });
+    // Function to show header and footer
+    function showHeaderFooter() {
+        if (!hasScrolled) {
+            $header.addClass('fading-header visible');
+            $footer.addClass('fading-footer visible');
+            hasScrolled = true;
+        }
+    }
 
-    $('#nav-about-me').click(function() {
-        scrollToContainer('about-about-me');
-    });
+    // Scroll to main content on scroll down button click
+    $('#scrollDown').click(scrollToMain);
 
-    $('#nav-cv').click(function() {
-        scrollToContainer('cv-cv');
-    });
+    // Show header and footer on wheel event
+    $(window).on('wheel', showHeaderFooter);
+
+    // Scroll to specific sections on nav link click
+    $('#nav-my-projects').click(() => scrollToContainer('projects-title'));
+    $('#nav-about-me').click(() => scrollToContainer('about-about-me'));
+    $('#nav-cv').click(() => scrollToContainer('cv-cv'));
+
+    // Initialize Bootstrap tooltips
+    $('[data-toggle="tooltip"]').tooltip(); 
 });
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+}
