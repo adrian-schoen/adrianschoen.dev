@@ -1,8 +1,8 @@
 // Function to switch the language of the page
 function switchLanguage(language) {
-    const elements = document.querySelectorAll('[id^="lang-"]');
+    const elements = document.querySelectorAll('[id]');
     elements.forEach(element => {
-        const key = element.id.replace('lang-', '');
+        const key = element.id;
         element.textContent = translations[language][key] || element.textContent;
     });
 }
