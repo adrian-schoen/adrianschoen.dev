@@ -1,290 +1,128 @@
+// Function to switch the language of the page
+function switchLanguage(language) {
+    const elements = document.querySelectorAll('[id^="lang-"]');
+    elements.forEach(element => {
+        const key = element.id.replace('lang-', '');
+        element.textContent = translations[language][key] || element.textContent;
+    });
+}
+
+// Translations object containing text for different languages
 const translations = {
     en: {
-        // Navbar
-        navMyProjects: "My Projects",
-        navAboutMe: "About Me",
-        navCv: "CV",
-
-        // index.html
-        indexGreeting: "Welcome to my Website!",
-        indexGreetingText: "Thank you for visiting! Here, you'll find a collection of my projects and insights into my work. I’m passionate about creating and sharing knowledge in the tech community.",
-        indexConnectSubtitle: "Feel free to explore my GitHub profile and check out the repository for this website:",
-        indexGithubProfileButton: "GitHub Profile",
-        indexGithubRepoButton: "Website Repository",
-
-        projectsTitle: "My Projects",
-        projectsTitle1: "adrianschoen.dev",
-        projectsTitle1Text: "This very website you are on.",
-        projectsTitle2: "CatCompression",
-        projectsTitle2Text: "CatCompression compresses files using Huffman coding and hides the data in PNG images of cats.",
-        // projectsTitle3: "Project 3",
-        // projectsTitle3Text: "Description of project 3.",
-        // projectsTitle4: "Project 4",
-        // projectsTitle4Text: "Description of project 4.",
-        // projectsTitle5: "Project 5",
-        // projectsTitle6Text: "Description of project 5.",
-        // projectsTitle6: "Project 6",
-        // projectsTitle6Text: "Description of project 6.",
-        projectsTitle1ModalTitle1: "adrianschoen.dev",
-        projectsTitle1ModalTitle1Text: "This is my personal website, designed to showcase my projects and professional experience. Here, you'll find a comprehensive portfolio that highlights my skills and accomplishments across various fields. Currently, the site is under construction as I work to enhance its features and content.",
-        projectsTitle1ModalTitle1Button: "View on GitHub",
-        projectsTitle2ModalTitle2: "CatCompression",
-        projectsTitle2ModalTitle2Text: "CatCompression is a specialized file compression tool that employs Huffman coding to efficiently compress files and seamlessly embed the compressed data within a PNG image of a cat. This innovative tool not only facilitates the compression process but also allows for easy extraction and decompression of the data from the PNG image. Designed for both efficiency and convenience, CatCompression offers a unique way to store data discreetly within a charming cat image file.",
-        projectsTitle2ModalTitle2Button: "View on GitHub",
-        // projectsTitle3ModalTitle3: "Project 3",
-        // projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle3ModalTitle3Button: "View on Github",
-        // projectsTitle4ModalTitle4: "Project 4",
-        // projectsTitle4ModalTitle4Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle4ModalTitle4Button: "View on Github",
-        // projectsTitle5ModalTitle5: "Project 5",
-        // projectsTitle5ModalTitle5Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle5ModalTitle5Button: "View on Github",
-        // projectsTitle6ModalTitle6: "Project 6",
-        // projectsTitle6ModalTitle6Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle6ModalTitle6Button: "View on Github",
-
-        // about.html
-        aboutAboutMe: "About Me",
-        aboutAboutMeText: "Hello, my name is Adrian Schön and I am currently in the second semester of my dual study programme in computer science. I am studying in co-operation with United Internet AG and DHBW Karlsruhe.",
-        aboutAboutMeText2: "By combining theory and practice, I gain valuable experience and deepen my knowledge both in the academic field and in real projects. My professional focus is on backend development. I work intensively with technologies such as Java and SpringBoot to develop robust and scalable applications. I place particular emphasis on clean code, performance optimisation and the implementation of best practices.",
-        aboutAboutMeText3: "In addition to my backend work, I also work with frontend technologies. I enjoy designing websites and web applications, utilising HTML, CSS and JavaScript to develop user-friendly and appealing interfaces. This website you are currently viewing is an example of my frontend work.",
-
-        linkedin: "LinkedIn",
-        linkedinText: "Visit my LinkedIn profile to learn more about my professional experiences and qualifications.",
-        linkedinProfileButton: "LinkedIn Profile",
-        contactMe: "Contact Me",
-        contactMeText: "You can reach me at my e-mail address: ",
-
-        // cv.html
-        cvCv: "Curriculum Vitae",
-        cvWorkexperience: "Work Experience",
-        cvWorkexperiencePosition: "Dual Student Computer Science",
-        cvWorkexperiencePositionDate: "October 2023 - September 2026",
-        cvWorkexperiencePositionC1: "1&1 Mail & Media GmbH, Oct. 2023 - Sep. 2024",
-        cvWorkexperiencePositionC11: "Developed a solid understanding of Java service and repository patterns as well as the frameworks Spring and Spring Boot frameworks to build robust backend applications with RESTful services and to improve the application architecture.",
-        cvWorkexperiencePositionC12: "Implemented unit tests with JUnit and Mockito in Spring Boot applications in order to ensure the reliability andreliability and functionality of the code and increase code quality.",
-        cvWorkexperiencePositionC13: "Reduced technical debt through the use of SonarQube, which improves the maintainability of the code.",
-        cvWorkexperiencePositionC14: "Researched and implemented a CI/CD pipeline as part of a project to optimise the development process and increase deployment efficiency.",
-        cvWorkexperiencePositionC15: "Gained hands-on experience in an agile work environment, including attending scrum meetings, sprint planning and retrospectives, which strengthened my ability to collaborate in a team and adapt to changing requirements. changing requirements.",
-        cvEducation: "Education",
-        cvEducationCourse: "B. Sc. in Computer Science",
-        cvEducationCourseDate: "Oct. 2023 - Sep. 2026",
-        cvEducationUniversity: "Duale Hochschule Baden-Württemberg Karlsruhe",
-        cvProjects: "Projects",
-        cvProjects1Name: "Personal Website",
-        cvProjects1Desc: "This website you are currently on. Lists all of my other projects.",
-        cvSkills: "Skills",
-        cvSkillsProgramminglanguages: "Programming Languages",
-        cvSkillsProgramminglanguagesList: "Java, Python, JavaScript, HTML/CSS",
-        cvSkillsFrameworks: "Frameworks",
-        cvSkillsFrameworksList: "Spring Boot, Spring MVC, Thymeleaf",
-        cvSkillsCodequality: "Code Quality & Testing",
-        cvSkillsCodequalityList: "Lombok, SonarQube, JUnit, Mockito",
-        cvSkillsOthertools: "Other Tools",
-        cvSkillsOthertoolsList: "Maven, Git, GitLab CI/CD, Docker",
-        cvSkillsIdes: "IDEs",
-        cvSkillsIdesList: "IntelliJ, PyCharm, VS Code",
-        cvSkillsLanguageskills: "Language Skills",
-        cvSkillsLanguageskillsList: "German (native speaker), English (business fluent)"
+        'nav-my-projects': 'My Projects',
+        'nav-about-me': 'About Me',
+        'nav-cv': 'CV',
+        'index-greeting': 'Welcome to my website!',
+        'index-greeting-text': 'Thank you for visiting! Here you will find a collection of my projects and insights into my work. My passion is creating and sharing knowledge in the tech community.',
+        'index-connect-subtitle': 'Check out my GitHub profile and the repository for this website:',
+        'index-github-profile-button': 'GitHub Profile',
+        'index-github-repo-button': 'Website Repository',
+        'projects-title': 'My Projects',
+        'projects-title-1': 'adrianschoen.dev',
+        'projects-title-1-text': 'This is the website you are currently on.',
+        'projects-title-2': 'CatCompression',
+        'projects-title-2-text': 'CatCompression compresses files using Huffman coding and hides the data in PNG images of cats.',
+        'about-about-me': 'About Me',
+        'about-about-me-text': 'Hello! My name is Adrian Schön, and I am currently in the second semester of my dual study program in computer science. I am studying in collaboration with United Internet AG and DHBW Karlsruhe.',
+        'about-about-me-text2': 'Through the combination of theory and practice, I am gaining valuable experience and deepening my knowledge in both academic and real-world projects. My professional focus is on backend development. I work intensively with technologies such as Java and SpringBoot to develop robust and scalable applications. I place particular emphasis on clean code, performance optimization, and the implementation of best practices.',
+        'about-about-me-text3': 'In addition to my backend work, I also engage with frontend technologies. I enjoy designing websites and web applications, using HTML, CSS, and JavaScript to create user-friendly and appealing interfaces. This website, which you are currently on, is an example of my work in the frontend area.',
+        'linkedin': 'LinkedIn',
+        'linkedin-text': 'Visit my LinkedIn profile to learn more about my professional experiences and qualifications.',
+        'linkedin-profile-button': 'LinkedIn Profile',
+        'contact-me': 'Contact',
+        'contact-me-text': 'You can reach me at my email address:',
+        'cv-cv': 'CV',
+        'cv-workexperience': 'Work Experience',
+        'cv-workexperience-position': 'Dual Student Computer Science',
+        'cv-workexperience-position-date': 'October 2023 - September 2026',
+        'cv-workexperience-position-c1': '1&1 Mail & Media GmbH, Oct. 2023 - Sep. 2024',
+        'cv-workexperience-position-c1-1': 'Developed a solid understanding of Java service and repository patterns as well as the Spring and Spring Boot frameworks to create robust backend applications with RESTful services and improve application architecture.',
+        'cv-workexperience-position-c1-2': 'Implemented unit tests with JUnit and Mockito in Spring Boot applications to ensure code reliability and functionality, and improve code quality.',
+        'cv-workexperience-position-c1-3': 'Reduced technical debt using SonarQube, which improved code maintainability.',
+        'cv-workexperience-position-c1-4': 'Researched and implemented a CI/CD pipeline as part of a project to optimize the development process and increase deployment efficiency.',
+        'cv-workexperience-position-c1-5': 'Gained practical experience in an agile work environment, including participating in Scrum meetings, sprint planning, and retrospectives, which strengthened my ability to collaborate in a team and adapt to changing requirements.',
+        'cv-education': 'Education',
+        'cv-education-course': 'B. Sc. Computer Science',
+        'cv-education-course-date': 'Oct. 2023 - Sep. 2026',
+        'cv-education-university': 'Duale Hochschule Baden-Württemberg Karlsruhe',
+        'cv-projects': 'Projects',
+        'cv-projects-1-name': 'Personal Website',
+        'cv-projects-1-desc': 'This website, which you are currently on. Here are all my other projects listed.',
+        'cv-skills': 'Skills',
+        'cv-skills-programminglanguages': 'Programming Languages',
+        'cv-skills-programminglanguages-list': 'Java, Python, JavaScript, HTML/CSS',
+        'cv-skills-frameworks': 'Frameworks',
+        'cv-skills-frameworks-list': 'Spring Boot, Spring MVC, Thymeleaf',
+        'cv-skills-codequality': 'Code Quality & Testing',
+        'cv-skills-codequality-list': 'Lombok, SonarQube, JUnit, Mockito',
+        'cv-skills-othertools': 'Other Tools',
+        'cv-skills-othertools-list': 'Maven, Git, GitLab CI/CD, Docker',
+        'cv-skills-ides': 'IDEs',
+        'cv-skills-ides-list': 'IntelliJ, PyCharm, VS Code',
+        'cv-skills-languageskills': 'Language Skills',
+        'cv-skills-languageskills-list': 'German (native), English (fluent)'
     },
     de: {
-        // navbar
-        navMyProjects: "Meine Projekte",
-        navAboutMe: "Über Mich",
-        navCv: "Lebenslauf",
-
-        // index.html
-        indexGreeting: "Wilkommen auf meiner Website!",
-        indexGreetingText: "Vielen Dank für Ihren Besuch! Hier finden Sie eine Sammlung meiner Projekte und Einblicke in meine Arbeit. Meine Leidenschaft gilt der Schaffung und dem Austausch von Wissen in der Tech-Community.",
-        indexConnectSubtitle: "Schauen Sie sich mein GitHub-Profil und das Repository für diese Website an:",
-        indexGithubProfileButton: "GitHub Profil",
-        indexGithubRepoButton: "Website Repository",
-
-        projectsTitle: "Meine Projekte",
-        projectsTitle1: "adrianschoen.dev",
-        projectsTitle1Text: "Auf dieser Website befinden Sie sich gerade.",
-        projectsTitle2: "CatCompression",
-        projectsTitle2Text: "CatCompression komprimiert Dateien mithilfe der Huffman-Kodierung und versteckt die Daten in PNG-Bildern von Katzen.",
-        // projectsTitle3: "Projekt 3",
-        // projectsTitle3Text: "Beschreibung von Projekt 3.",
-        // projectsTitle4: "Projekt 4",
-        // projectsTitle4Text: "Beschreibung von Projekt 4.",
-        // projectsTitle5: "Projekt 5",
-        // projectsTitle5Text: "Beschreibung von Projekt 5.",
-        // projectsTitle6: "Projekt 6",
-        // projectsTitle6Text: "Beschreibung von Projekt 6.",
-
-        projectsTitle1ModalTitle1: "adrianschoen.dev",
-        projectsTitle1ModalTitle1Text: "Dies ist meine persönliche Website, auf der ich meine Projekte und beruflichen Erfahrungen vorstelle. Hier finden Sie ein umfassendes Portfolio, das meine Fähigkeiten und Leistungen in verschiedenen Bereichen zeigt. Derzeit befindet sich die Website noch im Aufbau, während ich an der Verbesserung ihrer Funktionen und Inhalte arbeite.",
-        projectsTitle1ModalTitle1Button: "Zur GitHub Repo",
-        projectsTitle2ModalTitle2: "CatCompression",
-        projectsTitle2ModalTitle2Text: "CatCompression ist ein spezielles Dateikomprimierungstool, das die Huffman-Kodierung nutzt, um Dateien effizient zu komprimieren und die komprimierten Daten nahtlos in ein PNG-Bild einer Katze einzubetten. Dieses innovative Tool erleichtert nicht nur den Komprimierungsprozess, sondern ermöglicht auch eine einfache Extraktion und Dekomprimierung der Daten aus dem PNG-Bild. CatCompression wurde für Effizienz und Komfort entwickelt und bietet eine einzigartige Möglichkeit, Daten diskret in einer charmanten Katzenbilddatei zu speichern.",
-        projectsTitle2ModalTitle2Button: "Zur GitHub Repo",
-        // projectsTitle3ModalTitle3: "Projekt 3",
-        // projectsTitle3ModalTitle3Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle3ModalTitle3Button: "Zur GitHub Repo",
-        // projectsTitle4ModalTitle4: "Projekt 4",
-        // projectsTitle4ModalTitle4Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle4ModalTitle4Button: "Zur GitHub Repo",
-        // projectsTitle5ModalTitle5: "Projekt 5",
-        // projectsTitle5ModalTitle5Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle5ModalTitle5Button: "Zur GitHub Repo",
-        // projectsTitle6ModalTitle6: "Projekt 6",
-        // projectsTitle6ModalTitle6Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor venenatis nulla at porta. Quisque pharetra elementum viverra. Maecenas sit amet tellus diam. Integer porttitor dictum pellentesque. Morbi sed lacus ac sapien placerat mollis. Etiam ultricies eleifend ex, ac commodo est dignissim non.",
-        // projectsTitle6ModalTitle6Button: "Zur GitHub Repo",
-
-        // about.html
-        aboutAboutMe: "Über Mich",
-        aboutAboutMeText: "Hallo! Mein Name ist Adrian Schön, und ich befinde mich aktuell im zweiten Semester meines dualen Studiums der Informatik. Ich studiere in Zusammenarbeit mit der United Internet AG und der DHBW Karlsruhe.",
-        aboutAboutMeText2: "Durch die Kombination von Theorie und Praxis sammle ich wertvolle Erfahrungen und vertiefe mein Wissen sowohl im akademischen Bereich als auch in realen Projekten.\nDer Schwerpunkt meiner beruflichen Tätigkeit liegt in der Backend-Entwicklung. Ich arbeite intensiv mit Technologien wie Java und SpringBoot, um robuste und skalierbare Anwendungen zu entwickeln. Dabei lege ich besonderen Wert auf sauberen Code, Performance-Optimierung und die Implementierung von Best Practices.",
-        aboutAboutMeText3: "Neben meiner Backend-Arbeit beschäftige ich mich auch mit Frontend-Technologien. Ich habe Freude daran, Websites und Webanwendungen zu gestalten, und nutze dabei HTML, CSS und JavaScript, um benutzerfreundliche und ansprechende Oberflächen zu entwickeln. Diese Website, auf der Sie sich gerade befinden, ist ein Beispiel für meine Arbeit im Frontend-Bereich.",
-
-        linkedin: "LinkedIn",
-        linkedinText: "Besuchen Sie mein LinkedIn-Profil, um mehr über meine beruflichen Erfahrungen und Qualifikationen zu erfahren.",
-        linkedinProfileButton: "LinkedIn Profil",
-        contactMe: "Kontakt",
-        contactMeText: "Sie können mich unter meiner E-Mail-Adresse erreichen: ",
-
-        // cv.html
-        cvCv: "Lebenslauf",
-        cvWorkexperience: "Berufserfahrung",
-        cvWorkexperiencePosition: "Dualer Student Informatik",
-        cvWorkexperiencePositionDate: "Oktober 2023 - September 2026",
-        cvWorkexperiencePositionC1: "1&1 Mail & Media GmbH, Okt. 2023 - Sep. 2024",
-        cvWorkexperiencePositionC11: "Entwickelte ein fundiertes Verständnis der Java Service- und Repository-Pattern sowie der Frameworks Spring und Spring Boot zur Erstellung robuster Backend-Anwendungen mit RESTful Services und zur Verbesserung der Anwendungsarchitektur.",
-        cvWorkexperiencePositionC12: "Implementierte Unit-Tests mit JUnit und Mockito in Spring Boot-Anwendungen, um die Zuverlässigkeit und Funktionalität des Codes zu gewährleisten und die Codequalität zu steigern.",
-        cvWorkexperiencePositionC13: "Reduzierte technische Schulden durch den Einsatz von SonarQube, was die Wartbarkeit des Codes verbesserte.",
-        cvWorkexperiencePositionC14: "Recherchierte und implementierte eine CI/CD-Pipeline im Rahmen einer Projektarbeit, um den Entwicklungsprozess zu optimieren und die Effizienz des Deployments zu steigern.",
-        cvWorkexperiencePositionC15: "Erwarb praktische Erfahrung in einem agilen Arbeitsumfeld, einschließlich der Teilnahme an Scrum-Meetings Sprint-Planungen und Retrospektiven, was meine Fähigkeit zur Zusammenarbeit im Team und zur Anpassung an sich ändernde Anforderungen stärkte.",
-        cvEducation: "Ausbildung",
-        cvEducationCourse: "B. Sc. Informatik",
-        cvEducationCourseDate: "Okt. 2023 - Sep. 2026",
-        cvEducationUniversity: "Duale Hochschule Baden-Württemberg Karlsruhe",
-        cvProjects: "Projekte",
-        cvProjects1Name: "Persönliche Website",
-        cvProjects1Desc: "Diese Website, auf der Sie sich gerade befinden. Hier sind alle meine anderen Projekte aufgelistet.",
-        cvSkills: "Fachkenntnisse",
-        cvSkillsProgramminglanguages: "Programmiersprachen",
-        cvSkillsProgramminglanguagesList: "Java, Python, JavaScript, HTML/CSS",
-        cvSkillsFrameworks: "Frameworks",
-        cvSkillsFrameworksList: "Spring Boot, Spring MVC, Thymeleaf",
-        cvSkillsCodequality: "Code Quality & Testing",
-        cvSkillsCodequalityList: "Lombok, SonarQube, JUnit, Mockito",
-        cvSkillsOthertools: "Sonstige Tools",
-        cvSkillsOthertoolsList: "Maven, Git, GitLab CI/CD, Docker",
-        cvSkillsIdes: "IDEs",
-        cvSkillsIdesList: "IntelliJ, PyCharm, VS Code",
-        cvSkillsLanguageskills: "Sprachkenntnisse",
-        cvSkillsLanguageskillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)"
+        'nav-my-projects': 'Meine Projekte',
+        'nav-about-me': 'Über Mich',
+        'nav-cv': 'Lebenslauf',
+        'index-greeting': 'Wilkommen auf meiner Website!',
+        'index-greeting-text': 'Vielen Dank für Ihren Besuch! Hier finden Sie eine Sammlung meiner Projekte und Einblicke in meine Arbeit. Meine Leidenschaft gilt der Schaffung und dem Austausch von Wissen in der Tech-Community.',
+        'index-connect-subtitle': 'Schauen Sie sich mein GitHub-Profil und das Repository für diese Website an:',
+        'index-github-profile-button': 'GitHub Profil',
+        'index-github-repo-button': 'Website Repository',
+        'projects-title': 'Meine Projekte',
+        'projects-title-1': 'adrianschoen.dev',
+        'projects-title-1-text': 'Auf dieser Website befinden Sie sich gerade.',
+        'projects-title-2': 'CatCompression',
+        'projects-title-2-text': 'CatCompression komprimiert Dateien mithilfe der Huffman-Kodierung und versteckt die Daten in PNG-Bildern von Katzen.',
+        'about-about-me': 'Über Mich',
+        'about-about-me-text': 'Hallo! Mein Name ist Adrian Schön, und ich befinde mich aktuell im zweiten Semester meines dualen Studiums der Informatik. Ich studiere in Zusammenarbeit mit der United Internet AG und der DHBW Karlsruhe.',
+        'about-about-me-text2': 'Durch die Kombination von Theorie und Praxis sammle ich wertvolle Erfahrungen und vertiefe mein Wissen sowohl im akademischen Bereich als auch in realen Projekten. Der Schwerpunkt meiner beruflichen Tätigkeit liegt in der Backend-Entwicklung. Ich arbeite intensiv mit Technologien wie Java und SpringBoot, um robuste und skalierbare Anwendungen zu entwickeln. Dabei lege ich besonderen Wert auf sauberen Code, Performance-Optimierung und die Implementierung von Best Practices.',
+        'about-about-me-text3': 'Neben meiner Backend-Arbeit beschäftige ich mich auch mit Frontend-Technologien. Ich habe Freude daran, Websites und Webanwendungen zu gestalten, und nutze dabei HTML, CSS und JavaScript, um benutzerfreundliche und ansprechende Oberflächen zu entwickeln. Diese Website, auf der Sie sich gerade befinden, ist ein Beispiel für meine Arbeit im Frontend-Bereich.',
+        'linkedin': 'LinkedIn',
+        'linkedin-text': 'Besuchen Sie mein LinkedIn-Profil, um mehr über meine beruflichen Erfahrungen und Qualifikationen zu erfahren.',
+        'linkedin-profile-button': 'LinkedIn Profil',
+        'contact-me': 'Kontakt',
+        'contact-me-text': 'Sie können mich unter meiner E-Mail-Adresse erreichen:',
+        'cv-cv': 'Lebenslauf',
+        'cv-workexperience': 'Berufserfahrung',
+        'cv-workexperience-position': 'Dualer Student Informatik',
+        'cv-workexperience-position-date': 'Oktober 2023 - September 2026',
+        'cv-workexperience-position-c1': '1&1 Mail & Media GmbH, Okt. 2023 - Sep. 2024',
+        'cv-workexperience-position-c1-1': 'Entwickelte ein fundiertes Verständnis der Java Service- und Repository-Pattern sowie der Frameworks Spring und Spring Boot zur Erstellung robuster Backend-Anwendungen mit RESTful Services und zur Verbesserung der Anwendungsarchitektur.',
+        'cv-workexperience-position-c1-2': 'Implementierte Unit-Tests mit JUnit und Mockito in Spring Boot-Anwendungen, um die Zuverlässigkeit und Funktionalität des Codes zu gewährleisten und die Codequalität zu steigern.',
+        'cv-workexperience-position-c1-3': 'Reduzierte technische Schulden durch den Einsatz von SonarQube, was die Wartbarkeit des Codes verbesserte.',
+        'cv-workexperience-position-c1-4': 'Recherchierte und implementierte eine CI/CD-Pipeline im Rahmen einer Projektarbeit, um den Entwicklungsprozess zu optimieren und die Effizienz des Deployments zu steigern.',
+        'cv-workexperience-position-c1-5': 'Erwarb praktische Erfahrung in einem agilen Arbeitsumfeld, einschließlich der Teilnahme an Scrum-Meetings Sprint-Planungen und Retrospektiven, was meine Fähigkeit zur Zusammenarbeit im Team und zur Anpassung an sich ändernde Anforderungen stärkte.',
+        'cv-education': 'Ausbildung',
+        'cv-education-course': 'B. Sc. Informatik',
+        'cv-education-course-date': 'Okt. 2023 - Sep. 2026',
+        'cv-education-university': 'Duale Hochschule Baden-Württemberg Karlsruhe',
+        'cv-projects': 'Projekte',
+        'cv-projects-1-name': 'Persönliche Website',
+        'cv-projects-1-desc': 'Diese Website, auf der Sie sich gerade befinden. Hier sind alle meine anderen Projekte aufgelistet.',
+        'cv-skills': 'Fachkenntnisse',
+        'cv-skills-programminglanguages': 'Programmiersprachen',
+        'cv-skills-programminglanguages-list': 'Java, Python, JavaScript, HTML/CSS',
+        'cv-skills-frameworks': 'Frameworks',
+        'cv-skills-frameworks-list': 'Spring Boot, Spring MVC, Thymeleaf',
+        'cv-skills-codequality': 'Code Quality & Testing',
+        'cv-skills-codequality-list': 'Lombok, SonarQube, JUnit, Mockito',
+        'cv-skills-othertools': 'Sonstige Tools',
+        'cv-skills-othertools-list': 'Maven, Git, GitLab CI/CD, Docker',
+        'cv-skills-ides': 'IDEs',
+        'cv-skills-ides-list': 'IntelliJ, PyCharm, VS Code',
+        'cv-skills-languageskills': 'Sprachkenntnisse',
+        'cv-skills-languageskills-list': 'Deutsch (muttersprachlich), Englisch (verhandlungssicher)'
     }
 };
 
-function switchLanguage(lang) {
-    sessionStorage.setItem('language', lang);
-    const currentPage = window.location.href.split('/').pop();
-
-    // navbar
-    document.querySelector('#nav-my-projects').textContent = translations[lang].navMyProjects;
-    document.querySelector('#nav-about-me').textContent = translations[lang].navAboutMe;
-    document.querySelector('#nav-cv').textContent = translations[lang].navCv;
-
-    document.querySelector('#index-greeting').textContent = translations[lang].indexGreeting;
-    document.querySelector('#index-greeting-text').textContent = translations[lang].indexGreetingText;
-    document.querySelector('#index-connect-subtitle').textContent = translations[lang].indexConnectSubtitle;
-    document.querySelector('#index-github-profile-button').textContent = translations[lang].indexGithubProfileButton;
-    document.querySelector('#index-github-repo-button').textContent = translations[lang].indexGithubRepoButton;
-    document.querySelector('#projects-title').textContent = translations[lang].projectsTitle;
-
-    document.querySelector('#projects-title-1').textContent = translations[lang].projectsTitle1;
-    document.querySelector('#projects-title-1-text').textContent = translations[lang].projectsTitle1Text;
-    document.querySelector('#projects-title-2').textContent = translations[lang].projectsTitle2;
-    document.querySelector('#projects-title-2-text').textContent = translations[lang].projectsTitle2Text;
-    // document.querySelector('#projects-title-3').textContent = translations[lang].projectsTitle3;
-    // document.querySelector('#projects-title-3-text').textContent = translations[lang].projectsTitle3Text;
-    // document.querySelector('#projects-title-4').textContent = translations[lang].projectsTitle4;
-    // document.querySelector('#projects-title-4-text').textContent = translations[lang].projectsTitle4Text;
-    // document.querySelector('#projects-title-5').textContent = translations[lang].projectsTitle5;
-    // document.querySelector('#projects-title-5-text').textContent = translations[lang].projectsTitle5Text;
-    // document.querySelector('#projects-title-6').textContent = translations[lang].projectsTitle6;
-    // document.querySelector('#projects-title-6-text').textContent = translations[lang].projectsTitle6Text;
-
-    document.querySelector('#projects-title-1-modal-title-1').textContent = translations[lang].projectsTitle1ModalTitle1;
-    document.querySelector('#projects-title-1-modal-title-1-text').textContent = translations[lang].projectsTitle1ModalTitle1Text;
-    document.querySelector('#projects-title-1-modal-title-1-button').textContent = translations[lang].projectsTitle1ModalTitle1Button;
-    document.querySelector('#projects-title-2-modal-title-2').textContent = translations[lang].projectsTitle2ModalTitle2;
-    document.querySelector('#projects-title-2-modal-title-2-text').textContent = translations[lang].projectsTitle2ModalTitle2Text;
-    document.querySelector('#projects-title-2-modal-title-2-button').textContent = translations[lang].projectsTitle2ModalTitle2Button;
-    // document.querySelector('#projects-title-3-modal-title-3').textContent = translations[lang].projectsTitle3ModalTitle3;
-    // document.querySelector('#projects-title-3-modal-title-3-text').textContent = translations[lang].projectsTitle3ModalTitle3Text;
-    // document.querySelector('#projects-title-3-modal-title-3-button').textContent = translations[lang].projectsTitle3ModalTitle3Button;
-    // document.querySelector('#projects-title-4-modal-title-4').textContent = translations[lang].projectsTitle4ModalTitle4;
-    // document.querySelector('#projects-title-4-modal-title-4-text').textContent = translations[lang].projectsTitle4ModalTitle4Text;
-    // document.querySelector('#projects-title-4-modal-title-4-button').textContent = translations[lang].projectsTitle4ModalTitle4Button;
-    // document.querySelector('#projects-title-5-modal-title-5').textContent = translations[lang].projectsTitle5ModalTitle5;
-    // document.querySelector('#projects-title-5-modal-title-5-text').textContent = translations[lang].projectsTitle5ModalTitle5Text;
-    // document.querySelector('#projects-title-5-modal-title-5-button').textContent = translations[lang].projectsTitle5ModalTitle5Button;
-    // document.querySelector('#projects-title-6-modal-title-6').textContent = translations[lang].projectsTitle6ModalTitle6;
-    // document.querySelector('#projects-title-6-modal-title-6-text').textContent = translations[lang].projectsTitle6ModalTitle6Text;
-    // document.querySelector('#projects-title-6-modal-title-6-button').textContent = translations[lang].projectsTitle6ModalTitle6Button;"
-
-    document.querySelector('#about-about-me').textContent = translations[lang].aboutAboutMe;
-    document.querySelector('#about-about-me-text').textContent = translations[lang].aboutAboutMeText;
-    document.querySelector('#about-about-me-text2').textContent = translations[lang].aboutAboutMeText2;
-    document.querySelector('#about-about-me-text3').textContent = translations[lang].aboutAboutMeText3;
-
-    document.querySelector('#linkedin').textContent = translations[lang].linkedin;
-    document.querySelector('#linkedin-text').textContent = translations[lang].linkedinText;
-    document.querySelector('#linkedin-profile-button').textContent = translations[lang].linkedinProfileButton;
-
-    document.querySelector('#contact-me').textContent = translations[lang].contactMe;
-    document.querySelector('#contact-me-text').textContent = translations[lang].contactMeText;
-
-    document.querySelector('#cv-cv').textContent = translations[lang].cvCv;
-    document.querySelector('#cv-workexperience').textContent = translations[lang].cvWorkexperience;
-    document.querySelector('#cv-workexperience-position').textContent = translations[lang].cvWorkexperiencePosition;
-    document.querySelector('#cv-workexperience-position-date').textContent = translations[lang].cvWorkexperiencePositionDate;
-    document.querySelector('#cv-workexperience-position-c1').textContent = translations[lang].cvWorkexperiencePositionC1;
-    document.querySelector('#cv-workexperience-position-c1-1').textContent = translations[lang].cvWorkexperiencePositionC11;
-    document.querySelector('#cv-workexperience-position-c1-2').textContent = translations[lang].cvWorkexperiencePositionC12;
-    document.querySelector('#cv-workexperience-position-c1-3').textContent = translations[lang].cvWorkexperiencePositionC13;
-    document.querySelector('#cv-workexperience-position-c1-4').textContent = translations[lang].cvWorkexperiencePositionC14;
-    document.querySelector('#cv-workexperience-position-c1-5').textContent = translations[lang].cvWorkexperiencePositionC15;
-    document.querySelector('#cv-education').textContent = translations[lang].cvEducation;
-    document.querySelector('#cv-education-course').textContent = translations[lang].cvEducationCourse;
-    document.querySelector('#cv-education-course-date').textContent = translations[lang].cvEducationCourseDate;
-    document.querySelector('#cv-education-university').textContent = translations[lang].cvEducationUniversity;
-    document.querySelector('#cv-projects').textContent = translations[lang].cvProjects;
-    document.querySelector('#cv-projects-1-name').textContent = translations[lang].cvProjects1Name;
-    document.querySelector('#cv-projects-1-desc').textContent = translations[lang].cvProjects1Desc;
-    document.querySelector('#cv-skills').textContent = translations[lang].cvSkills;
-    document.querySelector('#cv-skills-programminglanguages').textContent = translations[lang].cvSkillsProgramminglanguages;
-    document.querySelector('#cv-skills-programminglanguages-list').textContent = translations[lang].cvSkillsProgramminglanguagesList;
-    document.querySelector('#cv-skills-frameworks').textContent = translations[lang].cvSkillsFrameworks;
-    document.querySelector('#cv-skills-frameworks-list').textContent = translations[lang].cvSkillsFrameworksList;
-    document.querySelector('#cv-skills-codequality').textContent = translations[lang].cvSkillsCodequality;
-    document.querySelector('#cv-skills-codequality-list').textContent = translations[lang].cvSkillsCodequalityList;
-    document.querySelector('#cv-skills-othertools').textContent = translations[lang].cvSkillsOthertools;
-    document.querySelector('#cv-skills-othertools-list').textContent = translations[lang].cvSkillsOthertoolsList;
-    document.querySelector('#cv-skills-ides').textContent = translations[lang].cvSkillsIdes;
-    document.querySelector('#cv-skills-ides-list').textContent = translations[lang].cvSkillsIdesList;
-    document.querySelector('#cv-skills-languageskills').textContent = translations[lang].cvSkillsLanguageskills;
-    document.querySelector('#cv-skills-languageskills-list').textContent = translations[lang].cvSkillsLanguageskillsList;
-};
-
-function loadLanguage() {
-    const lang = sessionStorage.getItem('language') || 'de'; // Default to German
-    switchLanguage(lang);
-    console.log('yeeeet');
-}
-
-document.addEventListener('DOMContentLoaded', loadLanguage);
-document.querySelector('#language-selector').addEventListener('change', (event) => {
-    switchLanguage(event.target.value);
-});
-
-window.addEventListener('hashchange', () => {
-    // You can call a function here if you need to handle something when the hash changes
-    // For example, you might want to load a specific section based on the new hash
-    loadLanguage(); // If you want to re-load the language when the hash changes
+// Event listener for language switcher buttons
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const language = this.getAttribute('onclick').match(/'(\w+)'/)[1];
+        switchLanguage(language);
+    });
 });
