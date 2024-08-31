@@ -9,7 +9,6 @@ function scrollToContainer(containerId) {
     }
 }
 
-
 $(document).ready(function() {
     // Check if the current page is index.html
     const currentPage = window.location.href.split('/').pop();
@@ -32,13 +31,21 @@ $(document).ready(function() {
             $(window).off('wheel');
         }
 
+        function showHeaderFooter() {
+            if (!hasScrolled) {
+                $('#header').addClass('fading-header visible');
+                $('footer').addClass('fading-footer visible');
+                hasScrolled = true;
+            }
+        }
+
         $('#scrollDown').click(function() {
             scrollToMain();
         });
 
-        // Can trigger only on first scroll, then listener removed
+        // Show header and footer immediately on first scroll
         $(window).on('wheel', function(event) {
-            scrollToMain();
+            showHeaderFooter();
         });
     }
 
