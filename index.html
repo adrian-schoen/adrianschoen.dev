@@ -18,13 +18,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-my-projects" href="javascript:void(0);" onclick="scrollToContainer('projects-container')">Meine Projekte</a>
+                            <a class="nav-link active" id="nav-my-projects" href="javascript:void(0);">Meine Projekte</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-about-me" href="javascript:void(0);" onclick="scrollToContainer('about-container')">Über Mich</a>
+                            <a class="nav-link active" id="nav-about-me" href="javascript:void(0);">Über Mich</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-cv" href="javascript:void(0);" onclick="scrollToContainer('cv-container')">Lebenslauf</a>
+                            <a class="nav-link active" id="nav-cv" href="javascript:void(0);">Lebenslauf</a>
                         </li>
                     </ul>
                     <div class="ms-auto">
@@ -39,16 +39,8 @@
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
         </nav>
-        <script>
-            window.addEventListener('load', function () {
-                setTimeout(function () {
-                    window.scrollTo(0, 0);
-                }, 50);
-            });
-        </script>
     </header>
     
     <div class="hero">
@@ -72,11 +64,9 @@
         </div>
         
         <div style="height:100px"></div>
-        <!-- PROJECTS  ------------------------------------------------------- -->
         <h1 class="text-center" id="projects-title">Meine Projekte</h1>
         <div class="projects-container py-5 mt-3 mb-5" id="projects-container">
             <div class="row card-row">
-                <!-- Project 2 -->
                 <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
                     <div class="card" data-bs-toggle="modal" data-bs-target="#project2Modal">
                         <img src="images/CatCompression.png" class="card-img-top" alt="Project 2">
@@ -86,7 +76,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 1 -->
                 <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
                     <div class="card" data-bs-toggle="modal" data-bs-target="#project1Modal">
                         <img src="images/adrianschoen.dev.png" class="card-img-top" alt="adrianschoen.dev">
@@ -96,50 +85,9 @@
                         </div>
                     </div>
                 </div>
-<!-- 
-                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#project3Modal">
-                        <img src="https://placehold.co/300" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 id="projects-title-3"></h5>
-                            <p id="projects-title-3-text"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#project4Modal">
-                        <img src="https://placehold.co/300" class="card-img-top" alt="Project 4">
-                        <div class="card-body">
-                            <h5 id="projects-title-4"></h5>
-                            <p id="projects-title-4-text"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#project5Modal">
-                        <img src="https://placehold.co/300" class="card-img-top" alt="Project 5">
-                        <div class="card-body">
-                            <h5 id="projects-title-5"></h5>
-                            <p id="projects-title-5-text"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
-                    <div class="card" data-bs-toggle="modal" data-bs-target="#project6Modal">
-                        <img src="https://placehold.co/300" class="card-img-top" alt="Project 6">
-                        <div class="card-body">
-                            <h5 id="projects-title-6"></h5>
-                            <p id="projects-title-6-text"></p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div style="height:100px"></div>
-        <!-- ABOUT ME  ------------------------------------------------------- -->
         <h1 class="text-center" id="about-about-me">Über Mich</h1>
         <div class="about-container mt-3 mb-5" id="about-container">
             <p id="about-about-me-text">Hallo! Mein Name ist Adrian Schön, und ich befinde mich aktuell im zweiten Semester meines dualen Studiums der Informatik. Ich studiere in Zusammenarbeit mit der United Internet AG und der DHBW Karlsruhe.</p>
@@ -158,8 +106,6 @@
         </div>
 
         <div style="height:100px"></div>
-
-        <!-- CV Content  ---------------------------------------------------- -->
         <h1 class="text-center" id="cv-cv">Lebenslauf</h1>
         <div class="cv-container mt-3 mb-5" id="cv-container">
             <div class="cv-content">
@@ -181,13 +127,10 @@
                     <li><strong id="cv-education-course">B. Sc. Informatik</strong>, <span id="cv-education-course-date">Okt. 2023 - Sep. 2026</span></li>
                     <i><span id="cv-education-university">Duale Hochschule Baden-Württemberg Karlsruhe</span></i>
                 </ul>
-                
-                
                 <h3 id="cv-projects">Projekte</h3>
                 <ul>
                     <li><strong id="cv-projects-1-name">Persönliche Website</strong> - <span id="cv-projects-1-desc">Diese Website, auf der Sie sich gerade befinden. Hier sind alle meine anderen Projekte aufgelistet.</span></li>
                 </ul>
-
                 <h3 id="cv-skills">Fachkenntnisse</h3>
                 <table>
                     <tr>
@@ -219,7 +162,6 @@
         </div>
     </main>
     
-<!-- Modals for Projects -->
     <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -251,72 +193,6 @@
             </div>
         </div>
     </div>
-<!-- 
-    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projects-title-3-modal-title-3"></h5>
-                    <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 3 Large">
-                    <p id="projects-title-3-modal-title-3-text"></p>
-                    <a href="#" target="_blank" class="btn btn-primary" id="projects-title-3-modal-title-3-button"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projects-title-4-modal-title-4"></h5>
-                    <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 4 Large">
-                    <p id="projects-title-4-modal-title-4-text"></p>
-                    <a href="#" target="_blank" class="btn btn-primary" id="projects-title-4-modal-title-4-button"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal fade" id="project5Modal" tabindex="-1" aria-labelledby="project5ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projects-title-5-modal-title-5"></h5>
-                    <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 5 Large">
-                    <p id="projects-title-5-modal-title-5-text"></p>
-                    <a href="#" target="_blank" class="btn btn-primary" id="projects-title-5-modal-title-5-button"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project6ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projects-title-6-modal-title-6"></h5>
-                    <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="https://placehold.co/500" class="img-fluid mb-3" alt="Project 6 Large">
-                    <p id="projects-title-6-modal-title-6-text"></p>
-                    <a href="#" target="_blank" class="btn btn-primary" id="projects-title-6-modal-title-6-button"></a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
 
     <footer class="fading-footer text-center py-3">
         <p>&copy; 2024 Adrian Schoen. All Rights Reserved.</p>
@@ -326,28 +202,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/js/language-switcher.js"></script>
     <script src="/js/script.js"></script>
-    <script>
-    function copyToClipboard(text) {
-        // Create a temporary textarea element
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        
-        // Select the text
-        textarea.select();
-        textarea.setSelectionRange(0, 99999); // For mobile devices
-    
-        // Copy the text to the clipboard
-        document.execCommand('copy');
-        
-        // Remove the temporary textarea element
-        document.body.removeChild(textarea);
-    }
-    
-    // Initialize Bootstrap tooltips
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
-    });
-    </script>
 </body>
 </html>
