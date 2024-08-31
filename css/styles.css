@@ -41,7 +41,7 @@ main {
     text-align: center;
     opacity: 0;
     border: 0.3125rem solid var(--white-low-alpha); /* 5px */
-    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 3s forwards, welcomeAnimateBoxShadow 3s forwards;
+    animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 1.5s forwards, welcomeAnimateBoxShadow 1.5s forwards;
     position: relative;
     z-index: 2;
     border-radius: 0.9375rem; /* 15px */
