@@ -135,7 +135,6 @@ main {
     opacity: 0;
     font-size: 2rem;
     animation: slideIn 1.5s forwards, fadeIn 1.5s forwards;
-    animation-delay: 1.5s;
     cursor: pointer;
     display: inline-block;
     padding: 0; /* Set padding to 0 */
@@ -188,12 +187,12 @@ main {
 
 .center-animation::before {
     animation: scaleBefore 3s forwards; /* Animate before */
-    animation-delay: 3s; /* Delay the animation by 3 seconds */
+    animation-delay: 1.5s; /* Delay the animation by 3 seconds */
 }
 
 .center-animation::after {
     animation: scaleAfter 3s forwards; /* Animate after */
-    animation-delay: 3s; /* Delay the animation by 3 seconds */
+    animation-delay: 1.5s; /* Delay the animation by 3 seconds */
 }
 
 .center-animation:hover::before {
@@ -348,7 +347,6 @@ footer {
 .fading-header.visible,
 .fading-footer.visible {
     animation: fadeIn 0.75s forwards;
-    animation-delay: 1s;
 }
 
 .cv-iframe {
