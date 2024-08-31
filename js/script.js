@@ -10,70 +10,54 @@ function scrollToContainer(containerId) {
 }
 
 $(document).ready(function() {
-    const currentPage = window.location.href.split('/').pop();
-    if (currentPage === '' || currentPage === 'index.html') {
-        const headerHeight = $('#header').outerHeight();
-        const $scrollTo = $('main');
-        let hasScrolled = false;
+    const currentPage = window.location.pathname.split('/').pop();
+    const $header = $('#header');
+    const $footer = $('footer');
+    const $scrollTo = $('main');
+    let hasScrolled = false;
 
-        function scrollToMain() {
-            hasScrolled = true;
-            $('html, body').animate({
-                scrollTop: $scrollTo.offset().top - 100
-            }, 1000); 
-            $('#header').addClass('fading-header visible');
-            $('footer').addClass('fading-footer visible');
-            $(window).off('wheel');
-        }
-
-        function showHeaderFooter() {
-            if (!hasScrolled) {
-                $('#header').addClass('fading-header visible');
-                $('footer').addClass('fading-footer visible');
-                hasScrolled = true;
-            }
-        }
-
-        $('#scrollDown').click(function() {
-            scrollToMain();
-        });
-
-        $(window).on('wheel', function(event) {
-            showHeaderFooter();
-        });
+    // Function to scroll to the main content
+    function scrollToMain() {
+        hasScrolled = true;
+        $('html, body').animate({
+            scrollTop: $scrollTo.offset().top - 100
+        }, 1000); 
+        $header.addClass('fading-header visible');
+        $footer.addClass('fading-footer visible');
+        $(window).off('wheel');
     }
 
-    $('#nav-my-projects').click(function() {
-        scrollToContainer('projects-title');
-    });
+    // Function to show header and footer
+    function showHeaderFooter() {
+        if (!hasScrolled) {
+            $header.addClass('fading-header visible');
+            $footer.addClass('fading-footer visible');
+            hasScrolled = true;
+        }
+    }
 
-    $('#nav-about-me').click(function() {
-        scrollToContainer('about-about-me');
-    });
+    // Scroll to main content on scroll down button click
+    $('#scrollDown').click(scrollToMain);
 
-    $('#nav-cv').click(function() {
-        scrollToContainer('cv-cv');
-    });
+    // Show header and footer on wheel event
+    $(window).on('wheel', showHeaderFooter);
+
+    // Scroll to specific sections on nav link click
+    $('#nav-my-projects').click(() => scrollToContainer('projects-title'));
+    $('#nav-about-me').click(() => scrollToContainer('about-about-me'));
+    $('#nav-cv').click(() => scrollToContainer('cv-cv'));
+
+    // Initialize Bootstrap tooltips
+    $('[data-toggle="tooltip"]').tooltip(); 
 });
 
+// Function to copy text to clipboard
 function copyToClipboard(text) {
-    // Create a temporary textarea element
     const textarea = document.createElement('textarea');
     textarea.value = text;
     document.body.appendChild(textarea);
-    
-    // Select the text
     textarea.select();
     textarea.setSelectionRange(0, 99999); // For mobile devices
-
-    // Copy the text to the clipboard
     document.execCommand('copy');
-    
-    // Remove the temporary textarea element
     document.body.removeChild(textarea);
 }
-
-// Initialize Bootstrap tooltips
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
