@@ -9,7 +9,6 @@
 
 html {
     scroll-behavior: smooth !important;
-    font-size: calc(26px + 0.1vw); /* Base font size for large screens */
 }
 
 /* General Styles */
@@ -76,45 +75,16 @@ main {
 }
 
 /* Responsive Font Sizes */
-@media (max-width: 3840px) {
-    html {
-        font-size: calc(22px + 0.1vw);
-    }
-}
 
-@media (max-width: 2560px) {
-    html {
-        font-size: calc(18px + 0.1vw);
+@media (max-width: 580px) {
+    .welcome-title {
+        font-size: 3rem;
     }
-}
-
-@media (max-width: 1920px) {
-    html {
-        font-size: calc(14px + 0.1vw);
+    .welcome-subtitle {
+        font-size: 1rem;
     }
-}
-
-@media (max-width: 1024px) {
-    html {
-        font-size: calc(12px + 0.1vw);
-    }
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: calc(10px + 0.1vw);
-    }
-}
-
-@media (max-width: 576px) {
-    html {
-        font-size: calc(8px + 0.1vw);
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: calc(6px + 0.1vw);
+    .arrow {
+        font-size: 1rem;
     }
 }
 
@@ -253,8 +223,9 @@ main {
 }
 
 .modal-img {
-    max-width: 31.25rem; /* 500px */
-    width: 31.25rem; /* 500px */
+    max-width: 100%;
+    width: auto;
+    height: auto;
 }
 
 .modal-content {
