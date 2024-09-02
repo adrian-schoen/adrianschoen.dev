@@ -21,8 +21,8 @@ body, html {
 }
 
 main {
-    margin-top: 1.25rem; /* 20px */
-    margin-bottom: 2.5rem; /* 40px */
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
 }
 
 .hero {
@@ -38,13 +38,13 @@ main {
 .welcome-container {
     text-align: center;
     opacity: 0;
-    border: 0.3125rem solid var(--white-low-alpha); /* 5px */
+    border: 0.3125rem solid var(--white-low-alpha);
     animation: welcomeFadeIn 1.5s forwards, welcomeAnimateBorder 1.5s forwards, welcomeAnimateBoxShadow 1.5s forwards;
     position: relative;
     z-index: 2;
-    border-radius: 0.9375rem; /* 15px */
-    padding: 2.5rem; /* 40px */
-    box-shadow: 0 0 1.25rem var(--white-low-alpha); /* 20px */
+    border-radius: 0.9375rem;
+    padding: 2.5rem;
+    box-shadow: 0 0 1.25rem var(--white-low-alpha);
     max-width: 80%;
     margin: 0 auto;
 }
@@ -59,43 +59,29 @@ main {
 }
 
 @keyframes welcomeAnimateBoxShadow {
-    100% { box-shadow: 0 0 2.5rem var(--white); /* 40px */ }
+    100% { box-shadow: 0 0 2.5rem var(--white);}
 }
 
 .welcome-title {
-    font-size: 6rem;
+    font-size: 3rem;
     margin: 0;
     animation-duration: 1s;
 }
 
 .welcome-subtitle {
-    font-size: 2rem;
-    margin: 1.25rem 0; /* 20px */
+    font-size: 1rem;
+    margin: 1.25rem 0;
     animation-duration: 1.2s;
-}
-
-/* Responsive Font Sizes */
-
-@media (max-width: 580px) {
-    .welcome-title {
-        font-size: 3rem;
-    }
-    .welcome-subtitle {
-        font-size: 1rem;
-    }
-    .arrow {
-        font-size: 1rem;
-    }
 }
 
 .arrow {
     opacity: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     animation: slideIn 1.5s forwards, fadeIn 1.5s forwards;
     cursor: pointer;
     display: inline-block;
     padding: 0;
-    margin: 0 -0.25rem; /* Adjust margin to shift left (4px) */
+    margin: 0 -0.25rem;
     transition: color 0.3s;
 }
 
@@ -104,13 +90,35 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5rem; /* 80px */
-    height: 5rem; /* 80px */
+    width: 4rem;
+    height: 4rem;
     margin: 0 auto;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-align: center;
 }
+
+/* Responsive Font Sizes */
+
+@media (min-width: 580px) {
+    .welcome-title {
+        font-size: 6rem;
+    }
+    .welcome-subtitle {
+        font-size: 2rem;
+    }
+    .arrow {
+        font-size: 2rem;
+    }
+    .center-animation {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+
+
+
 
 .center-animation:hover {
     color: var(--white);
@@ -126,19 +134,19 @@ main {
     height: 100%;
     width: 100%;
     transform-origin: center;
-    border-radius: 0.625rem; /* 10px */
+    border-radius: 0.625rem;
     transition: border-color 0.3s ease;
 }
 
 .center-animation::before {
-    border-top: 0.125rem solid var(--white-low-alpha); /* 2px */
-    border-bottom: 0.125rem solid var(--white-low-alpha); /* 2px */
+    border-top: 0.125rem solid var(--white-low-alpha); 
+    border-bottom: 0.125rem solid var(--white-low-alpha); 
     transform: scale3d(0, 1, 1);
 }
 
 .center-animation::after {
-    border-left: 0.125rem solid var(--white-low-alpha); /* 2px */
-    border-right: 0.125rem solid var(--white-low-alpha); /* 2px */
+    border-left: 0.125rem solid var(--white-low-alpha); 
+    border-right: 0.125rem solid var(--white-low-alpha); 
     transform: scale3d(1, 0, 1);
 }
 
@@ -182,7 +190,7 @@ main {
 
 @keyframes slideIn {
     from {
-        transform: translateY(-6.25rem); /* 100px */
+        transform: translateY(-6.25rem);
         opacity: 0;
     }
     to {
@@ -192,29 +200,29 @@ main {
 }
 
 .card-row {
-    padding-top: 1.25rem; /* 20px */
+    padding-top: 1.25rem; 
 }
 
 .card {
-    width: 18.75rem; /* 300px */
+    width: 18.75rem;
     cursor: pointer;
-    margin-bottom: 1.25rem; /* 20px */
-    border: 0.125rem solid var(--white); /* 2px */
+    margin-bottom: 1.25rem;
+    border: 0.125rem solid var(--white);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
 
 .card:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 1.875rem var(--white); /* 30px */
+    box-shadow: 0 0 1.875rem var(--white); 
 }
 
 .card-img-top {
-    max-width: 18.75rem; /* 300px */
+    max-width: 18.75rem; 
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-bottom: 0.125rem solid var(--white); /* 2px */
+    border-bottom: 0.125rem solid var(--white); 
 }
 
 .card-body {
@@ -230,25 +238,25 @@ main {
 
 .modal-content {
     background-color: var(--card-modal-black);
-    border: 0.125rem solid var(--white); /* 2px */
+    border: 0.125rem solid var(--white); 
 }
 
 .greeting-container,
 .about-container {
-    max-width: 40.625rem; /* 650px */
+    max-width: 40.625rem; 
     margin: 0 auto;
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem; 
     text-align: left;
-    border-top: 0.125rem solid var(--white); /* 2px */
+    border-top: 0.125rem solid var(--white); 
 }
 
 .projects-container,
 .cv-container {
-    max-width: 81.25rem; /* 1300px */
+    max-width: 81.25rem; 
     margin: 0 auto;
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem; 
     text-align: left;
-    border-top: 0.125rem solid var(--white); /* 2px */
+    border-top: 0.125rem solid var(--white); 
 }
 
 .navbar-nav .nav-link {
@@ -298,7 +306,7 @@ footer {
 
 .btn {
     color: var(--white) !important;
-    border: 0.125rem var(--white-low-alpha) solid !important; /* 2px */
+    border: 0.125rem var(--white-low-alpha) solid !important;
     background-color: transparent !important;
     transition: transform 0.3s ease, border-color 0.3s ease !important;
 }
@@ -308,7 +316,7 @@ footer {
 }
 
 .btn:hover {
-    border: 0.125rem var(--white) solid !important; /* 2px */
+    border: 0.125rem var(--white) solid !important;
     background-color: transparent !important;
     transform: scale(1.05) !important;
 }
