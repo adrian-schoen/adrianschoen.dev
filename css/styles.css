@@ -262,6 +262,14 @@ main {
 .custom-navbar {
     max-width: 80rem;
     margin: 0 auto;
+    border-radius: 0px 0px 10px 10px;
+    border-bottom: 2px solid var(--white);
+    padding: 0;
+}
+
+.custom-navbar .container {
+    padding: 0 5px 1px 5px;
+    margin: 0;
 }
 
 .navbar-nav .nav-link {
@@ -282,7 +290,7 @@ header, footer {
 header { 
     position: fixed;
     top: 0; 
-    background-image: linear-gradient(var(--header-footer-black), var(--background-black) 90%);
+    background-color: var(--background-black);
 }
 
 footer { 
