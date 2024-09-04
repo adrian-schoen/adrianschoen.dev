@@ -49,6 +49,11 @@ $(document).ready(function() {
 
     // Initialize Bootstrap tooltips
     $('[data-toggle="tooltip"]').tooltip(); 
+
+    // Collapse the navbar after clicking a link
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 });
 
 // Function to copy text to clipboard
