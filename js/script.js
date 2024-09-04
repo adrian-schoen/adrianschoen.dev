@@ -54,6 +54,11 @@ $(document).ready(function() {
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+
+    // Collapse the navbar after selecting a language
+    $('#language-selector').next('.dropdown-menu').find('.dropdown-item').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 });
 
 // Function to copy text to clipboard
