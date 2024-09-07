@@ -354,3 +354,12 @@ body::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+
+#adrian-schoen-img {
+    max-width: 20rem;
+    width: 100% !important;
+    -webkit-box-shadow:inset 0px 0px 0px 1px var(--white);
+    -moz-box-shadow:inset 0px 0px 0px 1px var(--white);
+    box-shadow:inset 0px 0px 0px 1px var(--white);
+    border: 3px solid var(--white);
+}
