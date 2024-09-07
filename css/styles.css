@@ -354,3 +354,8 @@ body::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+
+#adrian-schoen-img {
+    max-width: 20rem !important;
+    width: 100% !important;
+}
