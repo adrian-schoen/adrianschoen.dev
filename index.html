@@ -56,11 +56,14 @@
     <main style="min-height: 100vh">
         <h2 class="text-center" id="index-greeting" data-translate="indexGreeting">Wilkommen auf meiner Website!</h2>
         <div class="greeting-container py-5">
-            <p class="text-center" id="index-greeting-text" data-translate="indexGreetingText">Vielen Dank für Ihren Besuch! Hier finden Sie eine Sammlung meiner Projekte und Einblicke in meine Arbeit. Meine Leidenschaft gilt der Schaffung und dem Austausch von Wissen in der Tech-Community.</p>
-            <p class="text-center" id="index-connect-subtitle" data-translate="indexConnectSubtitle">Schauen Sie sich mein GitHub-Profil und das Repository für diese Website an:</p>
+            <p class="text-center" id="index-greeting-text" data-translate="indexGreetingText">Vielen Dank für Ihren Besuch! Auf dieser Seite stelle ich meine Arbeit als Softwareentwickler vor. Der Schwerpunkt liegt auf der Backend-Entwicklung und verschiedenen Projekten, die ich erstellt habe. Erkunden Sie meine Arbeit und lernen Sie meine Fähigkeiten kennen.</p>
+            <p class="text-center" id="index-connect-subtitle" data-translate="indexConnectSubtitle">Wenn Sie sich mit mir verbinden oder mehr erfahren möchten, zögern Sie nicht, mein GitHub oder LinkedIn zu besuchen oder mich per E-Mail zu kontaktieren. Ich hoffe, Sie finden etwas, das Ihr Interesse weckt!</p>
             <div class="text-center">
-                <a href="https://github.com/adrian-schoen" class="btn btn-primary" id="index-github-profile-button" target="_blank" data-translate="indexGithubProfileButton">GitHub Profil</a>
-                <a href="https://github.com/adrian-schoen/adrianschoen.dev" class="btn btn-primary" id="index-github-repo-button" target="_blank" data-translate="indexGithubRepoButton">Website Repository</a>
+                <a href="https://github.com/adrian-schoen" class="btn btn-primary mb-1" id="index-github-profile-button" target="_blank" data-translate="indexGithubProfileButton">GitHub Profil</a>
+                <a href="https://www.linkedin.com/in/adrianschoen-dev" class="btn btn-primary mb-1" id="linkedin-profile-button" target="_blank" data-translate="linkedinProfileButton">LinkedIn Profil</a>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mb-1" onclick="copyToClipboard('contact@adrianschoen.dev');" data-toggle="tooltip" title="Copy">contact@adrianschoen.dev</button>
             </div>
         </div>
         
@@ -94,16 +97,6 @@
             <p id="about-about-me-text" data-translate="aboutAboutMeText">Hallo! Mein Name ist Adrian Schön, und ich befinde mich aktuell im zweiten Semester meines dualen Studiums der Informatik. Ich studiere in Zusammenarbeit mit der United Internet AG und der DHBW Karlsruhe.</p>
             <p id="about-about-me-text2" data-translate="aboutAboutMeText2">Durch die Kombination von Theorie und Praxis sammle ich wertvolle Erfahrungen und vertiefe mein Wissen sowohl im akademischen Bereich als auch in realen Projekten.\nDer Schwerpunkt meiner beruflichen Tätigkeit liegt in der Backend-Entwicklung. Ich arbeite intensiv mit Technologien wie Java und SpringBoot, um robuste und skalierbare Anwendungen zu entwickeln. Dabei lege ich besonderen Wert auf sauberen Code, Performance-Optimierung und die Implementierung von Best Practices.</p>
             <p id="about-about-me-text3" data-translate="aboutAboutMeText3">Neben meiner Backend-Arbeit beschäftige ich mich auch mit Frontend-Technologien. Ich habe Freude daran, Websites und Webanwendungen zu gestalten, und nutze dabei HTML, CSS und JavaScript, um benutzerfreundliche und ansprechende Oberflächen zu entwickeln. Diese Website, auf der Sie sich gerade befinden, ist ein Beispiel für meine Arbeit im Frontend-Bereich.</p>
-            <h3 class="text-center mt-4" id="linkedin" data-translate="linkedin">LinkedIn</h3>
-            <p id="linkedin-text" data-translate="linkedinText">Besuchen Sie mein LinkedIn-Profil, um mehr über meine beruflichen Erfahrungen und Qualifikationen zu erfahren.</p>
-            <div class="text-center">
-                <a href="https://www.linkedin.com/in/adrianschoen-dev" class="btn btn-primary" id="linkedin-profile-button" target="_blank" data-translate="linkedinProfileButton">LinkedIn Profil</a>
-            </div>
-            <h3 class="text-center mt-4" id="contact-me" data-translate="contactMe">Kontakt</h3>
-            <p id="contact-me-text" data-translate="contactMeText">Sie können mich unter meiner E-Mail-Adresse erreichen: </p>
-            <div class="text-center">
-                <button class="btn btn-primary" onclick="copyToClipboard('contact@adrianschoen.dev');" data-toggle="tooltip" title="Copy">contact@adrianschoen.dev</button>
-            </div>
         </div>
 
         <div style="height:100px"></div>
