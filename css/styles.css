@@ -1,10 +1,11 @@
 /* Global Variables */
 :root {
-    --white-low-alpha: rgba(230, 230, 230, 0.3);
-    --white: rgb(230, 230, 230);
-    --background-black: rgb(30, 30, 30);
-    --header-footer-black: rgb(15, 15, 15);
-    --card-modal-black: rgb(20, 20, 20);
+    --white-low-alpha: rgba(214, 220, 229, 0.3);
+    /* --white: rgb(230, 230, 230); */
+    --white: rgb(214, 220, 229);
+    --background-black: rgb(15, 23, 42);
+    --header-footer-black: rgb(8, 12, 21);
+    --card-modal-black: rgb(30, 41, 59);
 }
 
 html {
