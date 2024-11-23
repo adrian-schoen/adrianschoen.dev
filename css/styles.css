@@ -243,7 +243,8 @@ main {
 }
 
 .greeting-container,
-.about-container {
+.about-container,
+.imprint-container {
     max-width: 40rem; 
     margin: 0 auto;
     padding: 1.25rem; 
