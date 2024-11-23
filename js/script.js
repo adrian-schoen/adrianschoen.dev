@@ -46,6 +46,7 @@ $(document).ready(function() {
     $('#nav-my-projects').click(() => scrollToContainer('projects-title'));
     $('#nav-about-me').click(() => scrollToContainer('about-about-me'));
     $('#nav-cv').click(() => scrollToContainer('cv-cv'));
+    $('#nav-imprint').click(() => scrollToContainer('imprint-title'));
 
     // Initialize Bootstrap tooltips
     $('[data-toggle="tooltip"]').tooltip(); 
