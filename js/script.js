@@ -43,7 +43,6 @@ $(document).ready(function() {
     $(window).on('wheel', showHeaderFooter);
 
     // Scroll to specific sections on nav link click
-    $('#nav-my-projects').click(() => scrollToContainer('projects-title'));
     $('#nav-about-me').click(() => scrollToContainer('about-about-me'));
     $('#nav-cv').click(() => scrollToContainer('cv-cv'));
     $('#nav-imprint').click(() => scrollToContainer('imprint-title'));
