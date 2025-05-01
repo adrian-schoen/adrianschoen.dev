@@ -27,9 +27,9 @@ const translations = {
         cvEducationCourseDate: "Oct. 2023 - Sep. 2026",
         cvEducationUniversity: "Duale Hochschule Baden-Württemberg Karlsruhe",
         cvSkills: "Skills",
-        cvSkillsProgramminglanguages: "Programming Languages",
-        cvSkillsProgramminglanguagesList: "Java, Python, JavaScript",
-        cvSkillsFrameworks: "Frameworks & Libraries",
+        cvSkillsProgrammingLanguages: "Programming Languages",
+        cvSkillsProgrammingLanguagesList: "Java, Python, JavaScript",
+        cvSkillsFrameworks: "Frameworks",
         cvSkillsFrameworksList: "Spring Boot, Quarkus",
         cvSkillsDatabase: "Databases",
         cvSkillsDatabaseList: "PostgreSQL, Hibernate, Redis",
@@ -41,8 +41,8 @@ const translations = {
         cvSkillsDevopsList: "Jenkins, GitLab CI/CD, Docker, Kubernetes",
         cvSkillsTools: "Tools",
         cvSkillsToolsList: "Maven, Git, Lombok",
-        cvSkillsLanguageskills: "Language Skills",
-        cvSkillsLanguageskillsList: "German (native speaker), English (business fluent)"
+        cvSkillsLanguageSkills: "Language Skills",
+        cvSkillsLanguageSkillsList: "German (native speaker), English (business fluent)"
     },
     de: {
         navAboutMe: "Über Mich",
@@ -72,22 +72,22 @@ const translations = {
         cvEducationCourseDate: "Okt. 2023 - Sep. 2026",
         cvEducationUniversity: "Duale Hochschule Baden-Württemberg Karlsruhe",
         cvSkills: "Fachkenntnisse",
-        cvSkillsProgramminglanguages: "Programmiersprachen",
-        cvSkillsProgramminglanguagesList: "Java, Python, JavaScript",
-        cvSkillsFrameworks: "Frameworks & Libraries",
+        cvSkillsProgrammingLanguages: "Programmiersprachen",
+        cvSkillsProgrammingLanguagesList: "Java, Python, JavaScript",
+        cvSkillsFrameworks: "Frameworks",
         cvSkillsFrameworksList: "Spring Boot, Quarkus",
         cvSkillsDatabase: "Datenbanken",
         cvSkillsDatabaseList: "PostgreSQL, Hibernate, Redis",
         cvSkillsTesting: "Testing",
         cvSkillsTestingList: "JUnit, Mockito, WireMock",
-        cvSkillsCodeQuality: "Code-Qualität",
+        cvSkillsCodeQuality: "Code Quality",
         cvSkillsCodeQualityList: "SonarQube",
         cvSkillsDevops: "DevOps & Cloud",
         cvSkillsDevopsList: "Jenkins, GitLab CI/CD, Docker, Kubernetes",
         cvSkillsTools: "Tools",
         cvSkillsToolsList: "Maven, Git, Lombok",
-        cvSkillsLanguageskills: "Sprachkenntnisse",
-        cvSkillsLanguageskillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)"
+        cvSkillsLanguageSkills: "Sprachkenntnisse",
+        cvSkillsLanguageSkillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)"
     }
 };
 
