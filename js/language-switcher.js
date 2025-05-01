@@ -38,10 +38,7 @@ const translations = {
         cvSkillsOthertools: "DevOps & Deployment",
         cvSkillsOthertoolsList: "Maven, Git, GitLab CI/CD, Docker, Kubernetes",
         cvSkillsLanguageskills: "Language Skills",
-        cvSkillsLanguageskillsList: "German (native speaker), English (business fluent)",
-        imprintTitle: "Imprint",
-        imprintContactText: "Contact",
-        imprintPhoneText: "Phone"
+        cvSkillsLanguageskillsList: "German (native speaker), English (business fluent)"
     },
     de: {
         navAboutMe: "Über Mich",
@@ -82,10 +79,7 @@ const translations = {
         cvSkillsOthertools: "DevOps & Deployment",
         cvSkillsOthertoolsList: "Maven, Git, GitLab CI/CD, Docker, Kubernetes",
         cvSkillsLanguageskills: "Sprachkenntnisse",
-        cvSkillsLanguageskillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)",
-        imprintTitle: "Impressum",
-        imprintContactText: "Kontakt",
-        imprintPhoneText: "Telefon"
+        cvSkillsLanguageskillsList: "Deutsch (muttersprachlich), Englisch (verhandlungssicher)"
     }
 };
 
